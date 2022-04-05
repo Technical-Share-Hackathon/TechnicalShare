@@ -1,7 +1,7 @@
 package br.com.technicalshare.api.modelos;
 
 import javax.persistence.*;
-import java.util.Arrays;
+import java.util.Objects;
 
 @Entity
 public class Usuario {
@@ -12,33 +12,21 @@ public class Usuario {
 
     private String nome;
 
+    @Column(name = "link_foto")
+    private String linkFoto;
+
+    @Column(name = "profissao_atual")
+    private String profissaoAtual;
+
+    private String descricao;
+
     private String email;
 
     private String senha;
 
-    private boolean mentor;
-
-    @Column(name = "media_avaliacao")
-    private int mediaAvaliacao;
-
-    private String[] linksDisponiveis;
-
     @OneToOne
-    private Agenda agenda;
-
-    @Override
-    public String toString() {
-        return "Usuario{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", email='" + email + '\'' +
-                ", senha='" + senha + '\'' +
-                ", mentor=" + mentor +
-                ", mediaAvaliacao=" + mediaAvaliacao +
-                ", linksDisponiveis=" + Arrays.toString(linksDisponiveis) +
-                ", agenda=" + agenda +
-                '}';
-    }
+    @JoinColumn(name = "links_id")
+    private LinksDisponiveis linksDisponiveis;
 
     public Long getId() {
         return id;
@@ -72,35 +60,48 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public boolean isMentor() {
-        return mentor;
+    public String getLinkFoto() {
+        return linkFoto;
     }
 
-    public void setMentor(boolean mentor) {
-        this.mentor = mentor;
+    public void setLinkFoto(String linkFoto) {
+        this.linkFoto = linkFoto;
     }
 
-    public int getMediaAvaliacao() {
-        return mediaAvaliacao;
+    public String getProfissaoAtual() {
+        return profissaoAtual;
     }
 
-    public void setMediaAvaliacao(int mediaAvaliacao) {
-        this.mediaAvaliacao = mediaAvaliacao;
+    public void setProfissaoAtual(String profissaoAtual) {
+        this.profissaoAtual = profissaoAtual;
     }
 
-    public String[] getLinksDisponiveis() {
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public LinksDisponiveis getLinksDisponiveis() {
         return linksDisponiveis;
     }
 
-    public void setLinksDisponiveis(String[] linksDisponiveis) {
+    public void setLinksDisponiveis(LinksDisponiveis linksDisponiveis) {
         this.linksDisponiveis = linksDisponiveis;
     }
 
-    public Agenda getAgenda() {
-        return agenda;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Usuario usuario = (Usuario) o;
+        return Objects.equals(id, usuario.id);
     }
 
-    public void setAgenda(Agenda agenda) {
-        this.agenda = agenda;
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
