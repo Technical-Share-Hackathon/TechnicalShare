@@ -18,7 +18,7 @@ public class Usuario {
     @Column(name = "profissao_atual")
     private String profissaoAtual;
 
-    private String descricao;
+    private String resumo;
 
     private String email;
 
@@ -27,6 +27,18 @@ public class Usuario {
     @OneToOne
     @JoinColumn(name = "links_id")
     private LinksDisponiveis linksDisponiveis;
+
+    @OneToOne
+    @JoinColumn(name = "soft_skills_id")
+    private SoftSkills softSkills;
+
+    @OneToOne
+    @JoinColumn(name = "hard_skills_id")
+    private HardSkills hardSkills;
+
+    @OneToOne
+    @JoinColumn(name = "interesses_id")
+    private AreaDeInteresse areaDeInteresse;
 
     public Long getId() {
         return id;
@@ -76,20 +88,44 @@ public class Usuario {
         this.profissaoAtual = profissaoAtual;
     }
 
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
     public LinksDisponiveis getLinksDisponiveis() {
         return linksDisponiveis;
     }
 
     public void setLinksDisponiveis(LinksDisponiveis linksDisponiveis) {
         this.linksDisponiveis = linksDisponiveis;
+    }
+
+    public String getResumo() {
+        return resumo;
+    }
+
+    public void setResumo(String resumo) {
+        this.resumo = resumo;
+    }
+
+    public SoftSkills getSoftSkills() {
+        return softSkills;
+    }
+
+    public void setSoftSkills(SoftSkills softSkills) {
+        this.softSkills = softSkills;
+    }
+
+    public HardSkills getHardSkills() {
+        return hardSkills;
+    }
+
+    public void setHardSkills(HardSkills hardSkills) {
+        this.hardSkills = hardSkills;
+    }
+
+    public AreaDeInteresse getAreaDeInteresse() {
+        return areaDeInteresse;
+    }
+
+    public void setAreaDeInteresse(AreaDeInteresse areaDeInteresse) {
+        this.areaDeInteresse = areaDeInteresse;
     }
 
     @Override

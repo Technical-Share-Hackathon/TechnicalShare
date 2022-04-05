@@ -1,5 +1,6 @@
 package br.com.technicalshare.api.controller;
 
+import br.com.technicalshare.api.controller.dto.UsuarioDtoSimples;
 import br.com.technicalshare.api.modelos.Usuario;
 import br.com.technicalshare.api.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/usuarios")
@@ -20,9 +22,13 @@ public class UsuarioController {
     private UsuarioRepository usuarioRepository;
 
     @GetMapping
-    public ResponseEntity<List<Usuario>> listaTodosOsUsuarios(){
+    public ResponseEntity<List<UsuarioDtoSimples>> listaTodosOsUsuarios(){
         List<Usuario> listaDeUsuarios = usuarioRepository.findAll();
-        System.out.println(listaDeUsuarios);
-        return ResponseEntity.ok(listaDeUsuarios);
+
+        List<UsuarioDtoSimples> usuarioDtoSimples = listaDeUsuarios.stream()
+                .map(usuario -> new UsuarioDtoSimples(usuario))
+                .collect(Collectors.toList());
+
+        return ResponseEntity.ok(usuarioDtoSimples);
     }
 }
