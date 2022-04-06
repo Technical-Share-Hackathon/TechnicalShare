@@ -1,4 +1,4 @@
-package br.com.technicalshare.api.modelos;
+package br.com.technicalshare.api.models;
 
 import javax.persistence.*;
 import java.util.Objects;
