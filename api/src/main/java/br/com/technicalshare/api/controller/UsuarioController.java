@@ -28,7 +28,7 @@ public class UsuarioController {
     private AuthService authService;
 
     @GetMapping
-    public ResponseEntity<List<UsuarioDtoSimples>> listaTodosOsUsuarios(){
+    public ResponseEntity<List<UsuarioDtoSimples>> listarTodosOsUsuarios(){
         List<Usuario> listaDeUsuarios = usuarioRepository.findAll();
 
         List<UsuarioDtoSimples> usuarioDtoSimples = listaDeUsuarios.stream()
@@ -36,6 +36,17 @@ public class UsuarioController {
                 .collect(Collectors.toList());
 
         return ResponseEntity.ok(usuarioDtoSimples);
+    }
+
+    @GetMapping("/{idUsuario}")
+    public ResponseEntity<UsuarioDetalhadoDto> listarUsuario(@PathVariable Long idUsuario){
+        Optional<Usuario> usuario = usuarioRepository.findById(idUsuario);
+
+       if(usuario.isEmpty()){
+           return ResponseEntity.notFound().build();
+       }
+
+       return ResponseEntity.ok(new UsuarioDetalhadoDto(usuario.get()));
     }
 
     @PostMapping("/logar")

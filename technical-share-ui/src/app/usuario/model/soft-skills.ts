@@ -1,6 +1,6 @@
 export interface SoftSkills {
 
-  id : number;
+  idSoftSkills : number;
 
   primeiraSoftSkill : string;
 

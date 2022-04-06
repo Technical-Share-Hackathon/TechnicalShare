@@ -5,12 +5,14 @@ import { CommonModule } from '@angular/common';
 import { UsuarioRoutingModule } from './usuario-routing.module';
 import { ListarUsuarioComponent } from './listar-usuario/listar-usuario.component';
 import { LogarComponent } from './logar/logar.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 @NgModule({
   declarations: [
     ListarUsuarioComponent,
-    LogarComponent
+    LogarComponent,
+    PerfilComponent
   ],
   imports: [
     CommonModule,

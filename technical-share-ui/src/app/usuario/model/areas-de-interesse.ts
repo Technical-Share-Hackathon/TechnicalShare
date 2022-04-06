@@ -1,6 +1,6 @@
 export interface AreasDeInteresse {
 
-  id: number,
+  idInteresses: number;
 
   primeiraAreaDeInteresse : string;
 

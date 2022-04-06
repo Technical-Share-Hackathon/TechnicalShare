@@ -24,6 +24,14 @@ export class UsuarioService {
     );
   }
 
+  buscarUsuario(idUsuario: number): Observable<UsuarioCompleto> {
+    return this.httpClient.get<UsuarioCompleto>(`${this.API}/${idUsuario}`)
+    .pipe(
+      first(),
+      tap(usuarioCompleto => console.log(usuarioCompleto))
+    );
+  }
+
   logar(usuarioLogin: UsuarioLogin): Observable<UsuarioCompleto> {
     return this.httpClient.post<UsuarioCompleto>(this.API+"/logar", usuarioLogin)
     .pipe(

@@ -1,9 +1,6 @@
 package br.com.technicalshare.api.controller.dto;
 
-import br.com.technicalshare.api.models.AreaDeInteresse;
-import br.com.technicalshare.api.models.HardSkills;
-import br.com.technicalshare.api.models.SoftSkills;
-import br.com.technicalshare.api.models.Usuario;
+import br.com.technicalshare.api.models.*;
 
 public class UsuarioDetalhadoDto {
 
@@ -25,13 +22,16 @@ public class UsuarioDetalhadoDto {
 
     private AreaDeInteresse areaDeInteresse;
 
+    private LinksDisponiveis linksDisponiveis;
+
     public UsuarioDetalhadoDto(Usuario usuario) {
         this.id = usuario.getId();
         this.nome = usuario.getNome();
-        this.linkFoto = usuario.getEmail();
+        this.linkFoto = usuario.getLinkFoto();
         this.profissaoAtual = usuario.getProfissaoAtual();
         this.resumo = usuario.getResumo();
         this.email = usuario.getEmail();
+        this.linksDisponiveis = usuario.getLinksDisponiveis();
         this.softSkills = usuario.getSoftSkills();
         this.hardSkills = usuario.getHardSkills();
         this.areaDeInteresse = usuario.getAreaDeInteresse();
@@ -71,5 +71,9 @@ public class UsuarioDetalhadoDto {
 
     public AreaDeInteresse getAreaDeInteresse() {
         return areaDeInteresse;
+    }
+
+    public LinksDisponiveis getLinksDisponiveis() {
+        return linksDisponiveis;
     }
 }

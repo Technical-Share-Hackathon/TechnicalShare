@@ -8,7 +8,7 @@ public class AreaDeInteresse {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idInteresses;
 
     @Column(name = "primeiro_interesse")
     private String primeiraAreaDeInteresse;
@@ -25,12 +25,12 @@ public class AreaDeInteresse {
     @Column(name = "quinto_interesse")
     private String quintaAreaDeInteresse;
 
-    public Long getId() {
-        return id;
+    public Long getIdInteresses() {
+        return idInteresses;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdInteresses(Long idInteresses) {
+        this.idInteresses = idInteresses;
     }
 
     public String getPrimeiraAreaDeInteresse() {

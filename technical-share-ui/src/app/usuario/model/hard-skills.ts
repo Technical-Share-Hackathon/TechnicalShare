@@ -1,6 +1,6 @@
 export interface HardSkills {
 
-  id: number;
+  idHardSkills: number;
 
   primeiraHardSkill : string;
 

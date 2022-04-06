@@ -8,7 +8,7 @@ public class LinksDisponiveis {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idLinks;
 
     @Column(name = "link_whatsapp")
     private String linkWhats;
@@ -16,12 +16,12 @@ public class LinksDisponiveis {
     @Column(name = "link_teams")
     private String linkTeams;
 
-    public Long getId() {
-        return id;
+    public Long getIdLinks() {
+        return idLinks;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdLinks(Long idLinks) {
+        this.idLinks = idLinks;
     }
 
     public String getLinkWhats() {

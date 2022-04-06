@@ -1,6 +1,6 @@
 export interface LinksDisponiveis {
 
-  id : number;
+  idLinks : number;
 
   linkWhats : string;
 

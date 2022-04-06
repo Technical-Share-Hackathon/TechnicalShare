@@ -8,7 +8,7 @@ public class SoftSkills {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idSoftSkills;
 
     @Column(name = "primeira_skill")
     private String primeiraSoftSkill;
@@ -25,12 +25,12 @@ public class SoftSkills {
     @Column(name = "quinta_skill")
     private String quintaSoftSkill;
 
-    public Long getId() {
-        return id;
+    public Long getIdSoftSkills() {
+        return idSoftSkills;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdSoftSkills(Long idSoftSkills) {
+        this.idSoftSkills = idSoftSkills;
     }
 
     public String getPrimeiraSoftSkill() {

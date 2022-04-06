@@ -4,7 +4,7 @@ INSERT INTO links (link_whatsapp, link_teams) VALUES ('YZAB', 'CDEF')
 
 INSERT INTO interesses (primeiro_interesse, segundo_interesse, terceiro_interesse, quarto_interesse, quinto_interesse) VALUES ('UX', 'UI', 'Front End', 'Angular', 'JavaScript')
 INSERT INTO interesses (primeiro_interesse, segundo_interesse) VALUES ('Back-end', 'Java')
-INSERT INTO interesses (primeiro_interesse, segundo_interesse, terceiro_interesse) VALUES ('FullStack', 'Java', 'TypeScript')
+INSERT INTO interesses (primeiro_interesse, segundo_interesse, terceiro_interesse, quarto_interesse, quinto_interesse) VALUES ('FullStack', 'Java', 'TypeScript', '', '')
 
 INSERT INTO hard_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Java', 'Spring Framework', 'JPA', 'Docker', 'Ansible')
 INSERT INTO hard_skills (primeira_skill, segunda_skill) VALUES ('Angular', 'Java Script')
