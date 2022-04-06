@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row d-flex justify-content-center mb-4">
+      <div class="col-md-4">
+          <h1 class="text-center mt-5">Login</h1>
+          <div class="login-form">
+              <form>
+                  <div class="form-group text-center">
+                    <label for="exampleInputEmail1" class="mb-1" >Endereço de email</label>
+                    <input [(ngModel)]="usuarioLogin.email" name="email" type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Digite seu email">
+                  </div>
+                  <div class="form-group text-center">
+                    <label for="exampleInputPassword1" class="mb-1 mt-2">Senha</label>
+                    <input [(ngModel)]="usuarioLogin.senha" name="senha" type="password" class="form-control" placeholder="Senha">
+                  </div>
+                  <button type="submit" class="btn btn-outline-success mt-2" (click)="logar()">Logar</button>
+                </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+

@@ -51,6 +51,5 @@ public class UsuarioController {
         };
 
         return ResponseEntity.ok(new UsuarioDetalhadoDto(usuario.get()));
-
     }
 }

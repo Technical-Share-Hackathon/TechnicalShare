@@ -1,6 +1,6 @@
-INSERT INTO links (primeiro_link, segundo_link, terceiro_link) VALUES ('ABCD', 'EFGH', 'IJKL')
-INSERT INTO links (primeiro_link, segundo_link, terceiro_link) VALUES ('MNOP', 'QRST', 'UVXW')
-INSERT INTO links (primeiro_link, segundo_link, terceiro_link) VALUES ('YZAB', 'CDEF', 'GHIJ')
+INSERT INTO links (link_whatsapp, link_teams) VALUES ('ABCD', 'EFGH')
+INSERT INTO links (link_whatsapp, link_teams) VALUES ('MNOP', 'QRST')
+INSERT INTO links (link_whatsapp, link_teams) VALUES ('YZAB', 'CDEF')
 
 INSERT INTO interesses (primeiro_interesse, segundo_interesse, terceiro_interesse, quarto_interesse, quinto_interesse) VALUES ('UX', 'UI', 'Front End', 'Angular', 'JavaScript')
 INSERT INTO interesses (primeiro_interesse, segundo_interesse) VALUES ('Back-end', 'Java')

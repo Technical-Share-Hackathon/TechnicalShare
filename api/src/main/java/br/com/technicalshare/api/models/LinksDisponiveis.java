@@ -10,14 +10,11 @@ public class LinksDisponiveis {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "primeiro_link")
-    private String primeiroLink;
+    @Column(name = "link_whatsapp")
+    private String linkWhats;
 
-    @Column(name = "segundo_link")
-    private String segundoLink;
-
-    @Column(name = "terceiro_link")
-    private String terceiroLink;
+    @Column(name = "link_teams")
+    private String linkTeams;
 
     public Long getId() {
         return id;
@@ -27,27 +24,19 @@ public class LinksDisponiveis {
         this.id = id;
     }
 
-    public String getPrimeiroLink() {
-        return primeiroLink;
+    public String getLinkWhats() {
+        return linkWhats;
     }
 
-    public void setPrimeiroLink(String primeiroLink) {
-        this.primeiroLink = primeiroLink;
+    public void setLinkWhats(String linkWhats) {
+        this.linkWhats = linkWhats;
     }
 
-    public String getSegundoLink() {
-        return segundoLink;
+    public String getLinkTeams() {
+        return linkTeams;
     }
 
-    public void setSegundoLink(String segundoLink) {
-        this.segundoLink = segundoLink;
-    }
-
-    public String getTerceiroLink() {
-        return terceiroLink;
-    }
-
-    public void setTerceiroLink(String terceiroLink) {
-        this.terceiroLink = terceiroLink;
+    public void setLinkTeams(String linkTeams) {
+        this.linkTeams = linkTeams;
     }
 }
