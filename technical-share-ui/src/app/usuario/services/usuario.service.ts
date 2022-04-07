@@ -24,6 +24,15 @@ export class UsuarioService {
     );
   }
 
+  atualizarUsuario(idUsuario: number, usuarioCompleto: UsuarioCompleto): Observable<UsuarioCompleto>{
+    return this.httpClient.put<UsuarioCompleto>(`${this.API}/atualizar/${idUsuario}`, usuarioCompleto)
+    .pipe(
+      first(),
+      tap(usuarioCompleto => console.log(usuarioCompleto))
+    )
+
+  }
+
   buscarUsuario(idUsuario: number): Observable<UsuarioCompleto> {
     return this.httpClient.get<UsuarioCompleto>(`${this.API}/${idUsuario}`)
     .pipe(

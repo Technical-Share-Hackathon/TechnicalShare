@@ -9,10 +9,13 @@ import br.com.technicalshare.api.exception.EmailNaoExistenteException;
 import br.com.technicalshare.api.exception.SenhaInvalidaException;
 import br.com.technicalshare.api.exception.UsuarioNaoExistenteException;
 import br.com.technicalshare.api.models.Usuario;
+import br.com.technicalshare.api.repository.InteressesRepository;
 import br.com.technicalshare.api.repository.UsuarioRepository;
 import br.com.technicalshare.api.service.AuthService;
 import br.com.technicalshare.api.service.UsuarioService;
+import br.com.technicalshare.api.specification.SpecificationInteresse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,6 +37,9 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
+    @Autowired
+    private InteressesRepository interessesRepository;
+
     @GetMapping
     public ResponseEntity<List<UsuarioDtoSimples>> listarTodosOsUsuarios(){
         List<Usuario> listaDeUsuarios = usuarioRepository.findAll();
@@ -44,6 +50,24 @@ public class UsuarioController {
 
         return ResponseEntity.ok(usuarioDtoSimples);
     }
+
+    @GetMapping("/sugerir/{interesse}")
+    public ResponseEntity<List<UsuarioDtoSimples>> listarUsuariosSugeridos(@PathVariable String interesse){
+
+        List<Usuario> usuariosRecomendadosPorInteresse = usuarioRepository.findAll(Specification.where(
+                SpecificationInteresse.primeiroInteresse(interesse)
+                        .or(SpecificationInteresse.segundoInteresse(interesse))
+                        .or(SpecificationInteresse.terceiraInteresse(interesse))
+                        .or(SpecificationInteresse.quartoInteresse(interesse))
+                        .or(SpecificationInteresse.quintoInteresse(interesse))
+        ));
+
+        List<UsuarioDtoSimples> usuarioDtoSimples = usuariosRecomendadosPorInteresse.stream().map(
+                usuario -> new UsuarioDtoSimples(usuario)).limit(3).collect(Collectors.toList());
+
+        return ResponseEntity.ok(usuarioDtoSimples);
+    }
+
 
     @GetMapping("/{idUsuario}")
     public ResponseEntity<UsuarioDetalhadoDto> listarUsuario(@PathVariable Long idUsuario){

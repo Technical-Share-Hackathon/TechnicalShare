@@ -23,8 +23,9 @@ export class PerfilComponent implements OnInit {
   constructor(
     private usuarioService : UsuarioService,
     private router : Router,
-    
+
   ) {
+
     usuarioService.buscarUsuario(1).subscribe((resp : UsuarioCompleto)=>{
 
       this.usuarioCompleto = resp

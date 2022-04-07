@@ -7,6 +7,7 @@ import { ListarUsuarioComponent } from './listar-usuario/listar-usuario.componen
 import { LogarComponent } from './logar/logar.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { AtualizacaoComponent } from './atualizacao/atualizacao.component';
+import { RecomendacoesComponent } from './recomendacoes/recomendacoes.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { AtualizacaoComponent } from './atualizacao/atualizacao.component';
     ListarUsuarioComponent,
     LogarComponent,
     PerfilComponent,
-    AtualizacaoComponent
+    AtualizacaoComponent,
+    RecomendacoesComponent
   ],
   imports: [
     CommonModule,

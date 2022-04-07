@@ -1,6 +1,7 @@
 import { UsuarioService } from './../services/usuario.service';
 import { UsuarioListagem } from './../model/usuario-listagem';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listar-usuario',
@@ -11,8 +12,11 @@ export class ListarUsuarioComponent implements OnInit {
 
   usuarios : UsuarioListagem[] = []
 
-  constructor(private usuarioService: UsuarioService) {
-    
+  constructor(
+    private usuarioService: UsuarioService,
+    private router : Router
+  ) {
+
     usuarioService.listar().subscribe((resp : UsuarioListagem[]) =>{
       this.usuarios = resp
     })

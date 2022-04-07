@@ -1,7 +1,6 @@
 package br.com.technicalshare.api.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.Objects;

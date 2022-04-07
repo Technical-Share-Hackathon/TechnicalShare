@@ -2,6 +2,7 @@ import { UsuarioCompleto } from './../model/usuario-completo';
 import { UsuarioService } from './../services/usuario.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-atualizacao',
@@ -22,7 +23,7 @@ export class AtualizacaoComponent implements OnInit {
     private usuarioService : UsuarioService,
     private route: ActivatedRoute
   ) {
-    
+
     let idRotaAtiva = this.route.snapshot.params['id'];
 
     this.usuarioService.buscarUsuario(idRotaAtiva).subscribe((resp: UsuarioCompleto)=>{
@@ -40,6 +41,13 @@ export class AtualizacaoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  atualizarUsuario(){
+    this.usuarioService.atualizarUsuario(this.usuarioCompleto.id, this.usuarioCompleto)
+    .subscribe((resp: UsuarioCompleto)=>{
+      this.usuarioCompleto = resp;
+    })
   }
 
 }
