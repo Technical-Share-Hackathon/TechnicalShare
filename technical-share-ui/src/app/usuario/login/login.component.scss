@@ -1,0 +1,352 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container{
+      display: flex;
+  }
+
+.main1{
+    background-color: #404099;
+    position: absolute;
+    width: 726px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    flex-grow: 4;
+}
+
+#title {
+    position: absolute;
+    height: 54.12181091308594px;
+    width: 457.8172912597656px;
+    left: 149px;
+    top: 255px;
+    border-radius: nullpx;
+    font-family: Metropolis;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#FFFFFF;
+}
+
+#text{
+    position: absolute;
+    height: 113px;
+    width: 443px;
+    left: 149px;
+    top: 349px;
+    border-radius: nullpx;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.fundo1 {
+    position: absolute;
+    width: 582.92px;
+    height: 342.48px;
+    left: 87px;
+    top: 451px;
+}
+
+.main2{
+    background-color: #F7F1FF;
+    width: 100%;
+    height: 100%;
+    flex-grow: 6;
+}
+
+#title2 {
+    position: absolute;
+    width: 442px;  
+    height: 26px;
+    left: 849px;
+    top: 282px;
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    color: #151515;
+}
+
+#text2{
+    position: absolute;
+    width: 442px;
+    height: 20px;
+    left: 849px;
+    top: 367px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #151515;
+}
+
+.hr{
+    position: absolute;
+    width: 54.12px;
+    height: 0px;
+    left: 849px;
+    top: 403px;
+    border: 2px solid #1E1BAF;
+}
+
+#login{
+    position: absolute;
+    width: 111px;
+    height: 16px;
+    left: 849px;
+    top: 446px;
+    font-family: Metropolis;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #151515;
+}
+
+#caixa-cadastro-login{  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 12px;
+    position: absolute;
+    width: 443px;
+    height: 51px;
+    left: 849px;
+    top: 474px;
+    background: #FFFFFF;
+    border: 1px solid #FF4500;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#senha {
+    position: absolute;
+    width: 111px;  
+    height: 16px;
+    left: 849px;
+    top: 558px;
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #151515;
+}
+
+#caixa-cadastro-senha{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 12px;
+    position: absolute;
+    width: 443px;
+    height: 51px;
+    left: 849px;
+    top: 587px;
+    background: #FFFFFF;
+    border: 1px solid #B4AEBD;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#entrar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    position: absolute;
+    width: 442px;
+    height: 50px;
+    left: 849px;
+    top: 680px;
+    background: #FF4500;
+    color: #FFFFFF;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 1025px){
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main1{
+        position: absolute;
+        width: 100%;
+        height: 443px;
+        left: 0px;
+        top: 0px;
+        background: #404099;
+    }
+
+    #title{
+        position: absolute;
+        width: 309px;
+        height: 121px;
+        left: 16px;
+        top: 50px;
+        font-family: 'Metropolis';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 64px;
+        color: #FFFFFF;
+    }
+
+    #text{
+        position: absolute;
+        width: 381px;
+        height: 115px;
+        left: 17px;
+        top: 190px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400; 
+        font-size: 14px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+
+    .fundo1{
+        position: absolute;
+        width: 342px;
+        height: 219px;
+        left: 36px;
+        top: 288px;
+    }
+
+    #main2{
+        width: 100%;
+    }
+
+    #title2{
+        position: absolute;
+        width: 380px;
+        height: 26px;
+        left: 17px;
+        top: 504px;
+        font-family: 'Metropolis';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        color: #151515;
+    }
+
+    #text2{
+        position: absolute;
+        width: 380px;
+        height: 20px;
+        left: 17px;
+        top: 573px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #151515;
+    }
+
+    .hr{
+        position: absolute;
+        width: 47px;
+        height: 0px;
+        left: 17px;
+        top: 609px;
+        border: 2px solid #1E1BAF;
+    }
+
+    #login{
+        position: absolute;
+        width: 95px;
+        height: 16px;
+        left: 17px;
+        top: 652px;
+        font-family: Metropolis;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: #151515;
+    }
+
+    #senha{
+        position: absolute;
+        width: 95px;
+        height: 16px;
+        left: 17px;
+        top: 766px;
+        font-family: Metropolis;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: #151515;
+
+    }
+
+    #caixa-cadastro-login{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px 12px;
+        position: absolute;
+        width: 350px;
+        height: 51px;
+        left: 17px;
+        top: 682px;
+        background: #FFFFFF;
+        border: 1px solid #FC6027;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+
+    #caixa-cadastro-senha{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px 12px;
+        position: absolute;
+        width: 350px;
+        height: 51px;
+        left: 17px;
+        top: 792px;
+        background: #FFFFFF;
+        border: 1px solid #B4AEBD;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+
+    #entrar{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; 
+        padding: 8px;
+        position: absolute;
+        width: 381px;
+        height: 50px;
+        left: 17px;
+        top: 793px;
+        background: #FF4500;
+        border-radius: 8px;
+    }
+}
