@@ -9,15 +9,23 @@ import br.com.technicalshare.api.exception.EmailNaoExistenteException;
 import br.com.technicalshare.api.exception.SenhaInvalidaException;
 import br.com.technicalshare.api.exception.UsuarioNaoExistenteException;
 import br.com.technicalshare.api.models.Usuario;
-import br.com.technicalshare.api.repository.InteressesRepository;
 import br.com.technicalshare.api.repository.UsuarioRepository;
 import br.com.technicalshare.api.service.AuthService;
 import br.com.technicalshare.api.service.UsuarioService;
+import br.com.technicalshare.api.specification.SpecificationHard;
 import br.com.technicalshare.api.specification.SpecificationInteresse;
+import br.com.technicalshare.api.specification.SpecificationSoft;
+import br.com.technicalshare.api.specification.SpecificationUsuario;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.data.domain.Pageable;
+
 
 import java.util.List;
 import java.util.Optional;
@@ -37,16 +45,12 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
-    @Autowired
-    private InteressesRepository interessesRepository;
-
     @GetMapping
-    public ResponseEntity<List<UsuarioDtoSimples>> listarTodosOsUsuarios(){
-        List<Usuario> listaDeUsuarios = usuarioRepository.findAll();
+    public ResponseEntity<Page<UsuarioDtoSimples>> listarTodosOsUsuarios(
+            @PageableDefault(sort = "nome", direction = Sort.Direction.ASC,page = 0, size = 1) Pageable paginacao){
+        Page<Usuario> listaDeUsuarios = usuarioRepository.findAll(paginacao);
 
-        List<UsuarioDtoSimples> usuarioDtoSimples = listaDeUsuarios.stream()
-                .map(usuario -> new UsuarioDtoSimples(usuario))
-                .collect(Collectors.toList());
+        Page<UsuarioDtoSimples> usuarioDtoSimples = listaDeUsuarios.map(UsuarioDtoSimples::new);
 
         return ResponseEntity.ok(usuarioDtoSimples);
     }
@@ -54,7 +58,7 @@ public class UsuarioController {
     @GetMapping("/sugerir/{interesse}")
     public ResponseEntity<List<UsuarioDtoSimples>> listarUsuariosSugeridos(@PathVariable String interesse){
 
-        List<Usuario> usuariosRecomendadosPorInteresse = usuarioRepository.findAll(Specification.where(
+        List<Usuario> usuariosRecomendadosPorInteresse = this.usuarioRepository.findAll(Specification.where(
                 SpecificationInteresse.primeiroInteresse(interesse)
                         .or(SpecificationInteresse.segundoInteresse(interesse))
                         .or(SpecificationInteresse.terceiraInteresse(interesse))
@@ -66,6 +70,31 @@ public class UsuarioController {
                 usuario -> new UsuarioDtoSimples(usuario)).limit(3).collect(Collectors.toList());
 
         return ResponseEntity.ok(usuarioDtoSimples);
+    }
+
+
+    @GetMapping("/pesquisar/{filtro}")
+    public ResponseEntity listarUsuariosQualquerFiltro(@PathVariable String filtro,
+            @PageableDefault(sort = "nome", direction = Sort.Direction.ASC,page = 0, size = 1) Pageable paginacao){
+
+        Page<Usuario> usuariosPorFiltro = this.usuarioRepository.findAll(
+                    Specification.where(SpecificationUsuario.nomeParecidoCom(filtro)
+                        .or(SpecificationUsuario.emailParecidoCom(filtro))
+                        .or(SpecificationUsuario.profissaoParecidaCom(filtro))
+                        .or(SpecificationSoft.primeiraSoft(filtro))
+                        .or(SpecificationSoft.segundaSoft(filtro))
+                        .or(SpecificationSoft.terceiraSoft(filtro))
+                        .or(SpecificationSoft.quartaSoft(filtro))
+                        .or(SpecificationSoft.quintaSoft(filtro))
+                        .or(SpecificationHard.primeiraHard(filtro))
+                        .or(SpecificationHard.segundaHard(filtro))
+                        .or(SpecificationHard.terceiraHard(filtro))
+                        .or(SpecificationHard.quartaHard(filtro))
+                        .or(SpecificationHard.quintaHard(filtro))) , paginacao);
+
+        Page<UsuarioDtoSimples> usuarioDtoSimplesPagina = usuariosPorFiltro.map(UsuarioDtoSimples::new);
+
+        return  ResponseEntity.ok(usuarioDtoSimplesPagina);
     }
 
 

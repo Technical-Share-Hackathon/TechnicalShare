@@ -1,4 +1,13 @@
 <div class="container center">
+
+  <div class="row mt-2">
+    <div class="form-group">
+      <label for="foto">Pesquise qualquer coisa</label>
+      <input [(ngModel)]="filtro" name="filtro" type="text" class="form-control" id="filtro"
+      (keyup)='pesquisar(filtro)' >
+  </div>
+  </div>
+
   <div class="row justify-content-md-center" >
     <div class="col-3" *ngFor="let usuario of usuarios">
       <div class="card" style="width: 15rem;"  >
@@ -7,7 +16,7 @@
           <h5 class="card-title">{{ usuario.nome }}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{ usuario.profissaoAtual }}</h6>
           <p class="card-text">{{ usuario.resumo }} </p>
-          <a [routerLink]="['perfil', usuario.id]" class="btn btn-primary">Ver Perfil</a>
+          <a [routerLink]="['/usuarios/perfil', usuario.id]" class="btn btn-primary">Ver Perfil</a>
         </div>
       </div>
     </div>
@@ -17,11 +26,10 @@
     <nav aria-label="Page navigation example">
       <ul class="pagination">
         <li class="page-item" *ngFor="let indice of indicePaginas" >
-          <a class="page-link" (click)="trocarPagina(indice)">{{indice}}</a>
+          <a (click) = "trocarPagina(filtro, indice)" class="page-link">{{indice}}</a>
         </li>
       </ul>
     </nav>
   </div>
 
 </div>
-

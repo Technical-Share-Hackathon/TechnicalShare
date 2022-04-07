@@ -1,9 +1,9 @@
-import { UsuarioListagem } from './../model/usuario-listagem';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, first, tap } from 'rxjs';
 import { UsuarioLogin } from '../model/usuario-login';
 import { UsuarioCompleto } from '../model/usuario-completo';
+import { Pagina } from '../model/pagina';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +16,17 @@ export class UsuarioService {
 
   }
 
-  listar(): Observable<UsuarioListagem[]> {
-    return this.httpClient.get<UsuarioListagem[]>(this.API)
+
+  listarUsuariosPaginadosPorQualquerFiltro(filtro : string, numeroPagina : number): Observable<Pagina>{
+    return this.httpClient.get<Pagina>(`${this.API}/pesquisar/${filtro}?page=${numeroPagina}`)
+    .pipe(
+      first(),
+      tap(pagina => console.log(pagina))
+    )
+  }
+
+  listar(numeroPagina : number): Observable<Pagina> {
+    return this.httpClient.get<Pagina>(`${this.API}?page=${numeroPagina}`)
     .pipe(
       first(),
       tap(usuarios => console.log(usuarios))

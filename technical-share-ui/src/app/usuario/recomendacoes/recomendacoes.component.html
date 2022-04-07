@@ -1,16 +1,1 @@
-<div class="container center">
-  <div class="row justify-content-md-center" >
-    <div class="col-3" *ngFor="let usuario of usuarios">
-      <div class="card" style="width: 15rem;"  >
-        <img src="{{ usuario.linkFoto }}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{ usuario.nome }}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">{{ usuario.profissaoAtual }}</h6>
-          <p class="card-text">{{ usuario.resumo }}</p>
-          <a [routerLink]="['perfil', usuario.id]" class="btn btn-primary">Ver Perfil</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 

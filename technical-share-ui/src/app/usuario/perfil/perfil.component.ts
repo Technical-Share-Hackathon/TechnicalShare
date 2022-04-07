@@ -2,7 +2,7 @@
 import { UsuarioService } from './../services/usuario.service';
 import { UsuarioCompleto } from './../model/usuario-completo';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -23,10 +23,13 @@ export class PerfilComponent implements OnInit {
   constructor(
     private usuarioService : UsuarioService,
     private router : Router,
+    private route: ActivatedRoute
 
   ) {
 
-    usuarioService.buscarUsuario(1).subscribe((resp : UsuarioCompleto)=>{
+    let idRotaAtiva = this.route.snapshot.params['id'];
+
+    usuarioService.buscarUsuario(idRotaAtiva).subscribe((resp : UsuarioCompleto)=>{
 
       this.usuarioCompleto = resp
 
