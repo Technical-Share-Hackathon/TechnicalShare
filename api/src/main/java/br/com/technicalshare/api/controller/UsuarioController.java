@@ -2,12 +2,16 @@ package br.com.technicalshare.api.controller;
 
 import br.com.technicalshare.api.controller.dto.UsuarioDetalhadoDto;
 import br.com.technicalshare.api.controller.dto.UsuarioDtoSimples;
+import br.com.technicalshare.api.exception.SemPermissaoException;
+import br.com.technicalshare.api.controller.form.UsuarioFormAtualizacao;
 import br.com.technicalshare.api.controller.form.UsuarioFormLogin;
 import br.com.technicalshare.api.exception.EmailNaoExistenteException;
 import br.com.technicalshare.api.exception.SenhaInvalidaException;
+import br.com.technicalshare.api.exception.UsuarioNaoExistenteException;
 import br.com.technicalshare.api.models.Usuario;
 import br.com.technicalshare.api.repository.UsuarioRepository;
 import br.com.technicalshare.api.service.AuthService;
+import br.com.technicalshare.api.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,6 +31,9 @@ public class UsuarioController {
     @Autowired
     private AuthService authService;
 
+    @Autowired
+    private UsuarioService usuarioService;
+
     @GetMapping
     public ResponseEntity<List<UsuarioDtoSimples>> listarTodosOsUsuarios(){
         List<Usuario> listaDeUsuarios = usuarioRepository.findAll();
@@ -40,7 +47,7 @@ public class UsuarioController {
 
     @GetMapping("/{idUsuario}")
     public ResponseEntity<UsuarioDetalhadoDto> listarUsuario(@PathVariable Long idUsuario){
-        Optional<Usuario> usuario = usuarioRepository.findById(idUsuario);
+        Optional<Usuario> usuario = this.usuarioRepository.findById(idUsuario);
 
        if(usuario.isEmpty()){
            return ResponseEntity.notFound().build();
@@ -51,16 +58,35 @@ public class UsuarioController {
 
     @PostMapping("/logar")
     public ResponseEntity<UsuarioDetalhadoDto> logar(@RequestBody UsuarioFormLogin usuarioFormLogin){
-        Optional<Usuario> usuario = usuarioRepository.findByEmail(usuarioFormLogin.getEmail());
+        Optional<Usuario> usuario = this.usuarioRepository.findByEmail(usuarioFormLogin.getEmail());
 
         if (usuario.isEmpty()){
             throw new EmailNaoExistenteException("Email incorreto");
         }
 
-        if(!authService.validarSenha(usuario.get(), usuarioFormLogin.getSenha())){
+        if(!this.authService.validarSenha(usuario.get(), usuarioFormLogin.getSenha())){
             throw new SenhaInvalidaException("Senha incorreta");
         };
 
         return ResponseEntity.ok(new UsuarioDetalhadoDto(usuario.get()));
+    }
+
+    @PutMapping("/atualizar/{idUsuario}")
+    public ResponseEntity<UsuarioDetalhadoDto> atualizarUsuario(@PathVariable Long idUsuario,
+                                                                @RequestBody UsuarioFormAtualizacao userForm){
+
+        Optional<Usuario> usuario = this.usuarioRepository.findById(idUsuario);
+
+        if(usuario.isEmpty()){
+            throw new UsuarioNaoExistenteException("Usuário não existe no sistema");
+        }
+
+        if(idUsuario != userForm.getId()){
+            throw new SemPermissaoException("Você não pode fazer isso");
+        }
+
+        Usuario usuarioAtualizado = this.usuarioService.atualizarDados(usuario.get(), userForm);
+
+        return ResponseEntity.ok(new UsuarioDetalhadoDto(usuarioAtualizado));
     }
 }

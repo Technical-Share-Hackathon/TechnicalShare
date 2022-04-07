@@ -1,5 +1,8 @@
 package br.com.technicalshare.api.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -24,20 +27,23 @@ public class Usuario {
 
     private String senha;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "links_id")
     private LinksDisponiveis linksDisponiveis;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "soft_skills_id")
+    @JsonIgnore
     private SoftSkills softSkills;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "hard_skills_id")
+    @JsonIgnore
     private HardSkills hardSkills;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "interesses_id")
+    @JsonIgnore
     private AreaDeInteresse areaDeInteresse;
 
     public Long getId() {

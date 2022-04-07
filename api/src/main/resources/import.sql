@@ -18,4 +18,19 @@ INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, email, senha, int
 INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, email, senha, interesses_id, hard_skills_id, links_id, soft_skills_id) VALUES ( 'João Roberto Marinho','https://i.imgur.com/P1plcar.jpg','Tech Lead','Atuei em diversas empresas ao longo da carreira, sempre trabalhando em grandes bancos', 'maraira@hotmail.com', '1234', 2,2,2,3);
 INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, email, senha, interesses_id, hard_skills_id, links_id, soft_skills_id) VALUES ( 'Leila Joana','https://i.imgur.com/hUlZzld.jpg', 'Desenvolvedora FullStack', 'Já atuei em diversas tecnologias e stacks, uma verdadeira fullstack', 'lelei@hotmail.com', '1234', 1,3,1,1);
 
+UPDATE soft_skills SET usuario_id = 1 WHERE id_soft_skills = 1;
+UPDATE soft_skills SET usuario_id = 3 WHERE id_soft_skills = 2;
+UPDATE soft_skills SET usuario_id = 2 WHERE id_soft_skills = 3;
+
+UPDATE hard_skills SET usuario_id = 1 WHERE id_hard_skills = 1;
+UPDATE hard_skills SET usuario_id = 3 WHERE id_hard_skills = 2;
+UPDATE hard_skills SET usuario_id = 2 WHERE id_hard_skills = 3;
+
+UPDATE interesses SET usuario_id = 1 WHERE id_interesses = 1;
+UPDATE interesses SET usuario_id = 3 WHERE id_interesses = 2;
+UPDATE interesses SET usuario_id = 2 WHERE id_interesses = 3;
+
+
+
+
 

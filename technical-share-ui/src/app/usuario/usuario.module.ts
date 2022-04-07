@@ -6,13 +6,15 @@ import { UsuarioRoutingModule } from './usuario-routing.module';
 import { ListarUsuarioComponent } from './listar-usuario/listar-usuario.component';
 import { LogarComponent } from './logar/logar.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { AtualizacaoComponent } from './atualizacao/atualizacao.component';
 
 
 @NgModule({
   declarations: [
     ListarUsuarioComponent,
     LogarComponent,
-    PerfilComponent
+    PerfilComponent,
+    AtualizacaoComponent
   ],
   imports: [
     CommonModule,

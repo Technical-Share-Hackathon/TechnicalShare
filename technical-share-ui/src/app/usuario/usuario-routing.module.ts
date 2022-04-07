@@ -1,3 +1,4 @@
+import { AtualizacaoComponent } from './atualizacao/atualizacao.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { LogarComponent } from './logar/logar.component';
 import { ListarUsuarioComponent } from './listar-usuario/listar-usuario.component';
@@ -7,7 +8,8 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {path:'', component: ListarUsuarioComponent},
   {path:'logar', component: LogarComponent},
-  {path:'perfil', component: PerfilComponent}
+  {path:'perfil', component: PerfilComponent},
+  {path:'atualizar/:id', component: AtualizacaoComponent}
 ];
 
 @NgModule({

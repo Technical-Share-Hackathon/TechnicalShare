@@ -9,6 +9,12 @@
           <p class="card-text">{{ usuarioCompleto.resumo }}</p>
         </div>
       </div>
+      <div class="row mt-1 ml-2">
+        <button [routerLink]="['/usuarios/atualizar', usuarioCompleto.id]"
+        type="button" class="btn btn-info" >
+        Atualizar informações
+      </button>
+      </div>
     </div>
 
     <div class="col-4">
@@ -60,12 +66,12 @@
             <h3 class="badge badge-primary mr-2" *ngFor="let softSkill of softSkillsFiltrados" >
               {{ softSkill }}
            </h3>
-
           </div>
         </div>
       </div>
+
     </div>
   </div>
 
-  <div class="row"></div>
+
 </div>

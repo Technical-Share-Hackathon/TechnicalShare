@@ -1,5 +1,7 @@
 package br.com.technicalshare.api.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -24,6 +26,10 @@ public class AreaDeInteresse {
 
     @Column(name = "quinto_interesse")
     private String quintaAreaDeInteresse;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Usuario usuario;
 
     public Long getIdInteresses() {
         return idInteresses;
@@ -71,5 +77,13 @@ public class AreaDeInteresse {
 
     public void setQuintaAreaDeInteresse(String quintaAreaDeInteresse) {
         this.quintaAreaDeInteresse = quintaAreaDeInteresse;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

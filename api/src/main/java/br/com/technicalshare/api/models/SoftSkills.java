@@ -1,5 +1,7 @@
 package br.com.technicalshare.api.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -24,6 +26,10 @@ public class SoftSkills {
 
     @Column(name = "quinta_skill")
     private String quintaSoftSkill;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Usuario usuario;
 
     public Long getIdSoftSkills() {
         return idSoftSkills;
@@ -71,5 +77,13 @@ public class SoftSkills {
 
     public void setQuintaSoftSkill(String quintaSoftSkill) {
         this.quintaSoftSkill = quintaSoftSkill;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }
