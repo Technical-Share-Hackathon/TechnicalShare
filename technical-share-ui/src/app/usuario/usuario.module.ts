@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { UsuarioRoutingModule } from './usuario-routing.module';
+import { UsuarioRoutingModugle } from './usuario-routing.module';
 import { ListarUsuarioComponent } from './listar-usuario/listar-usuario.component';
 import { LoginComponent } from './login/login.component';
 
@@ -13,7 +13,7 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     CommonModule,
-    UsuarioRoutingModule
+    UsuarioRoutingModugle
   ]
 })
 export class UsuarioModule { }
