@@ -4,12 +4,18 @@
     box-sizing: border-box;
   }
 
+ body{
+     width: 100%;
+     height: 1350px;
+     background-color: #F7F1FF;
+ }
 
 .header{
     position: absolute;
     width: 100%;
     height: 85px;
-    top: -16px;
+    left: 0px;
+    top: 0px;
     background: #404099;
 }
 
@@ -46,42 +52,44 @@
 
 #coracao{
     position: absolute;
-    width: 20px;
-    height: 20px;
     left: 1002px;
+    right: -20%;
     top: 26px;
+    bottom: 15%;
+    box-sizing: border-box;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 #sininho{
     position: absolute;
-    width: 24px;
-    height: 24px;
-    left: 1159px;
-    top: 20px;
+    width: 20px;
+    height: 20px;
+    left: 1118px;
+    top: 26px;
 }
 
 #user{
-    position: absolute;  
-    width: 24px;
-    height: 24px;
-    left: 1251px; 
-    top: 22px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 1235px;
+    top: 26px;    
 }
 
 #saída{
-    position: absolute;   
-    width: 24px;
-    height: 24px;
-    left: 1315px;
-    top: 20px;
+    position: absolute;
+    left: 70%;
+    right: -30%;
+    top: 26px;
+    bottom: 35%;
+    border-radius: 1px;
 }
 
 #favoritos{
     position: absolute;
     width: 92px;
     height: 15px;
-    left: 966px;
+    left: 982px; 
     top: 49px;
     font-family: Montserrat;
     font-style: normal;
@@ -98,9 +106,9 @@
     position: absolute;
     width: 93px;
     height: 15px;
-    left: 1082px;
+    left: 1090px;
     top: 49px;
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -108,23 +116,23 @@
     display: flex;
     align-items: center;
     text-align: center;
-    color: #FFFFFF; 
+    color: #FFFFFF;
 }
 
 #perfil {
     position: absolute;
-    width: 93px;
+    width: 92px;
     height: 15px;
-    left: 1250px;
-    top: 47px;
-    font-family: 'Montserrat';
+    left: 1228px;
+    top: 49px;
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;  
+    font-size: 12px;
     line-height: 15px;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: center; 
     color: #FFFFFF;
 }
 
@@ -132,8 +140,8 @@
     position: absolute;
     width: 93px;
     height: 15px;
-    left: 1320px;
-    top: 47px;
+    left: 1330px;
+    top: 49px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
@@ -152,14 +160,16 @@
     left: 0px;
     top: 69px;
     background: rgba(64, 64, 153, 0.75);
+   
      
 }
 
 #fundo2{
-    position: absolute; 
+    position: absolute;
     width: 100%;
     height: 471px;
-    left: 2px;
+    left: 0px;
+    top: 69px;
     mix-blend-mode: multiply;
 }
 
@@ -334,12 +344,25 @@
 }
 
 
+#name{
+    font-family: Metropolis;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #404099;
+}
+
+
 #cargo{
     font-family: Montserrat;
-    font-style: normal; 
+    font-style: normal;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 14px;
+    line-height: 17px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -357,6 +380,14 @@
     background: #FFFFFF;
     border-radius: 50%;
     box-sizing: border-box;
+}
+
+#proximo{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 1338px;
+    top: 835px;  
 }
 
 #resultado-da-pesquisa{
@@ -394,6 +425,14 @@
     left: 1316px;
     top: 1192px;
     background: #FFFFFF;
-    border: 1px solid #CAC4D3;
     box-sizing: border-box;
+    border-radius: 50%;
+}
+
+#proximo2{   
+    position: absolute;
+    width: 50px;  
+    height: 50px;
+    left: 1338px;
+    top: 1213px;
 }

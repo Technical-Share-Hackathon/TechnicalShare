@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+   
 </head>
 
 <body>
@@ -29,7 +30,6 @@
     </header>
     
     <span id="retangulo">
-      <img src='../assets/fundo2.png' alt='Mulher rindo' id="fundo2">
       <h2 id="text">Encontre o #SangueLaranja que você precisa!</h2>
       <div id="barra">
       <input type="text" placeholder="Busque por habilidades, cargos ou nome do Sangue Laranja" id="barra-pesquisa">
@@ -57,7 +57,7 @@
     </div>
 
   
-     <h5 id="resultado-da-pesquisa"> Resultados da sua <b>Pesquisa</b> </h5>
+     <h5 id="resultado-da-pesquisa"> Pessoas do mesmo cargo </h5>
  
      <div id="result2">
         <div id="profile" *ngFor="let perfil of perfis">
@@ -72,13 +72,11 @@
 
     </main>
 
-    <div id="ver-mais">
-        <img src='../assets/proximo.png'>
-    </div>
+    <div id="ver-mais"></div>
+    <img src='../assets/proximo.png' id="proximo">
 
-    <div id="ver-mais2">
-        <img src='../assets/proximo.png'>
-    </div>   
+    <div id="ver-mais2"></div>   
+    <img src='../assets/proximo.png' id="proximo2">
 
     <script src="./src/assets/js/home.js" type="text/javascript"></script>
 
