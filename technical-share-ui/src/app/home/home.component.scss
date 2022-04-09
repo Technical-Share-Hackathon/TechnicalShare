@@ -4,9 +4,6 @@
     box-sizing: border-box;
   }
 
-body{
-    background-color: red;
-}
 
 .header{
     position: absolute;
@@ -20,7 +17,7 @@ body{
     position: absolute;
     left: 2.01%;
     right: 89.65%;
-    top: 26.99%;
+    top: 28.99%;
     bottom: 96.13%;
 }
 
@@ -49,11 +46,10 @@ body{
 
 #coracao{
     position: absolute;
-    width: 29.22px;
-    height: 24px;
-    left: 1053px;
-    top: 20px;
-
+    width: 20px;
+    height: 20px;
+    left: 1002px;
+    top: 26px;
 }
 
 #sininho{
@@ -82,11 +78,11 @@ body{
 }
 
 #favoritos{
-    position: absolute; 
-    width: 93px;
+    position: absolute;
+    width: 92px;
     height: 15px;
-    left: 1040px;
-    top: 47px;
+    left: 966px;
+    top: 49px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
@@ -99,12 +95,12 @@ body{
 }
 
 #notificações{
-    position: absolute;   
+    position: absolute;
     width: 93px;
     height: 15px;
-    left: 1140px;
-    top: 47px;
-    font-family: Montserrat;
+    left: 1082px;
+    top: 49px;
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -112,7 +108,7 @@ body{
     display: flex;
     align-items: center;
     text-align: center;
-    color: #FFFFFF;
+    color: #FFFFFF; 
 }
 
 #perfil {
@@ -266,38 +262,34 @@ body{
     border-radius: 8px;
 }
 
-#qa{
-    position: absolute;
-    width: 49.91px;
-    height: 24px;
-    left: 414.5px;
-    top: 612px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 10px;
-    line-height: 12px;
+#figma{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    color: #A3A3A3;
+    padding: 8px;
+    position: absolute;
+    width: 158px;
+    height: 38px;
+    left: 581px;
+    top: 660px;
+    background: #E0DAE9;
+    border-radius: 8px;
 }
 
-#pa {
-    position: absolute;
-    width: 49.91px;
-    height: 24px;
-    left: 464.4px;
-    top: 612px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 10px;
-    line-height: 12px;
+#metodologia-agil {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    color: #A3A3A3;
+    padding: 8px;
+    position: absolute;
+    width: 202px;
+    height: 38px;
+    left: 763px;
+    top: 660px;
+    background: #E0DAE9;
+    border-radius: 8px;
 }
 
 #po{
@@ -326,7 +318,7 @@ body{
     width: 1146px;
     height: 259px;
     left: 149px;
-    top: 712px;
+    top: 750px;
 }
 
 #profile{
@@ -357,13 +349,14 @@ body{
 }
 
 #ver-mais{
-    position: absolute; 
-    width: 100px;
-    height: 100px;
-    left: 1278px;
-    top: 832px;
-    background: #E1E1E1;
-    border-radius: 50px;
+    position: absolute;
+    width: 92px; 
+    height: 92px;
+    left: 1316px;
+    top: 814px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    box-sizing: border-box;
 }
 
 #resultado-da-pesquisa{
@@ -372,7 +365,7 @@ body{
     height: 36px;
     left: 149px;
     top: 998px;
-    font-family: 'Metropolis';
+    font-family: Metropolis;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -391,14 +384,16 @@ body{
     height: 259px;
     left: 149px;
     top: 1060px;
+    background-color: #F7F1FF;
 }
 
 #ver-mais2{
     position: absolute;
-    width: 100px;
-    height: 100px;
-    left: 1278px;
-    top: 1164px;
-    background: #E1E1E1;
-    border-radius: 50px;
+    width: 92px;
+    height: 92px;
+    left: 1316px;
+    top: 1192px;
+    background: #FFFFFF;
+    border: 1px solid #CAC4D3;
+    box-sizing: border-box;
 }

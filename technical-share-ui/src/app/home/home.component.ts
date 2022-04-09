@@ -11,12 +11,14 @@ export class HomeComponent implements OnInit {
     {name: "Marcelo Silva", cargo: "Product Designer"},
     {name: "Marcelo Silva", cargo: "Product Designer"},
     {name: "Marcelo Silva", cargo: "Product Designer"},
-    {name: "Marcelo Silva", cargo: "Product Designer"}   
+    
+    
   ];
 
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
