@@ -127,9 +127,19 @@ UPDATE hard_skills SET usuario_id = 12 WHERE id_hard_skills = 12
 UPDATE soft_skills SET usuario_id = 12 WHERE id_soft_skills = 12
 
 INSERT INTO experiencia (cargo, descricao, empresa, inicio, termino, usuario_id) VALUES ("Desenvolvedor Jr", "Desenvolvimento e refatoração de programas de rotina batch", "Stefanini", '2021-07-01', '2022-01-05', 9)
+----12-
+
+INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email) VALUES ( 'João Roberto Marinho','https://i.imgur.com/P1plcar.jpg','Tech Lead','Atuei em diversas empresas ao longo dos meus 6 anos de carreira, acredito que a motivação e estudo encurtam qualquer distância entre uma pessoa e o domínio técnico de algo.','Senior', 'Tokyo', 'joaorm@fcamara.com');
+INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5511999999999”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=user@domain.com”%3EChat with User')
+INSERT INTO hard_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Google Analytics', 'Hotjar', 'Google Optimize', 'Google Tagmanager', 'H.E.A.R.T.')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Resiliência', 'Flexibilidade', 'Comunicação', 'Confiança', 'Organização e gestão do tempo')
 
 
-
+UPDATE usuario SET hard_skills_id = 12 WHERE id = 12;
+UPDATE usuario SET soft_skills_id = 12 WHERE id = 12;
+UPDATE hard_skills SET usuario_id = 12 WHERE id_hard_skills = 12
+UPDATE soft_skills SET usuario_id = 12 WHERE id_soft_skills = 12
+UPDATE usuario SET links_id = 13 WHERE id = 13
 
 
 
