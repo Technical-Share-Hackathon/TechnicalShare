@@ -38,7 +38,7 @@
     </span>
 
     <main>
-        <p id ="sugestões"> Sugestões </p>
+        <h5 id ="sugestões"> Sugestões de acordo com seus interesses </h5>
 
         <nav>
             <p id ="design"> Design </p>
@@ -49,10 +49,35 @@
         </nav>
 
     <div id="result">
-
+      <div id="profile" *ngFor="let perfil of perfis">
+          <img src="./assets/profile.png" alt="Foto de perfil" id="pic"> 
+          <h6 id ="name"> {{perfil.name}} </h6>
+          <p id="cargo"> {{perfil.cargo}} </p>
+      </div>   
     </div>
+
+    <div id="ver-mais">
+        <img src='../assets/proximo.png'>
+    </div>
+
+     <h5 id="resultado-da-pesquisa"> Resultados da sua <b>Pesquisa</b> </h5>
+ 
+     <div id="result2">
+        <div id="profile" *ngFor="let perfil of perfis">
+            <img src="../assets/profile.png" alt="Foto de perfil"id="pic"> 
+            <h6 id ="name"> {{perfil.name}} </h6>
+            <p id="cargo"> {{perfil.cargo}} </p>   
+        </div> 
+    </div>
+
+    <div id="ver-mais2">
+        <img src='../assets/proximo.png'>
+    </div>   
+     
 
     </main>
 
 </body>
 </html>
+
+

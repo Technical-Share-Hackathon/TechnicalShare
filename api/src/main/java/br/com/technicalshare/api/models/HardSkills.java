@@ -1,4 +1,6 @@
-package br.com.technicalshare.api.modelos;
+package br.com.technicalshare.api.models;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 
@@ -8,7 +10,7 @@ public class HardSkills {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idHardSkills;
 
     @Column(name = "primeira_skill")
     private String primeiraHardSkill;
@@ -25,12 +27,16 @@ public class HardSkills {
     @Column(name = "quinta_skill")
     private String quintaHardSkill;
 
-    public Long getId() {
-        return id;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Usuario usuario;
+
+    public Long getIdHardSkills() {
+        return idHardSkills;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdHardSkills(Long idHardSkills) {
+        this.idHardSkills = idHardSkills;
     }
 
     public String getPrimeiraHardSkill() {
@@ -71,5 +77,13 @@ public class HardSkills {
 
     public void setQuintaHardSkill(String quintaHardSkill) {
         this.quintaHardSkill = quintaHardSkill;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

@@ -1,4 +1,6 @@
-package br.com.technicalshare.api.modelos;
+package br.com.technicalshare.api.models;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 
@@ -8,7 +10,7 @@ public class AreaDeInteresse {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idInteresses;
 
     @Column(name = "primeiro_interesse")
     private String primeiraAreaDeInteresse;
@@ -25,12 +27,16 @@ public class AreaDeInteresse {
     @Column(name = "quinto_interesse")
     private String quintaAreaDeInteresse;
 
-    public Long getId() {
-        return id;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Usuario usuario;
+
+    public Long getIdInteresses() {
+        return idInteresses;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdInteresses(Long idInteresses) {
+        this.idInteresses = idInteresses;
     }
 
     public String getPrimeiraAreaDeInteresse() {
@@ -71,5 +77,13 @@ public class AreaDeInteresse {
 
     public void setQuintaAreaDeInteresse(String quintaAreaDeInteresse) {
         this.quintaAreaDeInteresse = quintaAreaDeInteresse;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

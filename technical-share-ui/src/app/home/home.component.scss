@@ -5,14 +5,13 @@
   }
 
 body{
-    background-color: #F7F1FF;
+    background-color: red;
 }
 
 .header{
     position: absolute;
     width: 100%;
     height: 85px;
-    left: 2px;
     top: -16px;
     background: #404099;
 }
@@ -154,9 +153,10 @@ body{
     position: absolute;
     width: 100%;
     height: 471px;
-    left: 2px;
-    top: 85px;
-    background:#404099;   
+    left: 0px;
+    top: 69px;
+    background: rgba(64, 64, 153, 0.75);
+     
 }
 
 #fundo2{
@@ -223,51 +223,47 @@ body{
 }
 
 #sugestões{
-    position: absolute;  
-    width: 306px;
+    position: absolute; 
+    width: 590px;
     height: 33px;
-    left: 210px;
-    top: 579px;
-    font-family: Roboto;
+    left: 149px;
+    top: 608px;
+    font-family: Metropolis;
     font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-    color: #30006C;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #404099;
 }
 
 #design{
-    position: absolute;
-    width: 42.6px;
-    height: 12px;
-    left: 224.61px;
-    top: 618px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 10px;
-    line-height: 12px; 
-    display: flex;
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    color: #636363;
+    padding: 8px;
+    position: absolute;
+    width: 209px;
+    height: 38px;
+    left: 149px;
+    top: 660px;
+    background: #FFBAA3;
+    border-radius: 8px;
 }
 
 #ux{
-    position: absolute;  
-    width: 132.68px;
-    height: 24px;
-    left: 281.82px;
-    top: 612px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 10px;
-    line-height: 12px;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    color: #A3A3A3;
+    padding: 8px;
+    position: absolute;
+    width: 175px;
+    height: 38px;
+    left: 382px;
+    top: 660px;
+    background: #E0DAE9;
+    border-radius: 8px;
 }
 
 #qa{
@@ -327,8 +323,82 @@ body{
     align-items: flex-start;
     padding: 0px;
     position: absolute;
-    width: 1146px;  
+    width: 1146px;
     height: 259px;
-    left: 32px;
-    top: 716px;
+    left: 149px;
+    top: 712px;
+}
+
+#profile{
+    position: static;
+    width: 210px;
+    height: 259px;
+    left: 0px;
+    top: 0px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 24px;
+}
+
+
+#cargo{
+    font-family: Montserrat;
+    font-style: normal; 
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.15em;
+    font-variant: small-caps;
+    color: #4E4956;
+}
+
+#ver-mais{
+    position: absolute; 
+    width: 100px;
+    height: 100px;
+    left: 1278px;
+    top: 832px;
+    background: #E1E1E1;
+    border-radius: 50px;
+}
+
+#resultado-da-pesquisa{
+    position: absolute;
+    width: 1370px;
+    height: 36px;
+    left: 149px;
+    top: 998px;
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #404099;
+}
+
+
+#result2{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    width: 1146px; 
+    height: 259px;
+    left: 149px;
+    top: 1060px;
+}
+
+#ver-mais2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 1278px;
+    top: 1164px;
+    background: #E1E1E1;
+    border-radius: 50px;
 }

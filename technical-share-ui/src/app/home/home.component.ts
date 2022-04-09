@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  perfis = [
+    {name: "Marcelo Silva", cargo: "Product Designer"},
+    {name: "Marcelo Silva", cargo: "Product Designer"},
+    {name: "Marcelo Silva", cargo: "Product Designer"},
+    {name: "Marcelo Silva", cargo: "Product Designer"},
+    {name: "Marcelo Silva", cargo: "Product Designer"}   
+  ];
 
   constructor() { }
 
