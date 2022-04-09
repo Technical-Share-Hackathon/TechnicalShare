@@ -1,9 +1,13 @@
 package br.com.technicalshare.api.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Objects;
+
+import java.util.List;
 
 @Entity
 public class Usuario {
@@ -22,9 +26,16 @@ public class Usuario {
 
     private String resumo;
 
+    private String squad;
+
+    private String nivelSenioridade;
+
     private String email;
 
     private String senha;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario")
+    private List<Experiencia> experiencias = new ArrayList<>();
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "links_id")
@@ -131,6 +142,30 @@ public class Usuario {
 
     public void setAreaDeInteresse(AreaDeInteresse areaDeInteresse) {
         this.areaDeInteresse = areaDeInteresse;
+    }
+
+    public List<Experiencia> getExperiencias() {
+        return experiencias;
+    }
+
+    public void setExperiencias(List<Experiencia> experiencias) {
+        this.experiencias = experiencias;
+    }
+
+    public String getSquad() {
+        return squad;
+    }
+
+    public void setSquad(String squad) {
+        this.squad = squad;
+    }
+
+    public String getNivelSenioridade() {
+        return nivelSenioridade;
+    }
+
+    public void setNivelSenioridade(String nivelSenioridade) {
+        this.nivelSenioridade = nivelSenioridade;
     }
 
     @Override

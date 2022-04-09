@@ -2,6 +2,8 @@ package br.com.technicalshare.api.controller.dto;
 
 import br.com.technicalshare.api.models.*;
 
+import java.util.List;
+
 public class UsuarioDetalhadoDto {
 
     private Long id;
@@ -11,6 +13,10 @@ public class UsuarioDetalhadoDto {
     private String linkFoto;
 
     private String profissaoAtual;
+
+    private String squad;
+
+    private String nivelSenioridade;
 
     private String resumo;
 
@@ -24,6 +30,8 @@ public class UsuarioDetalhadoDto {
 
     private LinksDisponiveis linksDisponiveis;
 
+    private List<Experiencia> experiencias;
+
     public UsuarioDetalhadoDto(Usuario usuario) {
         this.id = usuario.getId();
         this.nome = usuario.getNome();
@@ -34,7 +42,13 @@ public class UsuarioDetalhadoDto {
         this.linksDisponiveis = usuario.getLinksDisponiveis();
         this.softSkills = usuario.getSoftSkills();
         this.hardSkills = usuario.getHardSkills();
-        this.areaDeInteresse = usuario.getAreaDeInteresse();
+
+        this.areaDeInteresse = usuario.getAreaDeInteresse() != null ?
+                usuario.getAreaDeInteresse() :  new AreaDeInteresse();
+
+        this.experiencias = usuario.getExperiencias();
+        this.nivelSenioridade = usuario.getNivelSenioridade();
+        this.squad = usuario.getSquad();
     }
 
     public Long getId() {
@@ -75,5 +89,17 @@ public class UsuarioDetalhadoDto {
 
     public LinksDisponiveis getLinksDisponiveis() {
         return linksDisponiveis;
+    }
+
+    public List<Experiencia> getExperiencias() {
+        return experiencias;
+    }
+
+    public String getSquad() {
+        return squad;
+    }
+
+    public String getNivelSenioridade() {
+        return nivelSenioridade;
     }
 }

@@ -1,3 +1,4 @@
+import { UsuarioListagem } from './../model/usuario-listagem';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, first, tap } from 'rxjs';
@@ -27,6 +28,14 @@ export class UsuarioService {
 
   listar(numeroPagina : number): Observable<Pagina> {
     return this.httpClient.get<Pagina>(`${this.API}?page=${numeroPagina}`)
+    .pipe(
+      first(),
+      tap(usuarios => console.log(usuarios))
+    );
+  }
+
+  listarUsuariosPorInteresse(interesse : string, pagina : number) : Observable<Pagina>{
+    return this.httpClient.get<Pagina>(`${this.API}/sugerir/${interesse}?page=${pagina}`)
     .pipe(
       first(),
       tap(usuarios => console.log(usuarios))

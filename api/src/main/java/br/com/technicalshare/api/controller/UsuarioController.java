@@ -47,7 +47,7 @@ public class UsuarioController {
 
     @GetMapping
     public ResponseEntity<Page<UsuarioDtoSimples>> listarTodosOsUsuarios(
-            @PageableDefault(sort = "nome", direction = Sort.Direction.ASC,page = 0, size = 1) Pageable paginacao){
+            @PageableDefault(sort = "nome", direction = Sort.Direction.ASC,page = 0, size = 4) Pageable paginacao){
         Page<Usuario> listaDeUsuarios = usuarioRepository.findAll(paginacao);
 
         Page<UsuarioDtoSimples> usuarioDtoSimples = listaDeUsuarios.map(UsuarioDtoSimples::new);
@@ -56,26 +56,31 @@ public class UsuarioController {
     }
 
     @GetMapping("/sugerir/{interesse}")
-    public ResponseEntity<List<UsuarioDtoSimples>> listarUsuariosSugeridos(@PathVariable String interesse){
+    public ResponseEntity<Page<UsuarioDtoSimples>> listarUsuariosSugeridos(@PathVariable String interesse,
+            @PageableDefault(sort = "nome", direction = Sort.Direction.ASC,page = 0, size = 4) Pageable paginacao){
 
-        List<Usuario> usuariosRecomendadosPorInteresse = this.usuarioRepository.findAll(Specification.where(
-                SpecificationInteresse.primeiroInteresse(interesse)
-                        .or(SpecificationInteresse.segundoInteresse(interesse))
-                        .or(SpecificationInteresse.terceiraInteresse(interesse))
-                        .or(SpecificationInteresse.quartoInteresse(interesse))
-                        .or(SpecificationInteresse.quintoInteresse(interesse))
-        ));
+        Page<Usuario> usuariosRecomendadosPorInteresse = this.usuarioRepository.findAll(Specification.where(
+                SpecificationHard.primeiraHard(interesse)
+                        .or(SpecificationHard.segundaHard(interesse))
+                        .or(SpecificationHard.terceiraHard(interesse))
+                        .or(SpecificationHard.quartaHard(interesse))
+                        .or(SpecificationHard.quintaHard(interesse))
+                        .or(SpecificationSoft.primeiraSoft(interesse))
+                        .or(SpecificationSoft.segundaSoft(interesse))
+                        .or(SpecificationSoft.terceiraSoft(interesse))
+                        .or(SpecificationSoft.quartaSoft(interesse))
+                        .or(SpecificationSoft.quintaSoft(interesse))
+        ), paginacao);
 
-        List<UsuarioDtoSimples> usuarioDtoSimples = usuariosRecomendadosPorInteresse.stream().map(
-                usuario -> new UsuarioDtoSimples(usuario)).limit(3).collect(Collectors.toList());
+        Page<UsuarioDtoSimples> usuarioDtoSimples = usuariosRecomendadosPorInteresse.map(UsuarioDtoSimples::new);
 
         return ResponseEntity.ok(usuarioDtoSimples);
     }
 
 
     @GetMapping("/pesquisar/{filtro}")
-    public ResponseEntity listarUsuariosQualquerFiltro(@PathVariable String filtro,
-            @PageableDefault(sort = "nome", direction = Sort.Direction.ASC,page = 0, size = 1) Pageable paginacao){
+    public ResponseEntity<Page<UsuarioDtoSimples>> listarUsuariosQualquerFiltro(@PathVariable String filtro,
+            @PageableDefault(sort = "nome", direction = Sort.Direction.ASC,page = 0, size = 4) Pageable paginacao){
 
         Page<Usuario> usuariosPorFiltro = this.usuarioRepository.findAll(
                     Specification.where(SpecificationUsuario.nomeParecidoCom(filtro)

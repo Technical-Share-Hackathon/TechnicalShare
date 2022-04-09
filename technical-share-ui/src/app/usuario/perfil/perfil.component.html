@@ -1,77 +1,77 @@
-<div class="container justify-content-center mt-5">
+<div class="container  mt-5 mb-3">
   <div class="row">
-    <div class="col-4">
-      <div class="card" style="width: 18rem">
-        <img src="{{ usuarioCompleto.linkFoto }}" class="card-img-top" alt="..." />
+
+    <div class="col-sm-2 col-md-12 col-lg-4 col-xl-3">
+
+      <div class="card p-3 text-center card-style">
+        <div>
+          <img src="{{ usuarioCompleto.linkFoto}}" class=" rounded-circle img-style">
+        </div>
+
         <div class="card-body">
-          <h5 class="card-title">{{ usuarioCompleto.nome }}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">{{ usuarioCompleto.profissaoAtual }}</h6>
-          <p class="card-text">{{ usuarioCompleto.resumo }}</p>
+          <h5 class="card-title">{{usuarioCompleto.nome}}</h5>
+          <h6 class="card-subtitle" > {{usuarioCompleto.profissaoAtual}} </h6>
+          <div class="mt-5">
+            <p> {{usuarioCompleto.nivelSenioridade}}</p>
+          </div>
+          <div>
+            <p>{{usuarioCompleto.squad}}</p>
+          </div>
+          <div>
+            <a [href]="'https://www.microsoft.com/pt-br/microsoft-teams/log-in'" target="_blank" type="button" class="btn btn-outline-danger btn-block mt-1" >Teams</a>
+          </div>
+          <div>
+            <button type="button" class="btn btn-outline-danger btn-block mt-1" >Email</button>
+          </div>
+          <div>
+            <button type="button" class="btn btn-outline-danger btn-block mt-1" >Fale no Whatsapp</button>
+          </div>
         </div>
+
       </div>
-      <div class="row mt-1 ml-2">
-        <button [routerLink]="['/usuarios/atualizar', usuarioCompleto.id]"
-        type="button" class="btn btn-info" >
-        Atualizar informações
-      </button>
-      </div>
+
     </div>
 
-    <div class="col-4">
-      <div class="row">
-        <div class="card" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title">Interesses</h5>
-            <h3 class="badge badge-primary mr-2" *ngFor="let interesse of interessesFiltrados">
-              {{interesse}}
-           </h3>
-          </div>
+    <div class="col-sm-2 col-md-12 col-lg-8 col-xl-6 mt-2">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Resumo</h5>
+          <p class="card-text">{{usuarioCompleto.resumo}}</p>
         </div>
-      </div>
 
-      <div class="row mt-2">
-        <div class="card" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title">Meus links</h5>
-
-             <h3 class="badge badge-primary mr-2">
-               {{usuarioCompleto.linksDisponiveis.linkWhats}}
-            </h3>
-            <h3 class="badge badge-primary mr-2">
-              {{usuarioCompleto.linksDisponiveis.linkTeams}}
-           </h3>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-4">
-
-      <div class="row">
-        <div class="card" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title">Minhas Hard Skills</h5>
-             <h3 class="badge badge-primary mr-2" *ngFor="let hardSkill of hardSkillsFiltrados" >
-               {{ hardSkill }}
-            </h3>
-          </div>
-        </div>
-      </div>
-
-      <div class="row mt-2">
-        <div class="card " style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title">Minhas Soft Skills</h5>
-
-            <h3 class="badge badge-primary mr-2" *ngFor="let softSkill of softSkillsFiltrados" >
-              {{ softSkill }}
-           </h3>
+        <div class="card-body">
+          <h5 class="card-title">Experiência</h5>
+          <div *ngFor="let experiencia of usuarioCompleto.experiencias">
+            <h6>{{experiencia.cargo}}</h6>
+            <p>inicio: {{experiencia.inicio}} fim:{{experiencia.termino}}</p>
+            <p class="card-text">{{experiencia.descricao}}</p>
           </div>
         </div>
       </div>
 
     </div>
+
+    <div class="col-sm-2 col-md-12 col-lg-12 col-xl-3 mt-2">
+
+      <div class="card p-3 text-center card-style">
+        <div class="card-body">
+          <h5 class="card-title">Soft Skills</h5>
+          <div *ngFor="let soft of softSkillsFiltrados" >
+            <button type="button" class="btn btn-outline-danger btn-block mt-1" >{{soft}}</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card p-3 text-center card-style mt-2">
+        <div class="card-body">
+          <h5 class="card-title"> Hard Skills </h5>
+          <div *ngFor="let hard of hardSkillsFiltrados" >
+            <button type="button" class="btn btn-outline-danger btn-block mt-1" >{{hard}}</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
-
-
 </div>

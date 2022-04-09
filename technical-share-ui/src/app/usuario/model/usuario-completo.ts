@@ -1,4 +1,5 @@
 import { AreasDeInteresse } from "./areas-de-interesse";
+import { Experiencia } from "./experiencia";
 import { HardSkills } from "./hard-skills";
 import { LinksDisponiveis } from "./links-disponiveis";
 import { SoftSkills } from "./soft-skills";
@@ -13,11 +14,14 @@ export class UsuarioCompleto {
 
   public profissaoAtual! : string;
 
+  public squad! : string;
+
+  public nivelSenioridade! : string;
+
   public resumo!: string;
 
   public email! : string;
 
-  public senha! : string;
 
   public linksDisponiveis! : LinksDisponiveis;
 
@@ -26,4 +30,6 @@ export class UsuarioCompleto {
   public hardSkills! : HardSkills;
 
   public areaDeInteresse! : AreasDeInteresse;
+
+  public experiencias! : Experiencia[]
 }

@@ -20,6 +20,7 @@ export class PerfilComponent implements OnInit {
 
   softSkillsFiltrados : string[] = []
 
+
   constructor(
     private usuarioService : UsuarioService,
     private router : Router,
