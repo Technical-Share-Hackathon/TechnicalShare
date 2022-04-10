@@ -57,7 +57,7 @@ public class UsuarioController {
 
     @GetMapping("/sugerir/{interesse}")
     public ResponseEntity<Page<UsuarioDtoSimples>> listarUsuariosSugeridos(@PathVariable String interesse,
-            @PageableDefault(sort = "nome", direction = Sort.Direction.ASC,page = 0, size = 4) Pageable paginacao){
+            @PageableDefault(sort = "nome", direction = Sort.Direction.ASC,page = 0, size = 3) Pageable paginacao){
 
         Page<Usuario> usuariosRecomendadosPorInteresse = this.usuarioRepository.findAll(Specification.where(
                 SpecificationHard.primeiraHard(interesse)

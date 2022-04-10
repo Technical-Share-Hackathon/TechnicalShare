@@ -7,8 +7,6 @@ import { ListarUsuarioComponent } from './listar-usuario/listar-usuario.componen
 import { LogarComponent } from './logar/logar.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { AtualizacaoComponent } from './atualizacao/atualizacao.component';
-import { RecomendacoesComponent } from './recomendacoes/recomendacoes.component';
-import { ListagemPesquisaComponent } from './listagem-pesquisa/listagem-pesquisa.component';
 
 
 
@@ -18,8 +16,7 @@ import { ListagemPesquisaComponent } from './listagem-pesquisa/listagem-pesquisa
     LogarComponent,
     PerfilComponent,
     AtualizacaoComponent,
-    RecomendacoesComponent,
-    ListagemPesquisaComponent
+
   ],
   imports: [
     CommonModule,

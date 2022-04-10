@@ -16,24 +16,37 @@ export class ListarUsuarioComponent implements OnInit {
 
   paginaUsuariosSugeridos : Pagina = new Pagina
   totalPaginasUsuariosSugeridos : number = 0
-  interesses : string[] = ["backend", "java", "typescrip","angular", "Docker"]
-  indicePaginasSugeridos: number[] = []
+  numeroDaPaginaSugeridos : number = 0;
+  ultimaPaginaSugeridos : boolean = false
 
   interesseAtual : string ="";
 
+  interesses : string[] = ["figma", "java", "typescrip","angular", "Docker"]
 
+  usuariosSugeridosPorProfissao: UsuarioListagem[] = []
+  paginaUsuariosPorProfissao : Pagina = new Pagina
+  totalPaginasUsuariosPorProfissao: number = 0
+  ultimaPaginaProfissao: boolean = false
+  numeroDapaginaUsuariosProfissao : number = 0
 
-  usuariosPesquisados : UsuarioListagem[] = []
-  paginaUsuariosPesquisados : Pagina = new Pagina
-  totalPaginasUsuariosPesquisados : number = 0
-  indicePaginasPesquisados: number[] = []
-
-  filtro : string = ""
+  profissao : string = "UX"
 
   constructor(
     private usuarioService: UsuarioService,
     private router : Router
   ) {
+
+      this.usuarioService.listarUsuariosPaginadosPorQualquerFiltro(this.profissao, 0)
+      .subscribe((resp : Pagina) =>{
+
+        this.paginaUsuariosPorProfissao = resp
+        this.totalPaginasUsuariosPorProfissao = resp.totalPages
+        this.ultimaPaginaProfissao = resp.last
+        this.numeroDapaginaUsuariosProfissao = resp.number
+
+        this.usuariosSugeridosPorProfissao = resp.content
+
+      })
 
   }
 
@@ -41,65 +54,90 @@ export class ListarUsuarioComponent implements OnInit {
 
   }
 
-  pesquisarUsuariosSugerdos(interesse : string){
+  pesquisarUsuariosSugeridos(interesse : string){
     this.interesseAtual = interesse;
     this.usuarioService.listarUsuariosPorInteresse(interesse, 0)
     .subscribe((resp : Pagina)=>{
 
       this.paginaUsuariosSugeridos = resp
+      this.numeroDaPaginaSugeridos = resp.number
       this.totalPaginasUsuariosSugeridos = resp.totalPages
+      this.ultimaPaginaSugeridos = resp.last
 
       this.usuariosSugeridos = resp.content
 
-      this.indicePaginasSugeridos = []
-
-      for(let i = 1; i <= this.totalPaginasUsuariosSugeridos ; i++){
-        this.indicePaginasSugeridos.push(i)
-      }
     })
   }
 
-  trocarPagina(interesseAtual: string, pagina : number){
-    this.usuarioService.listarUsuariosPorInteresse(interesseAtual, pagina - 1)
+  retrocederPagina(interesseAtual: string){
+
+    if(this.numeroDaPaginaSugeridos !== 0){
+      this.numeroDaPaginaSugeridos -= 1
+    }
+
+    this.usuarioService.listarUsuariosPorInteresse(interesseAtual, this.numeroDaPaginaSugeridos)
     .subscribe((resp : Pagina) =>{
 
       this.paginaUsuariosSugeridos = resp
-      this.totalPaginasUsuariosSugeridos = resp.totalPages
+      this.numeroDaPaginaSugeridos = resp.number
 
       this.usuariosSugeridos = resp.content
-
     })
   }
 
-  pesquisar( filtro: string ){
-    this.usuarioService.listarUsuariosPaginadosPorQualquerFiltro(filtro, 0)
+  avancarPagina(interesseAtual: string){
+
+    if(this.ultimaPaginaSugeridos === true){
+      this.numeroDaPaginaSugeridos = this.numeroDaPaginaSugeridos
+    }else{
+      this.numeroDaPaginaSugeridos = this.numeroDaPaginaSugeridos + 1
+    }
+
+    this.usuarioService.listarUsuariosPorInteresse(interesseAtual, this.numeroDaPaginaSugeridos)
     .subscribe((resp : Pagina) =>{
 
-      this.paginaUsuariosPesquisados = resp
-      this.totalPaginasUsuariosPesquisados = resp.totalPages
+      this.paginaUsuariosSugeridos = resp
+      this.numeroDaPaginaSugeridos = resp.number
 
-      this.usuariosPesquisados = resp.content
-
-      this.indicePaginasPesquisados = []
-
-      for(let i = 1; i <= this.totalPaginasUsuariosPesquisados ; i++){
-        this.indicePaginasPesquisados.push(i)
-      }
-
+      this.usuariosSugeridos = resp.content
     })
   }
 
-  trocarPaginaPesquisa(interesseAtual: string, pagina : number){
-    this.usuarioService.listarUsuariosPorInteresse(interesseAtual, pagina - 1)
+  avancarPaginaProfissao(){
+
+    if(this.ultimaPaginaProfissao === true){
+      this.numeroDapaginaUsuariosProfissao = this.numeroDapaginaUsuariosProfissao
+    }else{
+      this.numeroDapaginaUsuariosProfissao = this.numeroDapaginaUsuariosProfissao + 1
+    }
+
+    this.usuarioService.listarUsuariosPaginadosPorQualquerFiltro(this.profissao, this.numeroDapaginaUsuariosProfissao)
     .subscribe((resp : Pagina) =>{
 
-      this.paginaUsuariosPesquisados = resp
-      this.totalPaginasUsuariosPesquisados = resp.totalPages
+      this.paginaUsuariosPorProfissao = resp
+      this.numeroDapaginaUsuariosProfissao = resp.number
 
-      this.usuariosPesquisados = resp.content
+      this.usuariosSugeridosPorProfissao = resp.content
 
+      console.log(this.numeroDapaginaUsuariosProfissao)
     })
   }
 
+  retrocederPaginaProfissao(){
+
+    if(this.numeroDapaginaUsuariosProfissao !== 0){
+      this.numeroDapaginaUsuariosProfissao -= 1
+    }
+
+    this.usuarioService.listarUsuariosPaginadosPorQualquerFiltro(this.profissao,
+      this.numeroDapaginaUsuariosProfissao)
+    .subscribe((resp : Pagina) =>{
+
+      this.paginaUsuariosPorProfissao = resp
+      this.numeroDapaginaUsuariosProfissao = resp.number
+
+      this.usuariosSugeridosPorProfissao = resp.content
+    })
+  }
 
 }
