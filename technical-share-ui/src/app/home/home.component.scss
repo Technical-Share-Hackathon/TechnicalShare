@@ -10,6 +10,10 @@
      background-color: #F7F1FF;
  }
 
+ .swiper-slide{
+     display: flex;
+ }
+
 .header{
     position: absolute;
     width: 100%;
@@ -523,12 +527,123 @@
         color: #404099;
     }
 
-    #result{
+    #design{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
         position: absolute;
+        width: 152px;
+        height: 38px;
+        left: 16px; 
+        top: 569px;
+        background: #FFBAA3;
+        border-radius: 8px;
+    }
+
+    #ux{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        position: absolute;
+        width: 128px;
+        height: 38px;
+        left: 186px;
+        top: 569px;
+        background: #E0DAE9;
+        border-radius: 8px;
+    }
+
+    #result{
+        position: absolute; 
         width: 431.34px;
         height: 192px;
         left: 16px;
         top: 631px;
     }
 
+    #profile{
+        width: 132.34px;
+        height: 192px;
+        left: 16px;
+        top: 631px;
+    }
+
+    #pic{
+        width: 88.23px;
+        height: 88.65px;
+    }
+
+    #name{
+        font-family: Metropolis;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #404099;
+    }
+
+    #ver-mais{
+        position: absolute;
+        width: 80.01px;
+        height: 80.01px;
+        left: 314px;
+        top: 687px;
+        background: #FFFFFF;
+    }
+
+    #proximo{
+        position: absolute;
+        width: 43.48px;
+        height: 43.48px;
+        left: 333.13px;
+        top: 705.26px;
+    }
+
+   
+    #resultado-da-pesquisa{
+        position: absolute;
+        width: 1239px;
+        height: 36px;
+        left: 16px;
+        top: 855px;
+        font-family: Metropolis;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 32px;
+        color: #404099;
+    }
+
+    #result2{
+        position: absolute;
+        position: absolute;  
+        width: 431.34px;
+        height: 192px;
+        left: 16px;
+        top: 922px;
+    }
+
+    #ver-mais2{
+        position: absolute;
+        width: 80.01px;
+        height: 80.01px;
+        left: 314px;
+        top: 978px;
+        background: #FFFFFF;
+    }
+
+    #proximo2{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 1338px;
+        top: 1213px;
+    }
 }

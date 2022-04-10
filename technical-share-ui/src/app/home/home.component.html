@@ -41,7 +41,7 @@
     <main>
         <h5 id ="sugestões"> Sugestões de acordo com seus interesses </h5>
 
-        <nav>
+        <nav id="opções-sugestões">
             <p id ="design" type="submit"> Design </p>
             <p id ="ux" type="submit"> UX Research </p>
             <p id ="figma" type="submit"> Figma </p>
@@ -49,23 +49,31 @@
         </nav>
 
     <div id="result">
-      <div id="profile" *ngFor="let perfil of perfis">
-          <img src="./assets/profile.png" alt="Foto de perfil" id="pic"> 
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="profile"*ngFor="let perfil of perfis">
+                <img src="./assets/profile.png" alt="Foto de perfil" id="pic"> 
           <h6 id ="name"> {{perfil.name}} </h6>
           <p id="cargo"> {{perfil.cargo}} </p>
-      </div>   
+      
     </div>
-
+   </div>
+   </div>
+   <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+   </div>
   
      <h5 id="resultado-da-pesquisa"> Pessoas do mesmo cargo </h5>
  
+
      <div id="result2">
-        <div id="profile" *ngFor="let perfil of perfis">
+         <div id="profile" *ngFor="let perfil of perfis">
             <img src="../assets/profile.png" alt="Foto de perfil"id="pic"> 
             <h6 id ="name"> {{perfil.name}} </h6>
-            <p id="cargo"> {{perfil.cargo}} </p>   
-        </div> 
-    </div>
+            <p id="cargo"> {{perfil.cargo}} </p>  
+        </div>
+        </div>
 
    
      
@@ -77,6 +85,8 @@
 
     <div id="ver-mais2"></div>   
     <img src='../assets/proximo.png' id="proximo2">
+
+
     
 </body>
 </html>
