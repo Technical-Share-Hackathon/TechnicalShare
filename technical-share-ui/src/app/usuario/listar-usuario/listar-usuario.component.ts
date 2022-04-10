@@ -90,7 +90,7 @@ export class ListarUsuarioComponent implements OnInit {
     if(this.ultimaPaginaSugeridos === true){
       this.numeroDaPaginaSugeridos = this.numeroDaPaginaSugeridos
     }else{
-      this.numeroDaPaginaSugeridos = this.numeroDaPaginaSugeridos + 1
+      this.numeroDaPaginaSugeridos += 1
     }
 
     this.usuarioService.listarUsuariosPorInteresse(interesseAtual, this.numeroDaPaginaSugeridos)
@@ -98,8 +98,10 @@ export class ListarUsuarioComponent implements OnInit {
 
       this.paginaUsuariosSugeridos = resp
       this.numeroDaPaginaSugeridos = resp.number
+      this.ultimaPaginaSugeridos = resp.last
 
       this.usuariosSugeridos = resp.content
+
     })
   }
 
@@ -108,7 +110,7 @@ export class ListarUsuarioComponent implements OnInit {
     if(this.ultimaPaginaProfissao === true){
       this.numeroDapaginaUsuariosProfissao = this.numeroDapaginaUsuariosProfissao
     }else{
-      this.numeroDapaginaUsuariosProfissao = this.numeroDapaginaUsuariosProfissao + 1
+      this.numeroDapaginaUsuariosProfissao += 1
     }
 
     this.usuarioService.listarUsuariosPaginadosPorQualquerFiltro(this.profissao, this.numeroDapaginaUsuariosProfissao)
@@ -116,6 +118,7 @@ export class ListarUsuarioComponent implements OnInit {
 
       this.paginaUsuariosPorProfissao = resp
       this.numeroDapaginaUsuariosProfissao = resp.number
+      this.ultimaPaginaProfissao = resp.last
 
       this.usuariosSugeridosPorProfissao = resp.content
 
