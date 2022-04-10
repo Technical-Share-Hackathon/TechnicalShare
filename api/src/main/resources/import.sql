@@ -127,19 +127,141 @@ UPDATE hard_skills SET usuario_id = 12 WHERE id_hard_skills = 12
 UPDATE soft_skills SET usuario_id = 12 WHERE id_soft_skills = 12
 
 INSERT INTO experiencia (cargo, descricao, empresa, inicio, termino, usuario_id) VALUES ("Desenvolvedor Jr", "Desenvolvimento e refatoração de programas de rotina batch", "Stefanini", '2021-07-01', '2022-01-05', 9)
-----12-
 
-INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email) VALUES ( 'João Roberto Marinho','https://i.imgur.com/P1plcar.jpg','Tech Lead','Atuei em diversas empresas ao longo dos meus 6 anos de carreira, acredito que a motivação e estudo encurtam qualquer distância entre uma pessoa e o domínio técnico de algo.','Senior', 'Tokyo', 'joaorm@fcamara.com');
-INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5511999999999”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=user@domain.com”%3EChat with User')
-INSERT INTO hard_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Google Analytics', 'Hotjar', 'Google Optimize', 'Google Tagmanager', 'H.E.A.R.T.')
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Resiliência', 'Flexibilidade', 'Comunicação', 'Confiança', 'Organização e gestão do tempo')
+INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email) VALUES ( 'Tatiane Ferreira','encurtador.com.br/ipMNP','Q.A Tester','Bem-Vindo ao meu perfil! Já estou na caminhada a 3 anos, e o meu maior estimulo pessoal é ajudar outras pessoas da mesma forma que me ajudaram no início da minha carreira.','Pleno', 'Rio', 'tatiferreira@fcamara.com');
+INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5511999824698”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=tatiferreira@fcamara.com”%3EChat with User')
+INSERT INTO hard_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Appium', 'Kryption', 'Cypress', 'Maven', 'Test Complete')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Autonomia', 'Iniciativa', 'Comunicação eficaz', 'Pensamento crítico', 'Sociabilidade')
 
 
-UPDATE usuario SET hard_skills_id = 12 WHERE id = 12;
-UPDATE usuario SET soft_skills_id = 12 WHERE id = 12;
-UPDATE hard_skills SET usuario_id = 12 WHERE id_hard_skills = 12
-UPDATE soft_skills SET usuario_id = 12 WHERE id_soft_skills = 12
+UPDATE usuario SET hard_skills_id = 13 WHERE id = 13;
+UPDATE usuario SET soft_skills_id = 13 WHERE id = 13;
+UPDATE hard_skills SET usuario_id = 13 WHERE id_hard_skills = 13
+UPDATE soft_skills SET usuario_id = 13 WHERE id_soft_skills = 13
 UPDATE usuario SET links_id = 13 WHERE id = 13
+-----------------------------------------------------------
+
+INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email) VALUES ( 'Ricardo da Luz','encurtador.com.br/hluP6','Ux Designer','Mais de 10 anos de experiência trabalhando com produtos digitais, identidades visuais e ecommerce. Estou a disposição!','Sênior', 'Rio', 'ricardoluz@fcamara.com');
+INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5511996377928”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=ricardoluz@fcamara.com”%3EChat with User')
+INSERT INTO hard_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Figma', 'Inglês', 'Sketch', 'Adobe Illustrator', 'ProtoPie')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Criatividade', 'Autodidata', 'Liderança', 'Produtividade', 'Gestão de Tempo')
+
+
+UPDATE usuario SET hard_skills_id = 14 WHERE id = 14;
+UPDATE usuario SET soft_skills_id = 14 WHERE id = 14;
+UPDATE hard_skills SET usuario_id = 14 WHERE id_hard_skills = 14
+UPDATE soft_skills SET usuario_id = 14 WHERE id_soft_skills = 14
+UPDATE usuario SET links_id = 14 WHERE id = 14
+-----------------------------------------------------------
+
+INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email) VALUES ( 'Luana Melo','encurtador.com.br/loCQY','Ui Designer','Estudante de desenvolvimento de sistemas, designer autônoma e apaixonada por UX e UI, essa é minha definição atual.','Júnior', 'Rio', 'lumelo@fcamara.com');
+INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5523999452956”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=lumelo@fcamara.com”%3EChat with User')
+INSERT INTO hard_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Adobe XD', 'Invision Studio', 'Sketch', 'Balsamiq', 'Marvel')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Organização', 'Foco', 'Criatividade', 'Confiança', 'Autodisciplina')
+
+
+UPDATE usuario SET hard_skills_id = 15 WHERE id = 15;
+UPDATE usuario SET soft_skills_id = 15 WHERE id = 15;
+UPDATE hard_skills SET usuario_id = 15 WHERE id_hard_skills = 15
+UPDATE soft_skills SET usuario_id = 15 WHERE id_soft_skills = 15
+UPDATE usuario SET links_id = 15 WHERE id = 15
+-----------------------------------------------------------
+
+
+INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email) VALUES ( 'Ariston Simões','encurtador.com.br/tSTZ3','Dev Full Stack','Gosto de transformar ideias em projetos com conceitos personalizados que faça negócios se destacarem no mercado por meio do desenvolvimento full stack.','Pleno', 'Rio', 'arisimoes@fcamara.com');
+INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5551996486756”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=arisimoes@fcamara.com”%3EChat with User')
+INSERT INTO hard_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Node JS', 'Mongo DB', 'Pyton', 'HTML', 'CSS')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Capacidade de Análise', 'Concentração', 'Trabalho em Equipe', 'Adaptação', 'Disciplina')
+
+
+UPDATE usuario SET hard_skills_id = 16 WHERE id = 16;
+UPDATE usuario SET soft_skills_id = 16 WHERE id = 16;
+UPDATE hard_skills SET usuario_id = 16 WHERE id_hard_skills = 16
+UPDATE soft_skills SET usuario_id = 16 WHERE id_soft_skills = 16
+UPDATE usuario SET links_id = 16 WHERE id = 16
+-----------------------------------------------------------
+
+
+INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email) VALUES ( 'Karla Santacruz','encurtador.com.br/jlCI0','Product Owner','Experiência em Gestão de Produtos digitais e UX Design, trabalho na área de tecnologia desde 2015, com passagens por empresas renomadas','Pleno', 'Rio', 'karlasantacruz@fcamara.com');
+INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5514996411675”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=karlasantacruz@fcamara.com”%3EChat with User')
+INSERT INTO hard_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Agile', 'Scrum', 'Kanban', 'Confluence', 'Jira Software')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Comunicação', 'Empatia', 'Inovação', 'Resiliência', 'Disciplina')
+
+
+UPDATE usuario SET hard_skills_id = 17 WHERE id = 17;
+UPDATE usuario SET soft_skills_id = 17 WHERE id = 17;
+UPDATE hard_skills SET usuario_id = 17 WHERE id_hard_skills = 17
+UPDATE soft_skills SET usuario_id = 17 WHERE id_soft_skills = 17
+UPDATE usuario SET links_id = 17 WHERE id = 17
+-----------------------------------------------------------
+
+
+INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email) VALUES ( 'Marcelo Godoy','encurtador.com.br/arJO1','Dev Back And','Atuo à 10 anos nesta área, e busco pelo conhecimento multidisciplinar, para ter condições de analisar, encontrar e resolver os problemas nos mais diversos níveis ou propor soluções eficientes para atender a necessidade do cliente.','Sênior', 'Veneza', 'marcelogodoy@fcamara.com');
+INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5514999362588”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=marcelogodoy@fcamara.com”%3EChat with User')
+INSERT INTO hard_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Spring Boot', 'Pyton', 'Ruby', 'React JS', 'Java Script')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Liderança', 'Comunicação', 'Integridade', 'Ética', 'Honestidade')
+
+
+UPDATE usuario SET hard_skills_id = 18 WHERE id = 18;
+UPDATE usuario SET soft_skills_id = 18 WHERE id = 18;
+UPDATE hard_skills SET usuario_id = 18 WHERE id_hard_skills = 18
+UPDATE soft_skills SET usuario_id = 18 WHERE id_soft_skills = 18
+UPDATE usuario SET links_id = 18 WHERE id = 18
+-----------------------------------------------------------
+
+
+INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email) VALUES ( 'Carol Alfredo','encurtador.com.br/ehoAX','Product Owner','Sou uma pessoa muito analítica, que gosta de sair dos padrões tradicionais e ama desafios. Dessa forma, venho então estudando, em busca de explorar todo esse meu potencial!','Trainee', 'Veneza', 'carolalfredo@fcamara.com');
+INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5514996997412”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=carolalfredo@fcamara.com”%3EChat with User')
+INSERT INTO hard_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Trello', 'Microsoft Project', 'Jira Software', 'Monday', 'Mural')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Detalhista', 'Foco', 'Curiosadade', 'Organização', 'Proativa')
+
+
+UPDATE usuario SET hard_skills_id = 19 WHERE id = 19;
+UPDATE usuario SET soft_skills_id = 19 WHERE id = 19;
+UPDATE hard_skills SET usuario_id = 19 WHERE id_hard_skills = 19
+UPDATE soft_skills SET usuario_id = 19 WHERE id_soft_skills = 19
+UPDATE usuario SET links_id = 19 WHERE id = 19
+-----------------------------------------------------------
+
+
+INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email) VALUES ( 'Helena Borges','encurtador.com.br/egzCL','Dev Front End','Sou muito grata às adversidades que apareceram na minha vida, pois elas me ensinaram a tolerância, a simpatia, o autocontrole, a perseverança e outras qualidades que, sem essas adversidades, eu jamais conheceria.','Pleno', 'Veneza', 'helenaborges@fcamara.com');
+INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5512999992540”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=helenaborges@fcamara.com”%3EChat with User')
+INSERT INTO hard_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('HTML', 'Angular', 'PHP', 'CSS', 'Bootstrap')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Criatividade', 'Determinação', 'Atitude Positiva', 'Motivação', 'Proativa')
+
+
+UPDATE usuario SET hard_skills_id = 20 WHERE id = 20;
+UPDATE usuario SET soft_skills_id = 20 WHERE id = 20;
+UPDATE hard_skills SET usuario_id = 20 WHERE id_hard_skills = 20
+UPDATE soft_skills SET usuario_id = 20 WHERE id_soft_skills = 20
+UPDATE usuario SET links_id = 20 WHERE id = 20
+-----------------------------------------------------------
+
+
+INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email) VALUES ( 'Pablo Galvão','encurtador.com.br/isDKY','Ux/Ui Designer','Fui conquistado pelo lado pessoal e humano da tecnologia ao utilizar métodos de design centrados no usuário.Minha missão diária é orientar às pessoas em todos os desafios do negócio.','Sênior', 'Veneza', 'pablogalvao@fcamara.com');
+INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5511998596741”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=pablogalvao@fcamara.com”%3EChat with User')
+INSERT INTO hard_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Figma', 'Sass', 'HTML', 'CSS', 'Desinion')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Agilidade', 'Determinação', 'Empatia', 'Criatividade', 'Persuasão')
+
+
+UPDATE usuario SET hard_skills_id = 21 WHERE id = 21;
+UPDATE usuario SET soft_skills_id = 21 WHERE id = 21;
+UPDATE hard_skills SET usuario_id = 21 WHERE id_hard_skills = 21
+UPDATE soft_skills SET usuario_id = 21 WHERE id_soft_skills = 21
+UPDATE usuario SET links_id = 21 WHERE id = 21
+-----------------------------------------------------------
+
+INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email) VALUES ( 'Patricia Albert','encurtador.com.br/bghyF','Ux Designer','Apaixonada por criar, inventar e aprender. Encontrei minhas paixões no design e procuro sempre aprender com novas experiências e evoluir a cada dia.','Júnior', 'Veneza', 'patialbert@fcamara.com');
+INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5511998596741”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=patialbert@fcamara.com”%3EChat with User')
+INSERT INTO hard_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Adobe XD', 'Google Analytics', 'Hotjar', 'Zeplin', 'Framer')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Entusiasmo', 'Adaptação', 'Comunicação', 'Empatia', 'Negociação')
+
+
+UPDATE usuario SET hard_skills_id = 22 WHERE id = 22;
+UPDATE usuario SET soft_skills_id = 22 WHERE id = 22;
+UPDATE hard_skills SET usuario_id = 22 WHERE id_hard_skills = 22
+UPDATE soft_skills SET usuario_id = 22 WHERE id_soft_skills = 22
+UPDATE usuario SET links_id = 22 WHERE id = 22
 
 
 
