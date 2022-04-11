@@ -2,24 +2,427 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-
-  body{
-      width: 100%;
-      height: 1500px;
-      background-color: #f7f7f7;
-  }
-
-.header{
-    position: absolute;
-    width: 100%;
-    height: 85px;
-    left: 0px;
-    top: 0px;
-    background: #404099;
+    font-family: Metropolis;
 }
 
-#logo{
+body{
+    width: 100%;
+    height: 1000px;
+    background-color: #F7F1FF;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+}
+
+.header{
+    width: 100%;
+    height: 85px;
+    background: #404099;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+}
+
+#technical{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px; 
+    color: #FFFFFF;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+}
+
+.text-icons{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.section-volta{
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #404099;
+    margin-left: 61px;
+    margin-top: 30px;
+}
+
+.perfil-section{
+    width: 326px;
+    height: 722px;
+    background: #FFFFFF;
+    border: 1px solid #E0DAE9;
+    border-radius: 5px;
+    margin-left: 61px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#heart{
+    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
+    
+}
+
+.info{
+    width: 97px; 
+    height: 24px; 
+    margin-top: 20px;  
+
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    width: 266px;
+    height: 50px;
+    margin-left: 16px;
+    margin-top: 180px;
+}
+
+#teams{
+    padding: 8px;
+    width: 266px;
+    height: 50px;
+    background: #FF4500;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+#email{
+    padding: 8px;
+    width: 266px;
+    border: 1px solid #FF4500;
+    border-radius: 8px;
+    color: #FF4500;
+    font-weight: 600;
+    font-family: Metropolis;
+    background-color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+#whatsapp{
+    padding: 8px;
+    width: 266px;
+    height: 50px;
+    border: 1px solid #FF4500;
+    border-radius: 8px;
+    color: #FF4500;
+    font-weight: 600;
+    font-family: Metropolis;
+    background-color: #FFFFFF;
+    margin-bottom: 10px;   
+}
+
+#name{
+    width: 321.08px;
+    height: 40px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    color: #404099;
+}
+
+#cargo{
+    width: 321.08px;
+    height: 17px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    font-variant: small-caps;
+    color: #4E4956;
+}
+
+#nível{
+    width: 170px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #4E4956;
+    margin-left: -80px;
+    margin-top: 50px;
+}
+
+#result-nível{
+    width: 97px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    color: #4E4956;
+    margin-left: 80px;
+    margin-top: -22px;
+}
+
+#squad{
+    width: 170px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #4E4956;
+    margin-left: -80px;
+    margin-top: 10px;
+}
+
+#result-squad{
+    width: 97px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    color: #4E4956;
+    margin-left: 80px;
+    margin-top: -22px;
+}
+
+#localização{
+    width: 170px;
+    height: 22px;
+    font-style: normal;
+    font-weight: 600; 
+    font-size: 16px;
+    line-height: 22px;
+    color: #4E4956;
+    margin-left: -80px;
+    margin-top: 10px;
+}
+
+#result-localização{
+    width: 140px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    color: #4E4956;
+    margin-left: 40px;
+    margin-top: -22px;
+}
+
+.section2{
+    width: 326px;
+    height: 722px;
+    background: #FFFFFF;
+    border: 1px solid #E0DAE9;
+    border-radius: 5px;
+    margin-left: 61px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section3{
+    width: 676px;
+    height: 722px;
+    margin-top: 30px;
+    background: #FFFFFF;    
+    border-radius: 5px;
+}
+
+#quem-sou-eu{ 
+    margin-left: 30px;
+    margin-top: 40px;
+    width: 139px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #404099;
+}
+
+#experiência{
+    margin-left: 30px;
+    margin-right: 20px;   
+    margin-top: 20px;
+    width: 114px;
+    height: 24px;
+    font-family: Metropolis;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #404099;
+}
+
+#cargo2{
+    width: 48px;
+    height: 22px;
+    left: 16px;
+    top: 15px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #404099;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 8px 0px;  
+}
+
+#descrição-cargo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 16px;
+    width: 616px;
+    height: 147px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background: #F7F1FF;
+    border-radius: 8px;
+}
+
+#empresa{
+    width: 200px;
+    height: 17px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.15em;
+    font-variant: small-caps;
+    color: #151515;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 8px 0px;
+}
+
+#função{
+    width: 562px;
+    height: 62px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #4E4956;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 8px 0px;
+}
+
+#text{
+    margin-left:30px;
+    margin-top: 20px;
+    width: 616px;
+    height: 98px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4E4956;
+}
+
+@media only screen and (max-width: 1025px){
+
+    body{
+        width: 100%;
+        height: 2300px;
+        background-color: #F7F1FF;
+    }
+
+    main{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .perfil-section{
+        width: 100%;
+        height: 688px;
+        margin-left: 0px;
+        background: #FFFFFF;
+        border-radius: 5px;
+        display: flex;
+    }
+
+    .section2{
+        width: 100%;
+        height: 688px;
+        background: #FFFFFF;
+        border: 1px solid #E0DAE9;
+        border-radius: 5px;
+        margin-left: 0px;
+    }
+
+    .section3{
+        width: 100%;
+        height: 722px;
+        background: #FFFFFF;    
+        box-sizing: border-box;
+        border-radius: 5px;
+        margin-left: 0px;
+    }
+
+    #text{
+        width: 322.46px;
+        height: 220px;
+    }
+
+    #descrição-cargo{
+        width: 100%;
+    }
+
+    #função{
+        display:none;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* #logo{
     position: absolute;
     left: 2.01%;
     right: 89.65%;
@@ -153,7 +556,24 @@
     color: #FFFFFF;
 }
 
-#voltar{
+#perfil {
+    position: absolute;
+    width: 92px;
+    height: 15px;
+    left: 1228px;
+    top: 49px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center; 
+    color: #FFFFFF;
+} */
+
+/* #voltar{
     position: absolute;
     width: 117px;
     height: 22px;
@@ -169,15 +589,16 @@
     color: #404099;
 }
 
-#proximo{
+#volta{
     position: absolute;
     width: 18px;
     height: 18px;
     left: 32px;
     top: 115px;
+    cursor: pointer;
 }
 
-.perfil{
+.perfil-section{
     position: absolute;
     width: 326px;
     height: 722px;
@@ -186,17 +607,9 @@
     background: #FFFFFF;
     border-radius: 5px;
     display: flex;
-    border: 2px solid red;
 }
 
-#heart{
-      filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
-      position: absolute;
-      left: 90%;
-      right: 76.53%;
-      top: 3%; 
-      bottom: 78.03%;
-}
+
 
 #pic{
     margin-left: auto;
@@ -206,140 +619,7 @@
     margin-top: 20px;
 }
 
-#name{
-    position: absolute; 
-    width: 321.08px;
-    height: 40px;
-    left: 65px;
-    top: 175px;
-    font-family: Metropolis;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 40px;
-    display: flex;
-    align-items: center; 
-    text-align: center;
-    color: #404099;
-}
 
-#cargo{
-    position: absolute;
-    width: 321.08px;
-    height: 17px;
-    left: 85px;
-    top: 220px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 17px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.15em;
-    font-variant: small-caps;
-    color: #4E4956;
-}
-
-#nível{
-    position: absolute;
-    width: 170px;
-    height: 22px;
-    left: 30px;
-    top: 330px;
-    font-family: Metropolis;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
-    color: #4E4956;
-}
-
-#result-nível{
-    position: absolute;
-    width: 97px;
-    height: 24px;
-    left: 231px;
-    top: 330px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: right;
-    color: #4E4956;
-}
-
-#squad{
-    position: absolute;
-    width: 170px;
-    height: 22px;
-    left: 30px;
-    top: 380px;
-    font-family: Metropolis;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
-    color: #4E4956;
-}
-
-#result-squad{
-    position: absolute;
-    width: 97px;
-    height: 24px;
-    left: 200px;
-    top: 380px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: right;
-    color: #4E4956;
-}
-
-#localização{
-    position: absolute;
-    width: 170px;
-    height: 22px;
-    left: 30px;
-    top: 430px;
-    font-family: Metropolis;
-    font-style: normal;
-    font-weight: 600; 
-    font-size: 16px;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
-    color: #4E4956;
-}
-
-#result-localização{
-    position: absolute;
-    width: 140px;
-    height: 24px;
-    left: 188px;
-    top: 430px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: right;
-    color: #4E4956;
-}
 
 #teams{
     display: flex;
@@ -358,44 +638,7 @@
     color: #ffffff;
 }
 
-#email{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    position: absolute;
-    width: 266px;
-    height: 50px;
-    left: 30px;
-    top: 600px;
-    border: 1px solid #FF4500;
-    border-radius: 8px;
-    color: #FF4500;
-    font-weight: 600;
-    font-family: Metropolis;
-    background-color: #FFFFFF;
-}
 
-#whatsapp{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    position: absolute;
-    width: 266px;
-    height: 50px;
-    left: 30px;
-    top: 660px;
-    border: 1px solid #FF4500;
-    border-radius: 8px;
-    color: #FF4500;
-    font-weight: 600;
-    font-family: Metropolis;
-    background-color: #FFFFFF;   
-
-}
 
 .info{
     position: absolute;
@@ -405,5 +648,152 @@
 .buttons{
     position: absolute;
     top: -40px;
-
 }
+
+#hard-skills{
+    width: 103px;
+    height: 24px;
+    margin-left: 30px;
+    margin-top: 40px;
+    font-family: Metropolis;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #FF4500;
+}
+
+.section2{
+    position: absolute;
+    width: 326px;
+    height: 722px;
+    left: 500px;
+    top: 157px;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+
+#categoria1{
+    margin-left: 30px;
+    margin-top: 20px;  
+    width: 66px;
+    height: 15px;
+    font-family: Montserrat;
+    font-style: normal; 
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #151515;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 1025px){
+
+    body{
+        width: 100%;
+        height: 2300px;
+        background-color: #F7F1FF;
+        border: 5px solid red;
+    }
+    
+
+    .header{
+        width: 100%;
+        height: 85px;
+        background: #404099; 
+    }
+
+    #coracao{
+        display: none;
+    }
+    
+    #sininho{
+        display: none;
+    }
+    
+    #user{
+        display: none;
+    }
+    
+    #saída{
+        display: none;
+    }
+
+    #volta{
+        position: absolute;
+        width: 19px;
+        height: 18px;
+        left: 16px;
+        top: 117px;
+        
+    }
+
+    #voltar{
+        position: absolute;
+        width: 119px;
+        height: 22px;
+        left: 48px;
+        top: 115px;
+        font-family: Metropolis;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        color: #404099;
+        
+    }
+
+    .perfil-section{
+        width: 350px;
+        height: 688px;
+        background: #FFFFFF;
+        border: 1px solid #E0DAE9;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 5px green solid;
+    }
+   
+    .section2{
+        width: 350px;
+        height: 688px;
+        left: 30px;
+        top: 870px;
+        background: #FFFFFF;
+        border: 1px solid #E0DAE9;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 5px green solid;
+    }
+
+    .section3{
+        position: absolute;
+        width: 100%;
+        height: 630px;
+        left: 16px;
+        top: 1614px;
+        border: 5px green solid;
+    }
+    
+    #text{     
+        
+    }
+
+    #função{
+        display: none;
+    }
+
+    #descrição-cargo{
+        width: 322.46px;
+        height: 108px;
+    }
+    
+} */
