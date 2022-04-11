@@ -34,6 +34,8 @@ public class Usuario {
 
     private String senha;
 
+    private String localizacao;
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario")
     private List<Experiencia> experiencias = new ArrayList<>();
 
@@ -166,6 +168,14 @@ public class Usuario {
 
     public void setNivelSenioridade(String nivelSenioridade) {
         this.nivelSenioridade = nivelSenioridade;
+    }
+
+    public String getLocalizacao() {
+        return localizacao;
+    }
+
+    public void setLocalizacao(String localizacao) {
+        this.localizacao = localizacao;
     }
 
     @Override

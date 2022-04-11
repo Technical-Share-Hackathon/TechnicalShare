@@ -15,17 +15,27 @@ public class HardSkills {
     @Column(name = "primeira_skill")
     private String primeiraHardSkill;
 
+    private int nivelPrimeiraHard;
+
     @Column(name = "segunda_skill")
     private String segundaHardSkill;
+
+    private int nivelSegundaHard;
 
     @Column(name = "terceira_skill")
     private String terceiraHardSkill;
 
+    private int nivelTerceiraHard;
+
     @Column(name = "quarta_skill")
     private String quartaHardSkill;
 
+    private int nivelQuartaHard;
+
     @Column(name = "quinta_skill")
     private String quintaHardSkill;
+
+    private int nivelQuintaHard;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JsonIgnore
@@ -85,5 +95,45 @@ public class HardSkills {
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
+    }
+
+    public int getNivelPrimeiraHard() {
+        return nivelPrimeiraHard;
+    }
+
+    public void setNivelPrimeiraHard(int nivelPrimeiraHard) {
+        this.nivelPrimeiraHard = nivelPrimeiraHard;
+    }
+
+    public int getNivelSegundaHard() {
+        return nivelSegundaHard;
+    }
+
+    public void setNivelSegundaHard(int nivelSegundaHard) {
+        this.nivelSegundaHard = nivelSegundaHard;
+    }
+
+    public int getNivelTerceiraHard() {
+        return nivelTerceiraHard;
+    }
+
+    public void setNivelTerceiraHard(int nivelTerceiraHard) {
+        this.nivelTerceiraHard = nivelTerceiraHard;
+    }
+
+    public int getNivelQuartaHard() {
+        return nivelQuartaHard;
+    }
+
+    public void setNivelQuartaHard(int nivelQuartaHard) {
+        this.nivelQuartaHard = nivelQuartaHard;
+    }
+
+    public int getNivelQuintaHard() {
+        return nivelQuintaHard;
+    }
+
+    public void setNivelQuintaHard(int nivelQuintaHard) {
+        this.nivelQuintaHard = nivelQuintaHard;
     }
 }

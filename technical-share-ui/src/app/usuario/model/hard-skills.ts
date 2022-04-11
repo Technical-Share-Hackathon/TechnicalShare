@@ -11,4 +11,15 @@ export interface HardSkills {
   quartaHardSkill : string;
 
   quintaHardSkill : string;
+
+  nivelPrimeiraHard: number;
+
+  nivelSegundaHard: number;
+
+  nivelTerceiraHard: number;
+
+  nivelQuartaHard: number;
+
+  nivelQuintaHard: number;
+
 }
