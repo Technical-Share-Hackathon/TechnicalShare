@@ -136,23 +136,6 @@
     color: #FFFFFF;
 }
 
-#perfil {
-    position: absolute;
-    width: 92px;
-    height: 15px;
-    left: 1228px;
-    top: 49px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    display: flex;
-    align-items: center;
-    text-align: center; 
-    color: #FFFFFF;
-}
-
 #sair{
     position: absolute;
     width: 93px;
@@ -202,4 +185,225 @@
     top: 157px;
     background: #FFFFFF;
     border-radius: 5px;
+    display: flex;
+    border: 2px solid red;
+}
+
+#heart{
+      filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
+      position: absolute;
+      left: 90%;
+      right: 76.53%;
+      top: 3%; 
+      bottom: 78.03%;
+}
+
+#pic{
+    margin-left: auto;
+    margin-right: auto;
+    width: 137.89px;
+    height: 140px;  
+    margin-top: 20px;
+}
+
+#name{
+    position: absolute; 
+    width: 321.08px;
+    height: 40px;
+    left: 65px;
+    top: 175px;
+    font-family: Metropolis;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    display: flex;
+    align-items: center; 
+    text-align: center;
+    color: #404099;
+}
+
+#cargo{
+    position: absolute;
+    width: 321.08px;
+    height: 17px;
+    left: 85px;
+    top: 220px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.15em;
+    font-variant: small-caps;
+    color: #4E4956;
+}
+
+#nível{
+    position: absolute;
+    width: 170px;
+    height: 22px;
+    left: 30px;
+    top: 330px;
+    font-family: Metropolis;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #4E4956;
+}
+
+#result-nível{
+    position: absolute;
+    width: 97px;
+    height: 24px;
+    left: 231px;
+    top: 330px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #4E4956;
+}
+
+#squad{
+    position: absolute;
+    width: 170px;
+    height: 22px;
+    left: 30px;
+    top: 380px;
+    font-family: Metropolis;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #4E4956;
+}
+
+#result-squad{
+    position: absolute;
+    width: 97px;
+    height: 24px;
+    left: 200px;
+    top: 380px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #4E4956;
+}
+
+#localização{
+    position: absolute;
+    width: 170px;
+    height: 22px;
+    left: 30px;
+    top: 430px;
+    font-family: Metropolis;
+    font-style: normal;
+    font-weight: 600; 
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #4E4956;
+}
+
+#result-localização{
+    position: absolute;
+    width: 140px;
+    height: 24px;
+    left: 188px;
+    top: 430px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #4E4956;
+}
+
+#teams{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    position: absolute;
+    width: 266px;
+    height: 50px;
+    left: 30px;
+    top: 540px;
+    background: #FF4500;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+#email{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    position: absolute;
+    width: 266px;
+    height: 50px;
+    left: 30px;
+    top: 600px;
+    border: 1px solid #FF4500;
+    border-radius: 8px;
+    color: #FF4500;
+    font-weight: 600;
+    font-family: Metropolis;
+    background-color: #FFFFFF;
+}
+
+#whatsapp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    position: absolute;
+    width: 266px;
+    height: 50px;
+    left: 30px;
+    top: 660px;
+    border: 1px solid #FF4500;
+    border-radius: 8px;
+    color: #FF4500;
+    font-weight: 600;
+    font-family: Metropolis;
+    background-color: #FFFFFF;   
+
+}
+
+.info{
+    position: absolute;
+    top: -20px
+}
+
+.buttons{
+    position: absolute;
+    top: -40px;
+
 }
