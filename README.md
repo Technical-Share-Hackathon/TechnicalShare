@@ -10,7 +10,7 @@
 + squad
 + e todas as suas habilidades técnicas e comportamentais
  
-## Technologies Used:
+## Tecnologias usadas:
 
 <table>
   <tr>
@@ -30,10 +30,10 @@
 ## Como rodar o Backend do Projeto:
 
 1) o projeto já possuí um script que faz a inserção dos dados no banco de dados, portanto, certifique-se de no application.properties direcionar o usuário e senha para seu próprio banco de dados, além de adicionar a dependência correta no pom.xml: 
-![image](https://user-images.githubusercontent.com/72326473/163059595-87cdf1fc-8f8e-4f5f-9648-20639965691a.png)
-![image](https://user-images.githubusercontent.com/72326473/163059677-3ee6aaa0-860c-4898-87b5-b65c3ab0a010.png)
+![image](https://user-images.githubusercontent.com/72326473/163059595-87cdf1fc-8f8e-4f5f-9648-20639965691a.png | width=100)
+![image](https://user-images.githubusercontent.com/72326473/163059677-3ee6aaa0-860c-4898-87b5-b65c3ab0a010.png | width=100)
 2)basta iniciar o projeto pela própria IDE do seu gosto. Para uma documentação mais detalhada dos endpoints, acesse o swagger da aplicação:
-3)![image](https://user-images.githubusercontent.com/72326473/163060619-95d0be70-9351-40f6-bdee-249c071b18e1.png)
+3)![image](https://user-images.githubusercontent.com/72326473/163060619-95d0be70-9351-40f6-bdee-249c071b18e1.png | width=100)
 
 ## Como rodar o FrontEnd do Projeto:
 1) Primeiro execute o comando "npm install" no diretório do projeto angular, isso vai garantir que vc instale todas as dependências que são ignoradas pelo git
