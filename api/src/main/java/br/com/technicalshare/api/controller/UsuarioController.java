@@ -13,12 +13,10 @@ import br.com.technicalshare.api.repository.UsuarioRepository;
 import br.com.technicalshare.api.service.AuthService;
 import br.com.technicalshare.api.service.UsuarioService;
 import br.com.technicalshare.api.specification.SpecificationHard;
-import br.com.technicalshare.api.specification.SpecificationInteresse;
 import br.com.technicalshare.api.specification.SpecificationSoft;
 import br.com.technicalshare.api.specification.SpecificationUsuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.web.PageableDefault;
@@ -27,9 +25,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.data.domain.Pageable;
 
 
-import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
+
 
 @RestController
 @RequestMapping("/api/usuarios")
@@ -122,9 +119,9 @@ public class UsuarioController {
             throw new EmailNaoExistenteException("Email incorreto");
         }
 
-        if(!this.authService.validarSenha(usuario.get(), usuarioFormLogin.getSenha())){
+        if(!this.authService.validarSenha(usuario.get(), usuarioFormLogin.getSenha())) {
             throw new SenhaInvalidaException("Senha incorreta");
-        };
+        }
 
         return ResponseEntity.ok(new UsuarioDetalhadoDto(usuario.get()));
     }

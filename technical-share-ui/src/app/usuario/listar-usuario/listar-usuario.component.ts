@@ -3,6 +3,7 @@ import { UsuarioListagem } from './../model/usuario-listagem';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Pagina } from '../model/pagina';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -21,7 +22,14 @@ export class ListarUsuarioComponent implements OnInit {
 
   interesseAtual : string ="";
 
-  interesses : string[] = ["figma", "java", "typescrip","angular", "Docker"]
+
+  interesses : string[] = [
+    environment.primeiraAreaDeInteresseDoUsuarioLogado,
+    "java",
+    "typescrip",
+    "angular",
+    "Docker"
+  ]
 
   usuariosSugeridosPorProfissao: UsuarioListagem[] = []
   paginaUsuariosPorProfissao : Pagina = new Pagina

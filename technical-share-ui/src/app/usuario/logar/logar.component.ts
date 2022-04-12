@@ -61,7 +61,7 @@ export class LogarComponent implements OnInit {
         environment.quartaHardSkillDoUsuarioLogado = this.usuarioCompleto.hardSkills.quartaHardSkill
         environment.quintaHardSkillDoUsuarioLogado = this.usuarioCompleto.hardSkills.quintaHardSkill
 
-        this.router.navigate(['usuarios/perfil']);
+        this.router.navigate(['usuarios/']);
 
     }, erro =>{
        console.log(erro)
