@@ -8,7 +8,7 @@
 + resumo
 + profissão
 + squad
-+ e todas as suas habilidades técnicas e comportamentais
++ e todas as suas habilidades técnicas, comportamentais e interesses
  
 ## Tecnologias usadas:
 
