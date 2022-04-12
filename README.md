@@ -1,1 +1,1 @@
-# TechincalShare
+# TechnicalShare
