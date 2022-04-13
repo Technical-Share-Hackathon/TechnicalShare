@@ -1,4 +1,3 @@
-<!-- As a link -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +17,8 @@
         </h1>
 
          <p id="text"> 
-                Uma plataforma onde você encontra pessoas da tecnologia com conhecimentos diversos para tirar suas dúvidas sobre a área ou te orientar no aprendizado de novas habilidades.
-         </p>
+          Encontre pessoas da área de tecnologia para trocar experiências e aprender coisas novas!
+        </p>
 
          <img src="assets/fundo1.png"  alt="Fundo 1" class="fundo1">
      </div>  
@@ -43,15 +42,15 @@
    Login
  </p>
 
- <input id="caixa-cadastro-login" placeholder="name@example.com" type="text">
+ <input [(ngModel)]="usuarioLogin.email" id="caixa-cadastro-login" placeholder="name@example.com" type="text">
 
  <p id="senha">
    Senha
  </p>
 
- <input id ="caixa-cadastro-senha" placeholder="......" type="password">
+ <input [(ngModel)]="usuarioLogin.senha" id="caixa-cadastro-senha" placeholder="......" type="password">
 
- <button id="entrar">Entrar</button>
+ <button (click)="fazerLogin()" id="entrar">Entrar</button>
   
 </div>
 

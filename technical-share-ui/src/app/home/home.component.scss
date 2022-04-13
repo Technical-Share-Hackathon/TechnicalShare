@@ -2,50 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+    font-family: Metropolis;
+}
 
- body{
-     width: 100%;
-     height: 1350px;
-     background-color: #F7F1FF;
- }
-
- .swiper-slide{
-     display: flex;
- }
+body{
+    width: 100%;
+    height: 1500px;
+    background-color: #F7F1FF;
+}
 
 .header{
-    position: absolute;
     width: 100%;
     height: 85px;
-    left: 0px;
-    top: 0px;
     background: #404099;
+    display: flex;
+    justify-content: space-between;
 }
 
-#logo{
-    position: absolute;
-    left: 2.01%;
-    right: 89.65%;
-    top: 28.99%;
-    bottom: 96.13%;
+.title{
+    display: flex;
+    align-items: center;
+    margin-left: 32px;
 }
 
-#seta{
-    position: absolute;
-    width: 42px;
-    height: 12px;
-    left: 149px;
-    top: 36px;
-}
-
-#title{
-    position: absolute;
-    width: 165px;
-    height: 32px;
-    left: 193px;
-    top: 30px;
-    font-family: 'Metropolis';
+#technical{
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -53,42 +33,60 @@
     color: #FFFFFF;
 }
 
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-icons{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.order-text-icon{
+    display: flex;
+    flex-direction: column; 
+    margin:30px;
+}
+
+.img-icon{
+    width: 29.14px;
+    height: 29.14px;
+    margin-left: 10px;
+    
+}
 
 #coracao{
-    position: absolute;
-    left: 1002px;
-    right: -20%;
-    top: 26px;
-    bottom: 15%;
+    width: 20px;
+    height: 20px;
     box-sizing: border-box;
     transform: matrix(-1, 0, 0, 1, 0, 0);
     cursor: pointer;
+    margin-left: 15px;
 }
 
 #sininho{
-    position: absolute;
     width: 20px;
     height: 20px;
-    left: 1118px;
-    top: 26px;
     cursor: pointer;
+    margin-left: 25px;
 }
 
 #user{
-    position: absolute;
     width: 20px;
-    height: 20px;
-    left: 1235px;
-    top: 26px;    
+    height: 20px;  
     cursor: pointer;
+    margin-left:5px;
 }
 
 #saída{
-    position: absolute;
-    left: 70%;
-    right: -30%;
-    top: 26px;
-    bottom: 35%;
     border-radius: 1px;
     cursor: pointer;
 }
@@ -106,91 +104,21 @@
     filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
 }
 
-#favoritos{
-    position: absolute;
-    width: 92px;
-    height: 15px;
-    left: 982px; 
-    top: 49px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF;
-}
 
-#notificações{
-    position: absolute;
-    width: 93px;
-    height: 15px;
-    left: 1090px;
-    top: 49px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-#perfil {
-    position: absolute;
-    width: 92px;
-    height: 15px;
-    left: 1228px;
-    top: 49px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    display: flex;
-    align-items: center;
-    text-align: center; 
-    color: #FFFFFF;
-}
-
-#sair{
-    position: absolute;
-    width: 93px;
-    height: 15px;
-    left: 1330px;
-    top: 49px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-#retangulo{
-    position: absolute;
+.section{
     width: 100%;
     height: 471px;
-    left: 0px;
-    top: 69px;
     background:url('../../assets/fundo2.png'),  #404099;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
 #text{
-    position: absolute;
     width: 672px;
     height: 83px;
-    left: 600px;
-    top: 110px;
-    font-family: Metropolis;
+    margin-left: 600px;
+    padding-top: 110px;
     font-style: normal;
     font-weight: 600;
     font-size: 48px;
@@ -199,58 +127,54 @@
     color: #FFFFFF;
 }
 
-#barra{
-    position: absolute;
-    width: 909px;
-    height: 51px;
-    left: 266px;
-    top: -100px;
-}
-
 #barra-pesquisa{
     display: flex;
-    flex-direction: row;
     align-items: center;
     padding: 8px 12px;
-    position: absolute;
     width: 896.84px;
     height: 51px;
-    left: 266px;
-    top: 376px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
     background: #FFFFFF;
     border: 1px solid #B4AEBD;
-    box-sizing: border-box;
     border-radius: 5px;
 }
 
 #barra-buscar{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 8px;
-    position: absolute;
     width: 175.83px;
     height: 51px;
-    left: 999.17px;
-    top: 376px;
+    margin-left: 1400px;
+    margin-top: -50px;
     background: #FF4500;
     border-radius: 0px 8px 8px 0px;
     color: #FFFFFF;
 }
 
 #sugestões{
-    position: absolute; 
     width: 590px;
     height: 33px;
-    left: 149px;
-    top: 608px;
-    font-family: Metropolis;
+    margin-left: 149px;
+    margin-top: 40px;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 32px;
     color: #404099;
+}
+
+#opções-sugestões{
+    display: flex;
+    width: 1042px;
+    height: 90px;
+    margin-left: 149px;
+    padding:10px;
+    justify-content:space-between;
+    margin-top: 20px;
 }
 
 #design{
@@ -259,11 +183,8 @@
     justify-content: center;
     align-items: center;
     padding: 8px;
-    position: absolute;
     width: 209px;
     height: 38px;
-    left: 149px;
-    top: 660px;
     background: #FFBAA3;
     border-radius: 8px;
 }
@@ -274,13 +195,11 @@
     justify-content: center;
     align-items: center;
     padding: 8px;
-    position: absolute;
     width: 175px;
     height: 38px;
-    left: 382px;
-    top: 660px;
     background: #E0DAE9;
     border-radius: 8px;
+    margin-left: 20px;
 }
 
 #figma{
@@ -289,13 +208,11 @@
     justify-content: center;
     align-items: center;
     padding: 8px;
-    position: absolute;
     width: 158px;
     height: 38px;
-    left: 581px;
-    top: 660px;
     background: #E0DAE9;
     border-radius: 8px;
+    margin-left: 20px;
 }
 
 #metodologia-agil {
@@ -304,13 +221,11 @@
     justify-content: center;
     align-items: center;
     padding: 8px;
-    position: absolute;
     width: 202px;
     height: 38px;
-    left: 763px;
-    top: 660px;
     background: #E0DAE9;
     border-radius: 8px;
+    margin-left: 20px;
 }
 
 #result{
@@ -323,6 +238,15 @@
     height: 259px;
     left: 149px;
     top: 750px;
+}
+
+.swiper{
+    width: 100%;
+}
+
+.card-content{
+    display: flex;
+    background:#F7F1FF;
 }
 
 #profile{

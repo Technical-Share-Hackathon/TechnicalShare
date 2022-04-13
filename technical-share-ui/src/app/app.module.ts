@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { PerfilSlideComponent } from './perfil-slide/perfil-slide.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PerfilComponent
+    PerfilComponent,
+    PerfilSlideComponent
   ],
   imports: [
     BrowserModule,

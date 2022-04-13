@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,35 +13,45 @@
 
 <body>
  
+   
     <header class="header">
-
-        <img src="../assets/logo.png" alt="Logo FCamara" id="logo">
-        <img src='../assets/jogue-a-flecha 1.png' id='seta'>
-        <h6 id="title"> Technical Share </h6>
-
-        <nav>
-            <img src='../assets/heart.png' alt='Favoritos' id="coracao">
-            <p id="favoritos"> Favoritos </p>
-            <img src='../assets/notificação.png' alt='Notificações' id="sininho">
-            <p id="notificações"> Notificações </p>
-            <img src='../assets/conta.png' alt='Perfil' id="user">
-            <p id="perfil"> Perfil </p>
-            <img src='../assets/sair.png' alt='Sair' id="saída">
-            <p id="sair"> Sair </p>
-        </nav>
-
-    </header>
+        <div class="title">
+          <img src="../assets/logo.png" alt="Logo FCamara" id="logo">
+          <img src='../assets/jogue-a-flecha 1.png' id='seta'>
+          <h6 id="technical"> Technical Share </h6>
+        </div>
+      
+          <nav class="icons">
+            <div class="order-text-icon">
+              <img src='../assets/heart.png' alt='Favoritos' class="img-icon" id="coracao">
+              <p class="text-icons"> Favoritos </p>
+            </div>
+            <div class="order-text-icon">
+              <img src='../assets/notificação.png' alt='Notificações' class="img-icon" id="sininho">
+              <p class="text-icons"> Notificações </p>
+            </div>
+            <div class="order-text-icon">
+              <img src='../assets/conta.png' alt='Perfil' id="user">
+              <p class="text-icons"> Perfil </p>
+            </div>
+            <div class="order-text-icon">
+              <img src='../assets/sair.png' alt='Logout' id="saída">
+              <p class="text-icons"> Sair </p>
+            </div>
+          </nav>
+      </header>
     
-    <span id="retangulo">
+    <section class="section">
       
       <h2 id="text">Encontre o #SangueLaranja que você precisa!</h2>
-      <div id="barra">
+     <div class="">
       <input type="text" placeholder="Busque por habilidades, cargos ou nome do Sangue Laranja" id="barra-pesquisa">
       <button id="barra-buscar"> Buscar </button>
-      </div>
-    </span>
+     </div>
+    
+    </section>
 
-    <main>
+    
         <h5 id ="sugestões"> Sugestões de acordo com seus interesses </h5>
 
         <nav id="opções-sugestões">
@@ -48,47 +61,86 @@
             <p id ="metodologia-agil" type="submit"> Metodologia Ágil </p>
         </nav>
 
-    <div id="result">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide" id="profile"*ngFor="let perfil of perfis">
-                <img src="./assets/profile.png" alt="Foto de perfil" id="pic"> 
-          <h6 id ="name"> {{perfil.name}} </h6>
-          <p id="cargo"> {{perfil.cargo}} </p>
-      
-    </div>
-   </div>
-   </div>
-   <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
-   </div>
-  
-     <h5 id="resultado-da-pesquisa"> Pessoas do mesmo cargo </h5>
- 
-
-     <div id="result2">
-         <div id="profile" *ngFor="let perfil of perfis">
-            <img src="../assets/profile.png" alt="Foto de perfil"id="pic"> 
-            <h6 id ="name"> {{perfil.name}} </h6>
-            <p id="cargo"> {{perfil.cargo}} </p>  
-        </div>
-        </div>
-
    
-     
+     <section>
+      <div class="swiper mySwiper container">
+        <div class="swiper-wrapper content">
+          <div class="swiper-slide card">
+            <div class="card-content">
+              <div class="perfil" *ngFor="let perfil of perfis">
+                <img src="../assets/profile.png" alt="Foto de perfil">
+                <h6 id="name">{{perfil.name}}</h6>
+                <p id="cargo">{{perfil.cargo}}</p>
 
-    </main>
+              </div>
 
-    <div id="ver-mais"></div>
-    <img src='../assets/proximo.png' id="proximo">
+            </div>
 
-    <div id="ver-mais2"></div>   
-    <img src='../assets/proximo.png' id="proximo2">
+          </div>
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+     </section>
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
 
 
     
 </body>
 </html>
 
+<!-- <main> -->
 
+<!-- <div id="result">
+  <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" id="profile"*ngFor="let perfil of perfis">
+          <img src="./assets/profile.png" alt="Foto de perfil" id="pic"> 
+    <h6 id ="name"> {{perfil.name}} </h6>
+    <p id="cargo"> {{perfil.cargo}} </p>
+
+</div>
+</div>
+</div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-pagination"></div>
+</div>
+
+<h5 id="resultado-da-pesquisa"> Pessoas do mesmo cargo </h5>
+
+
+<div id="result2">
+   <div id="profile" *ngFor="let perfil of perfis">
+      <img src="../assets/profile.png" alt="Foto de perfil"id="pic"> 
+      <h6 id ="name"> {{perfil.name}} </h6>
+      <p id="cargo"> {{perfil.cargo}} </p>  
+  </div>
+  </div>
+
+
+
+
+</main> -->

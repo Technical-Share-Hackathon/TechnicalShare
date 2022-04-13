@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CrudService } from 'src/app/services/crud.service';
+import { LoginUser } from '../model/login-user';
+import { UsuarioCompleto } from '../model/usuario-completo';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  usuarioLogin: LoginUser = new LoginUser();
+  usuarioCompleto: UsuarioCompleto = new UsuarioCompleto();
+
+  constructor(
+    
+    private servicoDoUsuario: CrudService,
+    private router: Router
+  ){}
 
   ngOnInit(): void {
+  }
+
+  fazerLogin() {
+    this.servicoDoUsuario.logarUsuario(this.usuarioLogin).subscribe((result: UsuarioCompleto) => {
+      this.usuarioCompleto = result
+  
+      this.router.navigate(['home']);
+    })
   }
 
 }

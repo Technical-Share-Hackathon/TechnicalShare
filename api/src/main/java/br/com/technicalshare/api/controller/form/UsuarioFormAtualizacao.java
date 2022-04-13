@@ -2,6 +2,8 @@ package br.com.technicalshare.api.controller.form;
 
 import br.com.technicalshare.api.models.*;
 
+import java.util.List;
+
 public class UsuarioFormAtualizacao {
 
     private Long id;
@@ -9,6 +11,8 @@ public class UsuarioFormAtualizacao {
     private String linkFoto;
 
     private String resumo;
+
+    private String nivelSenioridade;
 
     private SoftSkills softSkills;
 
@@ -18,6 +22,8 @@ public class UsuarioFormAtualizacao {
 
     private LinksDisponiveis linksDisponiveis;
 
+    private List<Experiencia> experiencias;
+
     public Usuario converterParaEntidade(Usuario usuario) {
         usuario.setLinkFoto(this.getLinkFoto());
         usuario.setResumo(this.getResumo());
@@ -25,6 +31,8 @@ public class UsuarioFormAtualizacao {
         usuario.setLinksDisponiveis(this.getLinksDisponiveis());
         usuario.setSoftSkills(this.getSoftSkills());
         usuario.setHardSkills(this.getHardSkills());
+        usuario.setExperiencias(this.getExperiencias());
+        usuario.setNivelSenioridade(this.getNivelSenioridade());
 
         return usuario;
     }
@@ -83,5 +91,21 @@ public class UsuarioFormAtualizacao {
 
     public void setLinksDisponiveis(LinksDisponiveis linksDisponiveis) {
         this.linksDisponiveis = linksDisponiveis;
+    }
+
+    public List<Experiencia> getExperiencias() {
+        return experiencias;
+    }
+
+    public String getNivelSenioridade() {
+        return nivelSenioridade;
+    }
+
+    public void setNivelSenioridade(String nivelSenioridade) {
+        this.nivelSenioridade = nivelSenioridade;
+    }
+
+    public void setExperiencias(List<Experiencia> experiencias) {
+        this.experiencias = experiencias;
     }
 }

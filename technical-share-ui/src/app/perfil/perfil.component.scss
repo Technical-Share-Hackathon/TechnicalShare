@@ -7,7 +7,7 @@
 
 body{
     width: 100%;
-    height: 1000px;
+    height: 100vh;
     background-color: #F7F1FF;
 }
 
@@ -27,6 +27,7 @@ main{
 .title{
     display: flex;
     align-items: center;
+    margin-left: 32px;
 }
 
 #technical{
@@ -40,6 +41,7 @@ main{
 .icons{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .text-icons{
@@ -51,6 +53,60 @@ main{
     align-items: center;
     text-align: center;
     color: #FFFFFF;
+}
+
+.order-text-icon{
+    display: flex;
+    flex-direction: column; 
+    margin:30px;
+}
+
+.img-icon{
+    width: 29.14px;
+    height: 29.14px;
+    margin-left: 10px;
+    
+}
+
+#coracao{
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+#sininho{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+#user{
+    width: 20px;
+    height: 20px;  
+    cursor: pointer;
+    margin-left:5px;
+}
+
+#saída{
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+#coracao:hover{
+    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
+}
+#sininho:hover{
+    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
+}
+#user:hover{
+    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
+}
+#saída:hover {
+    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
 }
 
 .section-volta{
@@ -80,7 +136,8 @@ main{
 
 #heart{
     filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
-    
+    margin-left: 250px;
+    margin-top:20px;
 }
 
 .info{
@@ -253,6 +310,7 @@ main{
     margin-top: 30px;
     background: #FFFFFF;    
     border-radius: 5px;
+    border: 1px solid #E0DAE9;
 }
 
 #quem-sou-eu{ 
@@ -275,7 +333,6 @@ main{
     margin-top: 20px;
     width: 114px;
     height: 24px;
-    font-family: Metropolis;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -358,21 +415,34 @@ main{
     color: #4E4956;
 }
 
+#topo{
+    display: none;
+}
+
 @media only screen and (max-width: 1025px){
 
     body{
         width: 100%;
-        height: 2300px;
+        height: 1500px;
         background-color: #F7F1FF;
     }
 
     main{
         width: 100%;
-        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
+    .section-volta{
+       margin-left: 20px
+    }
+
+    #heart{
+        margin-left: 300px;
+        margin-top: -20px
+    }
+
     .perfil-section{
         width: 100%;
         height: 688px;
@@ -412,7 +482,27 @@ main{
     #função{
         display:none;
     }
+
+    .icons{
+        display: none;
+    }
+
+    #topo {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        width: 368px;
+        height: 50px;
+        background: #404099;
+        border-radius: 8px;
+        color: #ffffff;
+    }
 }
+
 
 
 
@@ -453,57 +543,7 @@ main{
 }
 
 
-#coracao{
-    position: absolute;
-    left: 1002px;
-    right: -20%;
-    top: 26px;
-    bottom: 15%;
-    box-sizing: border-box;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-    cursor: pointer;
-}
 
-#sininho{
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    left: 1118px;
-    top: 26px;
-    cursor: pointer;
-}
-
-#user{
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    left: 1235px;
-    top: 26px;    
-    cursor: pointer;
-}
-
-#saída{
-    position: absolute;
-    left: 70%;
-    right: -30%;
-    top: 26px;
-    bottom: 35%;
-    border-radius: 1px;
-    cursor: pointer;
-}
-
-#coracao:hover{
-    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
-}
-#sininho:hover{
-    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
-}
-#user:hover{
-    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
-}
-#saída:hover {
-    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
-}
 
 #favoritos{
     position: absolute;
