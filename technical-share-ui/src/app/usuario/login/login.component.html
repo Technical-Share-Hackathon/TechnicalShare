@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
 </head>
+
 <body>
 
-<div class="container">
+  <div class="container">
 
-    
+
     <div class="main1">
-        <h1 id="title"> 
-                Technical Share
-        </h1>
+      <h1 id="title">
+        Technical Share
+      </h1>
 
-         <p id="text"> 
-          Encontre pessoas da área de tecnologia para trocar experiências e aprender coisas novas!
-        </p>
+      <p id="text">
+        Encontre pessoas da área de tecnologia para trocar experiências e aprender coisas novas!
+      </p>
 
-         <img src="assets/fundo1.png"  alt="Fundo 1" class="fundo1">
-     </div>  
+      <img src="assets/fundo1.png" alt="Fundo 1" class="fundo1">
+    </div>
 
 
-     <div class="main2">  
+    <div class="main2">
 
-         <h4 id ="title2">
-            Ficamos felizes em te ver de volta!
-         </h4>
+      <h4 id="title2">
+        Ficamos felizes em te ver de volta!
+      </h4>
 
-         <p id ="text2">
-         Preencha com seu e-mail e senha para entrar.
-        </p>
+      <p id="text2">
+        Preencha com seu e-mail e senha para entrar.
+      </p>
 
-  <div class="hr">
+      <div class="hr">
 
- </div>
- 
- <p id="login">
-   Login
- </p>
+      </div>
 
- <input [(ngModel)]="usuarioLogin.email" id="caixa-cadastro-login" placeholder="name@example.com" type="text">
+      <p id="login">
+        Login
+      </p>
 
- <p id="senha">
-   Senha
- </p>
+      <input [(ngModel)]="usuarioLogin.email" id="caixa-cadastro-login" placeholder="name@example.com" type="text">
 
- <input [(ngModel)]="usuarioLogin.senha" id="caixa-cadastro-senha" placeholder="......" type="password">
+      <p id="senha">
+        Senha
+      </p>
 
- <button (click)="fazerLogin()" id="entrar">Entrar</button>
-  
-</div>
+      <input [(ngModel)]="usuarioLogin.senha" id="caixa-cadastro-senha" placeholder="......" type="password">
 
-</div>
+      <button (click)="fazerLogin()" id="entrar">Entrar</button>
+
+    </div>
+
+  </div>
 
 </body>
+
 </html>
-
-
-
-
-

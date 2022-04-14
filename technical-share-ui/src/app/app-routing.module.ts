@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { PesquisaUsuariosComponent } from './pesquisa-usuarios/pesquisa-usuarios.component';
 
 
 const routes: Routes = [
   { path: '', pathMatch: 'full' ,redirectTo: 'usuarios'},
   { path: 'home', component: HomeComponent},
-  { path: 'perfil', component: PerfilComponent},
+  { path: 'perfil/:id', component: PerfilComponent},
+  { path:  'pesquisar/:pesquisa', component: PesquisaUsuariosComponent},
   
   
   {

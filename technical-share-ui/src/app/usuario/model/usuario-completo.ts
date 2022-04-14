@@ -20,4 +20,5 @@ export class UsuarioCompleto {
     hardSkills!: HardSkills
     experiencias!: Experiencias[]
     areaDeInteresse!: AreaDeInteresse
+    localizacao!: string
 }

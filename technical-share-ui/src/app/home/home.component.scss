@@ -6,9 +6,9 @@
 }
 
 body{
+    background: #F7F1FF;
     width: 100%;
-    height: 1500px;
-    background-color: #F7F1FF;
+    height: 3000px;
 }
 
 .header{
@@ -18,6 +18,10 @@ body{
     display: flex;
     justify-content: space-between;
 }
+
+.btn-group{
+    display: none;
+  }
 
 .title{
     display: flex;
@@ -105,6 +109,502 @@ body{
 }
 
 
+
+
+.img-style{
+    height:100px ;
+    width: 120px ;
+  }
+  
+  
+  .font-style{
+    font-size:0.7em;
+  }
+  
+  h1{
+    font-size:1.3em;
+  }
+  
+  
+  h6{
+    font-size:0.6em;
+  }
+  
+  .view {
+    background-image: url(../../assets/fundo2.png) ;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background:
+      linear-gradient(
+        rgba(40,40,99,.75),rgba(40,40,99,.75)
+      ),
+      url(../../assets/fundo2.png) no-repeat;
+  
+  }
+  
+  .bg {
+   background-color: #404099;
+  
+  }
+  
+  .botao{
+    background-color: #FF4500;
+  }
+  
+  .titulo{
+    color:  #4B4B8E;
+  }
+
+#text{
+    width: 672px;
+    height: 120px;
+    margin-left: 200px;
+    padding-top: -50px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#section1{
+    margin-top: -50px;
+}
+
+#botão{
+    width: 175.83px;
+    height: 51px;
+}
+
+#barra-busca{
+    width: 896.84px;
+    height: 51px;
+}
+
+#parte-pesquisa{
+    width: 1700px;
+    height:100px;
+    padding-left:-20px;
+    margin-left: 80px;
+}
+
+#sugestões{
+    width: 590px;
+    height: 33px;
+    margin-left: 149px;
+    margin-top: 40px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #404099;
+}
+
+#lista-sugestões{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    padding: 8px;
+    width: 175px;
+    height: 38px;
+    background: #E0DAE9;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+#lista-sugestões :hover{
+    background:#FF4500;
+}
+
+#nav-lista-sugestões{
+    margin-left: 130px;
+    margin-top: 20px;
+}
+
+#container-interesse{
+    margin-left: 149px;
+    width: 1374px;
+}
+
+#pessoas-mesmo-cargo{
+    width: 100%;
+    margin-left: 149px;
+    margin-top: 50px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #404099;
+}
+
+#sugestão-profissão{
+    margin-left: 149px;
+}
+
+.card-list{
+    background: #F7F1FF;
+    width: 209px;
+    height: 259px;
+}
+
+#pic{
+    width: 139.33px;
+    height: 140px;
+}
+
+#name{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    color: #404099;
+    margin-top: 10px;
+}
+
+
+#cargo{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    font-variant: small-caps;
+    color: #4E4956;
+    margin-top: 10px;
+}
+
+#pesquisa-list{
+    background: #F7F1FF;
+    width: 209px;
+    height: 259px;
+}
+
+#name-pesquisa{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    color: #404099;
+    margin-top: 10px;
+}
+
+#cargo-pesquisa{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    font-variant: small-caps;
+    color: #4E4956;
+    margin-top: 10px;
+}
+
+.rounded-circle{
+    width: 92px;
+    height: 92px;
+}
+
+#avancar{
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 18px;
+}
+
+#avancar2{
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 18px;
+}
+
+#volta{
+    transform: rotate(180deg);
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 18px;
+}
+
+#pic-pesquisa{
+    width: 139.33px;
+    height: 140px;
+}
+
+@media only screen and (max-width: 1025px){
+
+    header{
+        display: flex;
+        align-items: center;
+      }
+      
+      #logo{
+        margin-left: 0px;
+      }
+      
+      .btn-group{
+        display: block;
+      }
+      
+      .dropdown-item{
+        background: #404099;
+        border-top: 2px solid #FF4500;
+        color: #FFFFFF;
+      }
+
+.icons{
+     display: none;
+ }
+#text{
+    width: 350px;
+    height: 127px;
+    margin-left: 16px;
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.view {
+    background-image: url(../../assets/fundo2mobile.png) ;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background:
+      linear-gradient(
+        rgba(40,40,99,.75),rgba(40,40,99,.75)
+      ),
+      url(../../assets/fundo2mobile.png) no-repeat;
+  
+  }
+
+#parte-pesquisa{
+    width: 350px;
+    height: 40px;
+    margin-left: 16px;
+}
+#botão{
+    width: 80px;
+    height: 38px;
+}
+
+#barra-busca{
+    width: 100px;
+    height: 38px;
+}
+
+
+#sugestões{
+    width: 380px;
+    height: 62px;
+    margin-left: 14px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+#lista-flex{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-list{
+    width: 150px;
+    height: 192px;
+}
+
+#card-flex{
+    width: 400px;
+    height: 150px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    margin-left: -200px;
+    
+}
+
+#pic{
+    width: 40px;
+height: 40.65px;
+}
+
+#name{
+    width: 121px;
+height: 15.2px;
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 22px;
+text-align: center;
+}
+
+#cargo{
+    margin-top: 25px;
+    width: 121px;
+    height: 29px;
+    font-style: normal; 
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    font-variant: small-caps;
+}
+
+#row-responsive{ 
+    width: 200px;
+}
+
+#mais{
+    display: none;
+}
+
+#mais2{
+    display: none;
+}
+
+#menos{
+    display: none;
+}
+
+#menos2{
+    display: none;
+}
+
+#pessoas-mesmo-cargo{
+    width: 380px;
+    height: 62px;
+    margin-left: 14px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+
+
+}
+
+
+
+
+/* 
+
+body{
+    width: 100%;
+    height: 1500px;
+    background-color: #F7F1FF;
+}
+
+
+
+.header{
+    width: 100%;
+    height: 85px;
+    background: #404099;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    margin-left: 32px;
+}
+
+#technical{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px; 
+    color: #FFFFFF;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-icons{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.order-text-icon{
+    display: flex;
+    flex-direction: column; 
+    margin:30px;
+}
+
+.img-icon{
+    width: 29.14px;
+    height: 29.14px;
+    margin-left: 10px;
+    
+}
+
+#coracao{
+    width: 20px;
+    height: 20px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+#sininho{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+#user{
+    width: 20px;
+    height: 20px;  
+    cursor: pointer;
+    margin-left:5px;
+}
+
+#saída{
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+#coracao:hover{
+    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
+}
+#sininho:hover{
+    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
+}
+#user:hover{
+    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
+}
+#saída:hover {
+    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
+}
+
+
 .section{
     width: 100%;
     height: 471px;
@@ -113,19 +613,11 @@ body{
     background-size: cover;
 }
 
-
-#text{
-    width: 672px;
-    height: 83px;
-    margin-left: 600px;
-    padding-top: 110px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 56px;
-    text-align: center;
-    color: #FFFFFF;
+.section2{
+    margin-top: 180px;
 }
+
+
 
 #barra-pesquisa{
     display: flex;
@@ -155,17 +647,6 @@ body{
     color: #FFFFFF;
 }
 
-#sugestões{
-    width: 590px;
-    height: 33px;
-    margin-left: 149px;
-    margin-top: 40px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 32px;
-    color: #404099;
-}
 
 #opções-sugestões{
     display: flex;
@@ -175,9 +656,14 @@ body{
     padding:10px;
     justify-content:space-between;
     margin-top: 20px;
+    
 }
 
-#design{
+.interesses{
+    display: flex;
+}
+
+.design{
     display: flex; 
     flex-direction: row;
     justify-content: center;
@@ -187,19 +673,15 @@ body{
     height: 38px;
     background: #FFBAA3;
     border-radius: 8px;
+    cursor: pointer;
+}
+
+.design :hover{
+    width: 100px;
 }
 
 #ux{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    width: 175px;
-    height: 38px;
-    background: #E0DAE9;
-    border-radius: 8px;
-    margin-left: 20px;
+
 }
 
 #figma{
@@ -228,20 +710,9 @@ body{
     margin-left: 20px;
 }
 
-#result{
-    display: flex; 
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    position: absolute;
-    width: 1146px;
-    height: 259px;
-    left: 149px;
-    top: 750px;
-}
-
 .swiper{
     width: 100%;
+    margin-left: 150px;
 }
 
 .card-content{
@@ -249,161 +720,45 @@ body{
     background:#F7F1FF;
 }
 
-#profile{
-    position: static;
-    width: 210px;
-    height: 259px;
-    left: 0px;
-    top: 0px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px 24px;
-    background: #FFFFFF;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
 #pic{
     margin-top: 20px;
 }
 
 
-#name{
-    font-family: Metropolis;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #404099;
-}
 
 
-#cargo{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.15em;
-    font-variant: small-caps;
-    color: #4E4956;
-}
 
-#ver-mais{
-    position: absolute;
-    width: 92px; 
-    height: 92px;
-    left: 1316px;
-    top: 814px;
-    background: #FFFFFF;
-    border-radius: 50%;
-    box-sizing: border-box;
-}
-
-#proximo{
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    left: 1338px;
-    top: 835px;  
-}
-
-#resultado-da-pesquisa{
-    position: absolute;
-    width: 1370px;
-    height: 36px;
-    left: 149px;
-    top: 1030px;
-    font-family: Metropolis;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 32px;
-    color: #404099;
-}
-
-
-#result2{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    position: absolute;
-    width: 1146px; 
-    height: 259px;
-    left: 149px;
-    top: 1080px;
-    background-color: #F7F1FF;
-}
-
-#ver-mais2{
-    position: absolute;
-    width: 92px;
-    height: 92px;
-    left: 1316px;
-    top: 1192px;
-    background: #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 50%;
-}
-
-#proximo2{   
-    position: absolute;
-    width: 50px;  
-    height: 50px;
-    left: 1338px;
-    top: 1213px;
-}
 
 
 @media only screen and (max-width: 1025px){
-    
+
+    body{
+        width: 100%;
+        background-color: #F7F1FF;
+    }
+ 
     .header{
-        position: absolute;
         width: 100%;
         height: 85px;
-        left: 0px;
-        top: 0px;
         background: #404099;
     }
 
-    #retangulo{
-        position: absolute;
+  
+
+    .section{
+        margin-top: -30px;
         width: 100%;
         height: 359px;
-        left: 0px;
-        top: 85px;
         background: url('../../assets/fundo2mobile.png'),  #404099;
     }
 
-    #text{
-        position: absolute;
-        width: 382px;
-        height: 127px;
-        left: 16px;
-        top: 100px;
-        font-family: Metropolis;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 32px;
-        line-height: 40px;
-        text-align: center;
-        color: #FFFFFF;
+    .section2{
+        width: 100%;
+        margin-top: 15px;
     }
 
-    #barra{
-        position: absolute;
-        width: 380px;
-        height: 38px;
-        left: 8px;
+    #text{
+        
     }
 
     #barra-pesquisa{
@@ -411,14 +766,12 @@ body{
         flex-direction: row;
         align-items: center;
         padding: 8px 12px;
-        position: absolute;
         width: 260px;
         height: 38px;
-        left: 16px;
-        top: 342px;
+        margin-left: 25px;
+        margin-top: 140px;
         background: #FFFFFF;
         border: 1px solid #B4AEBD;
-        box-sizing: border-box;
         border-radius: 5px;
     }
 
@@ -428,27 +781,42 @@ body{
         justify-content: center;  
         align-items: center;
         padding: 8px;
-        position: absolute;
         width: 85px;
         height: 38px;
-        left: 270px;
-        top: 342px;
+        margin-left: 285px;
+        margin-top: -38px;
         background: #FF4500;
         border-radius: 0px 8px 8px 0px;
     }
 
     #sugestões{
-        position: absolute;
-        width: 380px;
+        width: 350px;
         height: 62px;
-        left: 16px;
-        top: 491px;
-        font-family: Metropolis;
+        margin-left: 16px;
         font-style: normal;
         font-weight: 500;
         font-size: 22px;
         line-height: 32px;
         color: #404099;
+    }
+
+    #opções-sugestões{
+        width: 100%;   
+        height: 38px;
+        display: flex;
+        margin-left: 0px;
+    }
+
+    #ux{
+        display: none;
+    }
+
+    #figma{
+        display: none;
+    }
+
+    #metodologia-agil{
+        display: none;
     }
 
     #design{
@@ -457,11 +825,10 @@ body{
         justify-content: center;
         align-items: center;
         padding: 8px;
-        position: absolute;
         width: 152px;
         height: 38px;
-        left: 16px; 
-        top: 569px;
+        margin-left: 0px; 
+        margin-top: -20px;
         background: #FFBAA3;
         border-radius: 8px;
     }
@@ -472,28 +839,17 @@ body{
         justify-content: center;
         align-items: center;
         padding: 8px;
-        position: absolute;
         width: 128px;
         height: 38px;
-        left: 186px;
-        top: 569px;
+        margin-left: -20px;
+        margin-top: -20px;
         background: #E0DAE9;
         border-radius: 8px;
     }
 
-    #result{
-        position: absolute; 
-        width: 431.34px;
-        height: 192px;
-        left: 16px;
-        top: 631px;
-    }
-
-    #profile{
-        width: 132.34px;
-        height: 192px;
-        left: 16px;
-        top: 631px;
+    .swiper{
+        width: 100%;
+        margin-left: 0px;
     }
 
     #pic{
@@ -502,7 +858,6 @@ body{
     }
 
     #name{
-        font-family: Metropolis;
         font-style: normal;
         font-weight: 600;
         font-size: 16px;
@@ -512,62 +867,16 @@ body{
         text-align: center;
         color: #404099;
     }
-
-    #ver-mais{
-        position: absolute;
-        width: 80.01px;
-        height: 80.01px;
-        left: 314px;
-        top: 687px;
-        background: #FFFFFF;
-    }
-
-    #proximo{
-        position: absolute;
-        width: 43.48px;
-        height: 43.48px;
-        left: 333.13px;
-        top: 705.26px;
-    }
-
    
-    #resultado-da-pesquisa{
-        position: absolute;
-        width: 1239px;
+    #pessoas-mesmo-cargo{
+        width: 100%;
         height: 36px;
-        left: 16px;
+        margin-left: 0px;
         top: 855px;
-        font-family: Metropolis;
         font-style: normal;
         font-weight: 500;
         font-size: 22px;
         line-height: 32px;
         color: #404099;
     }
-
-    #result2{
-        position: absolute;
-        position: absolute;  
-        width: 431.34px;
-        height: 192px;
-        left: 16px;
-        top: 922px;
-    }
-
-    #ver-mais2{
-        position: absolute;
-        width: 80.01px;
-        height: 80.01px;
-        left: 314px;
-        top: 978px;
-        background: #FFFFFF;
-    }
-
-    #proximo2{
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        left: 1338px;
-        top: 1213px;
-    }
-}
+} */

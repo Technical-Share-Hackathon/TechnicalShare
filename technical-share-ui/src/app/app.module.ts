@@ -6,20 +6,21 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { PerfilComponent } from './perfil/perfil.component';
-import { PerfilSlideComponent } from './perfil-slide/perfil-slide.component';
+import { PesquisaUsuariosComponent } from './pesquisa-usuarios/pesquisa-usuarios.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     PerfilComponent,
-    PerfilSlideComponent
+    PesquisaUsuariosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule, 
+    FormsModule
 
   ],
   providers: [],

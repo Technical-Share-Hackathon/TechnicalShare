@@ -1,4 +1,4 @@
-window.onload = function(){
+/* window.onload = function(){
 
     const btnUx = document.getElementById('ux');
     const btnDesign = document.getElementById('design');
@@ -43,3 +43,4 @@ btnDesign.addEventListener('click', () => {
   
 }
 
+ */
