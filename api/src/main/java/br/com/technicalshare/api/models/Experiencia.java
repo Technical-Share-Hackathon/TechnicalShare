@@ -2,7 +2,6 @@ package br.com.technicalshare.api.models;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -18,10 +17,10 @@ public class Experiencia {
 
     private String empresa;
 
-    @JsonFormat(pattern = "dd-MM-yyyy")
+    @JsonFormat(pattern = "yyyy")
     private LocalDate inicio;
 
-    @JsonFormat(pattern = "dd-MM-yyyy")
+    @JsonFormat(pattern = "yyyy")
     private LocalDate termino;
 
     private String descricao;

@@ -1,7 +1,12 @@
 package br.com.technicalshare.api.controller;
 
+import br.com.technicalshare.api.controller.form.UsuarioFormLogin;
+import br.com.technicalshare.api.exception.EmailNaoExistenteException;
+import br.com.technicalshare.api.exception.SenhaInvalidaException;
 import br.com.technicalshare.api.models.*;
 import br.com.technicalshare.api.repository.UsuarioRepository;
+import br.com.technicalshare.api.service.AuthService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,6 +19,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -23,6 +29,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -41,6 +48,9 @@ public class UsuarioControllerTest {
 
     @MockBean
     UsuarioRepository usuarioRepository;
+
+    @MockBean
+    AuthService authService;
 
     Usuario usuarioMock;
 
@@ -121,4 +131,140 @@ public class UsuarioControllerTest {
                 .andExpect(jsonPath("number").value(0));
 
     }
+
+    @Test
+    @DisplayName("Request da página de usuarios sugeridos por algum interesse do usuário")
+    public void deveRetornarUmaPaginaDeUsuariosComCriterio() throws Exception {
+
+        Page<Usuario> paginaUsuarios = new PageImpl<>(Arrays.asList(usuarioMock));
+        String sugestao = "java";
+
+        BDDMockito.given(usuarioRepository.findAll(any(Specification.class),any(PageRequest.class)))
+                .willReturn(paginaUsuarios);
+
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders
+                .get(USUARIO_URI+"/sugerir/"+sugestao)
+                .accept(MediaType.APPLICATION_JSON);
+
+        mockMvc.perform(request)
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("content").isNotEmpty())
+                .andExpect(jsonPath("totalElements").value(1))
+                .andExpect(jsonPath("number").value(0));
+
+    }
+
+    @Test
+    @DisplayName("Request da página de usuarios de acordo com qualquer critério de pesquisa")
+    public void deveRetornarUmaPaginaDeUsuariosFiltrados() throws Exception {
+        Page<Usuario> paginaUsuarios = new PageImpl<>(Arrays.asList(usuarioMock));
+        String filtroQualquer = "lol@fcamara.com";
+
+        BDDMockito.given(usuarioRepository.findAll(any(Specification.class),any(PageRequest.class)))
+                .willReturn(paginaUsuarios);
+
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders
+                .get(USUARIO_URI+"/pesquisar/"+filtroQualquer)
+                .accept(MediaType.APPLICATION_JSON);
+
+        mockMvc.perform(request)
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("content").isNotEmpty())
+                .andExpect(jsonPath("totalElements").value(1))
+                .andExpect(jsonPath("number").value(0));
+    }
+
+    @Test
+    @DisplayName("Request de um Singleton de usuario")
+    public void deveRetornarRecursoUnicoDeUsuario() throws Exception {
+
+        BDDMockito.given(usuarioRepository.findById(any(Long.class))).willReturn(Optional.of(usuarioMock));
+
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders
+                .get(USUARIO_URI+"/"+1)
+                .accept(MediaType.APPLICATION_JSON);
+
+        mockMvc.perform(request)
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("resumo").value("teste"))
+                .andExpect(jsonPath("squad").value("Brasil"))
+                .andExpect(jsonPath("email").value("lol@fcamara.com"))
+                .andExpect(jsonPath("profissaoAtual").value("Desenvolvedor"));
+        
+    }
+
+    @Test
+    @DisplayName("Deve logar com sucesso")
+    public void deveLogarComSucesso() throws Exception {
+        ObjectMapper mapper = new ObjectMapper();
+        UsuarioFormLogin formLogin = new UsuarioFormLogin("teste@teste.com", "1234");
+
+        String loginJson = mapper.writeValueAsString(formLogin);
+
+        BDDMockito.given(usuarioRepository.findByEmail(any(String.class))).willReturn(Optional.of(usuarioMock));
+        BDDMockito.given(authService.validarSenha(any(Usuario.class), any(String.class))).willReturn(true);
+
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders
+                .post(USUARIO_URI+"/logar")
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
+                .content(loginJson);
+
+        mockMvc.perform(request)
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("resumo").value("teste"))
+                .andExpect(jsonPath("squad").value("Brasil"))
+                .andExpect(jsonPath("email").value("lol@fcamara.com"))
+                .andExpect(jsonPath("profissaoAtual").value("Desenvolvedor"));
+    }
+
+    @Test
+    @DisplayName("Deve lançar exceção de email invalido")
+    public void deveRetornarErroAoTentarLogar() throws Exception {
+
+        ObjectMapper mapper = new ObjectMapper();
+        UsuarioFormLogin formLogin = new UsuarioFormLogin("teste@teste.com", "teste");
+
+        String loginJson = mapper.writeValueAsString(formLogin);
+
+        BDDMockito.given(usuarioRepository.findByEmail(any(String.class)))
+                .willThrow(new EmailNaoExistenteException("Email incorreto"));
+
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders
+                .post(USUARIO_URI+"/logar")
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
+                .content(loginJson);
+
+        mockMvc.perform(request)
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("erro").value("Email incorreto"));
+
+    }
+
+    @Test
+    @DisplayName("Deve lançar exceção de senha incorreta ao tentar logar")
+    public void deveRetornarErroDeSenhaAoTentarLogar() throws Exception {
+        ObjectMapper mapper = new ObjectMapper();
+        UsuarioFormLogin formLogin = new UsuarioFormLogin("teste@teste.com", "1234");
+
+        String loginJson = mapper.writeValueAsString(formLogin);
+
+        BDDMockito.given(usuarioRepository.findByEmail(any(String.class))).willReturn(Optional.of(usuarioMock));
+        BDDMockito.given(authService.validarSenha(any(Usuario.class), any(String.class)))
+                .willThrow(new SenhaInvalidaException("Senha incorreta"));
+
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders
+                .post(USUARIO_URI+"/logar")
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
+                .content(loginJson);
+
+        mockMvc.perform(request)
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("erro").value("Senha incorreta"));
+    }
+
+
+
 }

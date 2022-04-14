@@ -24,7 +24,7 @@ export class ListarUsuarioComponent implements OnInit {
 
 
   interesses : string[] = [
-    environment.primeiraAreaDeInteresseDoUsuarioLogado,
+    "figma",
     "java",
     "typescrip",
     "angular",

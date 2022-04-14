@@ -22,6 +22,8 @@ public class UsuarioDetalhadoDto {
 
     private String email;
 
+    private String localizacao;
+
     private SoftSkills softSkills;
 
     private HardSkills hardSkills;
@@ -39,6 +41,7 @@ public class UsuarioDetalhadoDto {
         this.profissaoAtual = usuario.getProfissaoAtual();
         this.resumo = usuario.getResumo();
         this.email = usuario.getEmail();
+        this.localizacao = usuario.getLocalizacao();
         this.linksDisponiveis = usuario.getLinksDisponiveis();
         this.softSkills = usuario.getSoftSkills();
         this.hardSkills = usuario.getHardSkills();
