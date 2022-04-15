@@ -37,7 +37,7 @@
 2)basta iniciar o projeto pela própria IDE do seu gosto. Para uma documentação mais detalhada dos endpoints, acesse o swagger da aplicação:
 <img src="https://user-images.githubusercontent.com/72326473/163060619-95d0be70-9351-40f6-bdee-249c071b18e1.png" width="524" height="224">
 3) No script de banco de dados você pode editar os usuários para comtemplar senha ao efetuar o login:
-<img src="https://user-images.githubusercontent.com/72326473/163605315-19e75720-f5f8-4952-9734-63ec61000754.png" width="524" height="224">
+<img src="https://user-images.githubusercontent.com/72326473/163605315-19e75720-f5f8-4952-9734-63ec61000754.png" width="424" height="124">
 4) Se preferir pode usar o usuário default que tem o email "lucasst@fcamara.com" e senha "1234"
 
 ## Como rodar o FrontEnd do Projeto:
