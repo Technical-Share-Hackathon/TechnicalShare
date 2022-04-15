@@ -1,0 +1,229 @@
+<body>
+
+<header class="header">
+  <div class="title">
+    <img src="../assets/logo.png" alt="Logo FCamara" id="logo">
+    <img src='../assets/jogue-a-flecha 1.png' id='seta'>
+    <h6 id="technical"> Technical Share </h6>
+  </div>
+
+  <div class="btn-group">
+    <div type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <img src="../../assets/menu.png">
+    </div>
+    <div class="dropdown-menu dropdown-menu-right">
+      <button class="dropdown-item" type="button">Favoritos</button>
+      <button class="dropdown-item" type="button">Notificações</button>
+      <button class="dropdown-item" type="button">Perfil</button>
+      <button class="dropdown-item" type="button">Sair</button>
+    </div>
+  </div>
+
+    <nav class="icons">
+      <div class="order-text-icon">
+        <img src='../assets/heart.png' alt='Favoritos' class="img-icon" id="coracao">
+        <p class="text-icons"> Favoritos </p>
+      </div>
+      <div class="order-text-icon">
+        <img src='../assets/notificação.png' alt='Notificações' class="img-icon" id="sininho">
+        <p class="text-icons"> Notificações </p>
+      </div>
+      <div class="order-text-icon">
+        <img src='../assets/conta.png' alt='Perfil' id="user">
+        <p class="text-icons"> Perfil </p>
+      </div>
+      <div class="order-text-icon">
+        <img src='../assets/sair.png' alt='Logout' id="saída">
+        <p class="text-icons"> Sair </p>
+      </div>
+    </nav>
+</header>
+
+
+<div class="jumbotron jumbotron-fluid view" style="height: 400px; padding-top:150px">
+  <div class="container" id="section1">
+
+
+    <div class="row justify-content-center mt-2 p-3 ">
+      <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-1"></div>
+      <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 mt-1 ">
+        <h1 class="text-white" id="text">Encontre o #SangueLaranja que você precisa!</h1>
+      </div>
+    </div>
+
+    <div class="row justify-content-center" id="parte-pesquisa">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 mt-1" >
+        <div class="input-group">
+          <input  id="barra-busca" [(ngModel)]="buscaDoUsuario" type="text" class="form-control" placeholder="Busque por habilidades, cargos ou Nome do Sangue Laranja" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+          <div class="input-group-append" id="button-addon4">
+            <button  id='botão' class="btn  text-white botao" type="button" (click)="pesquisar()">Buscar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container ">
+  <div class="row mt-4">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <h5 class="titulo" id="sugestões">Sugestões de acordo com seus Interesses</h5>
+    </div>
+  </div>
+
+  <div class="row" id="nav-lista-sugestões">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" >
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li
+          id="lista-sugestões"
+          class="nav-item"
+          role="presentation"
+          *ngFor="let interesse of interesses"
+        >
+          <a
+            class="nav-link badge badge badge-pill badge-info mr-3"
+            id="pills-{{ interesse }}-tab"
+            data-toggle="pill"
+            href="#pills-{{ interesse }}"
+            role="tab"
+            [attr.aria-controls]="'pills-{{interesse}}'"
+            aria-selected="false"
+            (click)="pesquisarUsuariosSugeridos(interesse)"
+            >{{ interesse }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="container-interesse">
+  <div class="row">
+
+
+    <div class=" col-lg-1 col-xl-1 mt-5" id="menos">
+      <a class="page-link rounded-circle" (click)="retrocederPagina(interesseAtual)">
+        <img src="../../../assets/proximo.png" alt="" id="volta">
+      </a>
+    </div>
+
+
+ 
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active"
+          id="pills-{{ interesseAtual }}"
+          role="tabpanel"
+          attr.aria-labelledby="pills-{{ interesseAtual }}-tab">
+          <div class="row justify-content-center">
+            <div class="col-sm-2 col-md-5 col-lg-3 col-xl-3 mt-1" *ngFor="let usuario of usuariosSugeridos" id="pesquisa-list">
+              <div class="card h-100 p-2 text-center">
+                <div>
+                  <img
+                    id="pic-pesquisa"
+                    src="{{ usuario.linkFoto }}"
+                    class="img-style rounded-circle ml-3"
+                  />
+                </div>
+                <div class="card-body">
+                  <a [routerLink]="['/perfil', usuario.id]">
+                    <h5 class="card-title font-style" id="name-pesquisa">{{ usuario.nome }}</h5></a>
+                  <h6 class="card-subtitle mb-2 text-muted" id="cargo-pesquisa">
+                    {{ usuario.profissaoAtual }}
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="  col-lg-1 col-xl-1 mt-5" id="mais">
+      <a class="page-link rounded-circle" (click)="avancarPagina(interesseAtual)">
+        <img src="../../assets/proximo.png" id="avancar">
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container mt-5 mb-3" >
+  <div class="row justify-content-center mt-2">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <h1 class="titulo" id="pessoas-mesmo-cargo">Pessoas com o mesmo cargo que você</h1>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mb-5" id="sugestão-profissão">
+  <div class="row" id="row-responsive">
+
+     
+      <div class=" col-lg-1 col-xl-1 mt-5" id="menos2">
+        <a class="page-link rounded-circle" (click)="retrocederPaginaProfissao()">
+          <img src="../../assets/proximo.png" alt="Botão voltar" id="volta2">
+        </a>
+      </div>
+
+
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10" id="card-flex">
+      <div class="row justify-content-center">
+        <div
+          class="col-sm-2 col-md-5 col-lg-3 col-xl-3 mt-1 card-list"
+          *ngFor="let usuario of usuariosSugeridosPorProfissao"
+        >
+          <div class="card h-100 p-2 text-center ">
+            <div>
+              <img
+                id="pic"
+                src="{{ usuario.linkFoto }}"
+                class="img-style rounded-circle ml-3"
+                alt="..."
+              />
+            </div>
+            <div class="card-body">
+              <a  [routerLink]="['perfil', usuario.id]">
+                <h5 class="card-title font-style" id="name">{{ usuario.nome }}</h5>
+              </a>
+              <h6 class="card-subtitle mb-2 text-muted" id="cargo">
+                {{ usuario.profissaoAtual }}
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="  col-lg-1 col-xl-1 mt-5" id="mais2">
+      <a class="page-link rounded-circle" (click)="avancarPaginaProfissao()" >
+        <img src="../../../assets/proximo.png" id="avancar2">
+      </a>
+    </div>
+  </div>
+</div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

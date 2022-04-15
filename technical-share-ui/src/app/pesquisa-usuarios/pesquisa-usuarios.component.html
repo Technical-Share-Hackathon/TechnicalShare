@@ -1,0 +1,98 @@
+<body>
+
+<header class="header">
+  <div class="title">
+    <img src="../assets/logo.png" alt="Logo FCamara" id="logo">
+    <img src='../assets/jogue-a-flecha 1.png' id='seta'>
+    <h6 id="technical"> Technical Share </h6>
+  </div>
+
+  <div class="btn-group">
+    <div type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <img src="../../assets/menu.png">
+    </div>
+    <div class="dropdown-menu dropdown-menu-right">
+      <button class="dropdown-item" type="button">Favoritos</button>
+      <button class="dropdown-item" type="button">Notificações</button>
+      <button class="dropdown-item" type="button">Perfil</button>
+      <button class="dropdown-item" type="button">Sair</button>
+    </div>
+  </div>
+
+    <nav class="icons">
+      <div class="order-text-icon">
+        <img src='../assets/heart.png' alt='Favoritos' class="img-icon" id="coracao">
+        <p class="text-icons"> Favoritos </p>
+      </div>
+      <div class="order-text-icon">
+        <img src='../assets/notificação.png' alt='Notificações' class="img-icon" id="sininho">
+        <p class="text-icons"> Notificações </p>
+      </div>
+      <div class="order-text-icon">
+        <img src='../assets/conta.png' alt='Perfil' id="user">
+        <p class="text-icons"> Perfil </p>
+      </div>
+      <div class="order-text-icon">
+        <img src='../assets/sair.png' alt='Logout' id="saída">
+        <p class="text-icons"> Sair </p>
+      </div>
+    </nav>
+</header>
+
+
+<div class="section-volta">
+  <img src='../../assets/Vector.png' id='volta'>
+  <p id="voltar">Voltar ao início</p>
+</div>
+
+
+<div class="row justify-content-center" id="parte-pesquisa">
+  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 mt-1">
+     <div class="input-group">
+      <input id="barra-busca"  [(ngModel)]="filtro" type="text" class="form-control"
+                                   placeholder="Busque por habilidades, cargos ou Nome do Sangue Laranja"
+                                   aria-label="Recipient's username with two button addons"
+                                   aria-describedby="button-addon4">
+       <div class="input-group-append" id="button-addon4">
+        <button id="botão"  (click)="pesquisar(filtro)" class="btn  text-white botao" type="button">Buscar</button>
+       </div>
+     </div>
+  </div>
+</div>
+
+<div class="col-sm-12 col-md-12 col-lg-10 col-xl-10" id="result">
+  <div class="row justify-content-center">
+            <div class="col-sm-2 col-md-5 col-lg-3 col-xl-3 mt-1" *ngFor="let usuario of usuarios"  id="pesquisa-list">
+                      <div class="card h-100 p-2 text-center">
+                                <div>
+                                          <img src="{{ usuario.linkFoto }}"
+                                                    id="pic-pesquisa"
+                                                    class="img-style rounded-circle ml-3" alt="..." />
+                                </div>
+                                <div class="card-body">
+                                          <a [routerLink]="['perfil', usuario.id]">
+                                                    <h5 id="name-pesquisa" class="card-title font-style">{{ usuario.nome }}</h5>
+                                          </a>
+                                          <h6 class="card-subtitle mb-2 text-muted" id="cargo-pesquisa">
+                                                    {{ usuario.profissaoAtual }}
+                                          </h6>
+                                </div>
+                      </div>
+            </div>
+  </div>
+</div>
+
+
+
+
+<div class="row  justify-content-md-center mt-2" id="paginação">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item" *ngFor="let item of indice" id="paginas" >
+                <a class="page-link" (click)="trocarPagina(item)">{{item}}</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+</body>        

@@ -1,0 +1,516 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Metropolis;
+}
+
+body{
+    background: #F7F1FF;
+    width: 100%;
+    height: 3000px;
+}
+
+.header{
+    width: 100%;
+    height: 85px;
+    background: #404099;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-group{
+    display: none;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    margin-left: 32px;
+}
+
+#technical{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px; 
+    color: #FFFFFF;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-icons{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.order-text-icon{
+    display: flex;
+    flex-direction: column; 
+    margin:30px;
+}
+
+.img-icon{
+    width: 29.14px;
+    height: 29.14px;
+    margin-left: 10px;
+    
+}
+
+#coracao{
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+#sininho{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+#user{
+    width: 20px;
+    height: 20px;  
+    cursor: pointer;
+    margin-left:5px;
+}
+
+#saída{
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+#coracao:hover{
+    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
+}
+#sininho:hover{
+    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
+}
+#user:hover{
+    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
+}
+#saída:hover {
+    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
+}
+
+.img-style{
+    height:100px ;
+    width: 120px ;
+}
+
+.font-style{
+    font-size:0.7em;
+}
+
+.view {
+    background-image: url(../../assets/fundo2.png) ;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background:
+    linear-gradient(
+        rgba(40,40,99,.75),rgba(40,40,99,.75)
+),
+    url(../../assets/fundo2.png) no-repeat;
+
+}
+
+.bg {
+    background-color: #404099;
+
+}
+
+.botao{
+    background-color: #FF4500;
+}
+
+.titulo{
+    color:  #4B4B8E;
+}
+
+#text{
+    width: 672px;
+    height: 120px;
+    margin-left: 100px;
+    padding-top: -50px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#section1{
+    margin-top: -50px;
+}
+
+#botão{
+    width: 175.83px;
+    height: 51px;
+}
+
+#barra-busca{
+    width: 896.84px;
+    height: 51px;
+}
+
+#parte-pesquisa{
+    width: 1700px;
+    height:100px;
+    padding-left:-20px;
+    margin-left: 80px;
+}
+
+#sugestões{
+    width: 590px;
+    height: 33px;
+    margin-left: 149px;
+    margin-top: 40px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #404099;
+}
+
+#lista-sugestões{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    padding: 8px;
+    width: 175px;
+    height: 38px;
+    background: #E0DAE9;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+#lista-sugestões :hover{
+    background:#FF4500;
+}
+
+#nav-lista-sugestões{
+    margin-left: 130px;
+    margin-top: 20px;
+}
+
+#container-interesse{
+    margin-left: 149px;
+    width: 1374px;
+}
+
+#pessoas-mesmo-cargo{
+    width: 100%;
+    margin-left: 149px;
+    margin-top: 50px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #404099;
+}
+
+#sugestão-profissão{
+    margin-left: 149px;
+}
+
+.card-list{
+    background: #F7F1FF;
+    width: 209px;
+    height: 259px;
+}
+
+#pic{
+    width: 139.33px;
+    height: 140px;
+}
+
+#name{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    color: #404099;
+    margin-top: 10px;
+}
+
+
+#cargo{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    font-variant: small-caps;
+    color: #4E4956;
+    margin-top: 10px;
+}
+
+#pesquisa-list{
+    background: #F7F1FF;
+    width: 209px;
+    height: 259px;
+}
+
+#name-pesquisa{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    color: #404099;
+    margin-top: 10px;
+}
+
+#cargo-pesquisa{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    font-variant: small-caps;
+    color: #4E4956;
+    margin-top: 10px;
+}
+
+.rounded-circle{
+    width: 92px;
+    height: 92px;
+}
+
+#avancar{
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 18px;
+}
+
+#avancar2{
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 18px;
+}
+
+#volta{
+    transform: rotate(180deg);
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 18px;
+}
+
+#volta2{
+    transform: rotate(180deg);
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+#pic-pesquisa{
+    width: 139.33px;
+    height: 140px;
+}
+
+@media only screen and (max-width: 1025px){
+
+    header{
+    display: flex;
+    align-items: center;
+    }
+
+#logo{
+    margin-left: 0px;
+    }
+
+.btn-group{
+    display: block;
+}
+
+.dropdown-item{
+    background: #404099;
+    border-top: 2px solid #FF4500;
+    color: #FFFFFF;
+    }
+
+.icons{
+    display: none; 
+    }
+
+#text{
+    width: 340px;
+    height: 127px;
+    margin-left: 16px;
+    margin-top: -20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    }
+
+.view {
+    background-image: url(../../assets/fundo2mobile.png) ;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background:
+    linear-gradient(
+        rgba(40,40,99,.75),rgba(40,40,99,.75)
+     ),
+      url(../../assets/fundo2mobile.png) no-repeat;
+
+    }
+
+#parte-pesquisa{
+    width: 350px;
+    height: 40px;
+    margin-left: 0px;
+    margin-left: 16px;
+}
+#botão{
+    width: 80px;
+    height: 38px;
+}
+
+#barra-busca{
+    width: 100px;
+    height: 38px;
+}
+
+
+#sugestões{
+    width: 340px;
+    height: 62px;
+    margin-left: 14px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500px;
+    line-height: 32px;
+    }
+
+#container-interesse{
+    display: flex;
+    flex-direction: row;
+    height:100px;
+    width: 300px;
+    margin-left: 0px;
+    margin-top: -30px
+    }
+
+#pesquisa-list{
+    width: 150px;
+    height: 250px;
+    margin-left: 20px;
+    }
+
+#pic-pesquisa{
+    width: 100px;
+    }
+
+#name-pesquisa{
+    font-size: 14px;
+    }
+
+.rounded-circle{
+    width: 50px;
+    height: 50px;
+    }
+
+#pic{
+    width: 88.23px;
+    height: 88.65px;
+    }
+
+#nav-lista-sugestões{
+    width:365px;
+    margin-left: 0px;
+    }
+
+#lista-sugestões{
+    width: 50px;
+    font-size: 15px;
+    text-align: center;
+    color: #FF4500;
+    }
+
+
+#pessoas-mesmo-cargo{
+    width: 340px;
+    height: 62px;
+    margin-top: 850px;
+    margin-left: 14px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500px;
+    line-height: 32px;
+    }
+
+#sugestão-profissão{
+    margin-left: 0px;
+    margin-top: -60px;
+    }
+
+#menos{
+    margin-left: 160px;
+    }
+
+#mais{
+    margin-left: 160px;
+    }
+
+#avancar{
+    margin-left: 2px;
+    margin-top: 1px;
+    }
+
+#volta{
+    margin-left: 2px;
+    margin-top: 1px;
+    transform: rotate(180deg);
+}
+
+#menos2{
+    margin-left: 160px;
+    }
+
+#volta2{
+    margin-left: -2px;
+    margin-top: 1px;
+    transform: rotate(180deg);
+    }
+
+#mais2{
+    margin-left: 160px; 
+    }
+
+#avancar2{
+    margin-left: 1px;
+    margin-top: 1px; 
+    }
+
+
+}

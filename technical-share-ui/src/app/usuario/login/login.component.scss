@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Metropolis;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: #F7F1FF;
+}
+
+.main1{
+    background-color: #404099;
+    width: 1930px;
+    height: 965px;
+}
+
+.container{
+    display: flex;
+}
+
+#title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 250px;
+    height: 54.12181091308594px;
+    width: 457.8172912597656px;
+    border-radius: nullpx;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#FFFFFF;
+}
+
+#text{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 443px;
+    height: 57px;
+    border-radius: nullpx;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.fundo1 {
+    width: 582.92px;
+    height: 342.48px;
+    margin-left: 60px;
+}
+
+.main2{
+    background-color: #F7F1FF;
+    width: 100%
+}
+
+#title2 {
+    margin-left: 66px;
+    margin-top: 260px;
+    width: 442px;  
+    height: 26px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    color: #151515;
+}
+
+#text2{
+    margin-left: 66px;
+    margin-top: 70px;
+    width: 442px;
+    height: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #151515;
+}
+
+.hr{
+    margin-left: 66px;
+    margin-top: 30px;
+    width: 54.12px;
+    height: 0px;
+    border: 2px solid #1E1BAF;
+}
+
+#login{
+    margin-top: 20px;
+    margin-left: 66px;
+    width: 111px;
+    height: 16px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #151515;
+}
+
+#caixa-cadastro-login{  
+    margin-top: 20px;
+    margin-left: 66px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 12px;
+    position: absolute;
+    width: 443px;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #FF4500;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#senha {
+    margin-top: 90px;
+    margin-left: 66px;
+    width: 111px;  
+    height: 16px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #151515;
+}
+
+#caixa-cadastro-senha{
+    margin-top: 20px;
+    margin-left: 66px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 12px;
+    width: 443px;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #B4AEBD;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#entrar{
+    margin-top: 40px;
+    margin-left: 66px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 442px;
+    height: 50px;
+    background: #FF4500;
+    color: #FFFFFF;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 1025px){
+    html{
+        width: 100%;
+    }   
+
+    body{
+        width: 100%;
+        height: 1000px;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main1{
+        width: 100%;
+        height: 443px;
+        background: #404099;
+    }
+
+    .main2{
+        width: 100%;
+        height: 443px;
+    }
+
+    #title{
+        margin-left: 5px;
+        margin-top: 50px;
+        width: 309px;
+        height: 121px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 64px;
+        color: #FFFFFF;
+    }
+
+    #text{
+        width: 350px;
+        height: 115px;
+        margin-left: 5px;
+        font-style: normal;
+        font-weight: 400; 
+        font-size: 14px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+
+    .fundo1{
+        width: 342px;
+        height: 219px;
+        margin-left: 0px;
+        margin-top: -50px;
+    }
+
+    #main2{
+        width: 100%;
+    }
+
+    #title2{
+        width: 320px;
+        height: 40px;
+        margin-left: 5px;
+        margin-top: 50px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        color: #151515;
+    }
+
+    #text2{
+        margin-left: 5px;
+        margin-top: 40px;
+        width: 350px;
+        height: 20px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #151515;
+    }
+
+    .hr{
+        width: 47px;
+        height: 0px;
+        margin-left: 17px;
+        border: 2px solid #1E1BAF;
+    }
+
+    #login{
+        width: 95px;
+        height: 16px;
+        margin-left: 17px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: #151515;
+    }
+
+    #senha{
+        width: 95px;
+        height: 16px;
+        margin-left: 17px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: #151515;
+
+    }
+
+    #caixa-cadastro-login{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px 12px;
+        width: 330px;
+        height: 51px;
+        margin-left: 17px;
+        background: #FFFFFF;
+        border: 1px solid #FC6027;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+
+    #caixa-cadastro-senha{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px 12px;
+        width: 330px;
+        height: 51px;
+        margin-left: 17px;
+        background: #FFFFFF;
+        border: 1px solid #FC6027;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+
+    #entrar{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; 
+        padding: 8px;
+        width: 330px;
+        height: 50px;
+        margin-left: 17px;
+        background: #FF4500;
+        border-radius: 8px;
+    }
+}

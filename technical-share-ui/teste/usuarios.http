@@ -1,0 +1,9 @@
+#faz o login do usuario
+
+POST http://localhost:4200/usuarios/login
+Content-Type: application/json
+
+{
+    "usuario": "email@example.com",
+    "senha": "123456789101112"
+}
