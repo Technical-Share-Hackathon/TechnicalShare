@@ -41,22 +41,20 @@
 
 
 <div class="jumbotron jumbotron-fluid view" style="height: 400px; padding-top:150px">
-  <div class="container" id="section1">
-
+  <div class="container mb-3" >
 
     <div class="row justify-content-center mt-2 p-3 ">
-      <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-1"></div>
       <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 mt-1 ">
         <h1 class="text-white" id="text">Encontre o #SangueLaranja que você precisa!</h1>
       </div>
     </div>
 
-    <div class="row justify-content-center" id="parte-pesquisa">
-      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 mt-1" >
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 mt-1 ">
         <div class="input-group">
-          <input  id="barra-busca" [(ngModel)]="buscaDoUsuario" type="text" class="form-control" placeholder="Busque por habilidades, cargos ou Nome do Sangue Laranja" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+          <input [(ngModel)]="buscaDoUsuario" type="text" class="form-control" placeholder="Busque por habilidades, cargos ou Nome do Sangue Laranja" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
           <div class="input-group-append" id="button-addon4">
-            <button  id='botão' class="btn  text-white botao" type="button" (click)="pesquisar()">Buscar</button>
+            <button  (click)="pesquisar()" class="btn  text-white botao" type="button">Buscar</button>
           </div>
         </div>
       </div>
@@ -110,7 +108,7 @@
     </div>
 
 
- 
+
     <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
       <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active"
@@ -164,7 +162,7 @@
 <div class="container mb-5" id="sugestão-profissão">
   <div class="row" id="row-responsive">
 
-     
+
       <div class=" col-lg-1 col-xl-1 mt-5" id="menos2">
         <a class="page-link rounded-circle" (click)="retrocederPaginaProfissao()">
           <img src="../../assets/proximo.png" alt="Botão voltar" id="volta2">
@@ -188,7 +186,7 @@
               />
             </div>
             <div class="card-body">
-              <a  [routerLink]="['perfil', usuario.id]">
+              <a  [routerLink]="['/perfil', usuario.id]">
                 <h5 class="card-title font-style" id="name">{{ usuario.nome }}</h5>
               </a>
               <h6 class="card-subtitle mb-2 text-muted" id="cargo">

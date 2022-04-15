@@ -16,7 +16,7 @@ export class CrudService {
   public logarUsuario(usuarioLogin: LoginUser): Observable<UsuarioCompleto> {
     return this.http.post<UsuarioCompleto>(`${this.SERVER_URL}/logar`, usuarioLogin)
     .pipe(
-      first(), 
+      first(),
         tap(usuarioCompleto => console.log(usuarioCompleto))
     )
   }
@@ -30,7 +30,7 @@ export class CrudService {
   }
 
   listarUsuariosPaginadosFiltro(filtro : string, numeroPagina : number): Observable<Pagina>{
-    return this.http.get<Pagina>(`${this.SERVER_URL}/pesquisar/${filtro}?page=${numeroPagina}&size=1`)
+    return this.http.get<Pagina>(`${this.SERVER_URL}/pesquisar/${filtro}?page=${numeroPagina}&size=12`)
     .pipe(
       first(),
       tap(pagina => console.log(pagina))

@@ -9,9 +9,9 @@ const routes: Routes = [
   { path: '', pathMatch: 'full' ,redirectTo: 'usuarios'},
   { path: 'home', component: HomeComponent},
   { path: 'perfil/:id', component: PerfilComponent},
-  { path:  'pesquisar/:pesquisa', component: PesquisaUsuariosComponent},
-  
-  
+  { path: 'pesquisar/:pesquisa', component: PesquisaUsuariosComponent},
+
+
   {
     path: 'usuarios',
     loadChildren: () => import('./usuario/usuario.module').then(m => m.UsuarioModule)

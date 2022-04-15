@@ -8,7 +8,7 @@
     <title>Perfil</title>
 </head>
 <body>
-  
+
     <header class="header">
       <div class="title">
         <img src="../assets/logo.png" alt="Logo FCamara" id="logo">
@@ -27,7 +27,7 @@
           <button class="dropdown-item" type="button">Sair</button>
         </div>
       </div>
-    
+
         <nav class="icons">
           <div class="order-text-icon">
             <img src='../assets/heart.png' alt='Favoritos' class="img-icon" id="coracao">
@@ -50,7 +50,7 @@
 
     <div class="section-volta">
       <img src='../../assets/Vector.png' id='volta'>
-      <p id="voltar">Voltar ao início</p>
+      <a [routerLink]="['/home']"><p id="voltar">Voltar ao início</p></a>
     </div>
 
     <main>
@@ -60,7 +60,7 @@
         <img src={{usuarioCompleto.linkFoto}} id='pic'>
         <h4 id ="name">{{usuarioCompleto.nome}}</h4>
          <p id="cargo">{{usuarioCompleto.profissaoAtual}}</p>
-  
+
       <div class="info">
         <div class="order-info">
          <p id="nível">Nível de experiência</p>
@@ -71,24 +71,24 @@
          <p id="localização">Localização</p>
          <p id="result-localização">{{usuarioCompleto.localizacao}}</p>
       </div>
-  
+
       <div class="buttons">
          <button id="teams" (click)="redirecionar()">
              <img src="../../assets/teams.png" id="icon-teams">
              Agendar no Teams
          </button>
-        
+
          <button id="email">
              <img src="../../assets/email.png" id="icon-email">
              Enviar E-mail
          </button>
-  
+
          <button id="whatsapp" (click)="redirecionarWpp()">
           <img src="../../assets/whatsapp.png" id="icon-email">
              Falar no Whatsapp
       </button>
      </div>
-  
+
     </section>
 
     <section class="section2">
@@ -96,7 +96,7 @@
 
     <div class="ratings">
       <p id="categoria1">{{usuarioCompleto.hardSkills.primeiraHardSkill}}</p>
-      
+
       <div class="progress">
         <div class="progress-bar  cor {{usuarioCompleto.hardSkills.nivelPrimeiraHard | barraProgesso}}" role="progressbar" id="rating"></div>
       </div>
@@ -122,12 +122,12 @@
 
     <p id="ver-mais"> VER MAIS </p>
 
-   
+
     <h6 id="soft-skills">Soft Skills</h6>
 
     <div class="ratings">
       <p id="categoria1">{{usuarioCompleto.softSkills.primeiraSoftSkill}}</p>
-      
+
       <div class="progress">
         <div class="progress-bar  color" role="progressbar" style="width: 100%" aria-valuenow= "50" aria-valuemin="0" aria-valuemax="100" id="rating"></div>
       </div>
@@ -163,17 +163,17 @@
       <div id="text">
           {{usuarioCompleto.resumo}}
       </div>
-  
+
       <h6 id="experiência">  </h6>
-  
+
       <div id="descrição-cargo" *ngFor="let experiencia of experiencias">
          <p id="cargo2"> {{experiencia.cargo}} | {{experiencia.inicio}} - {{experiencia.termino}} </p>
           <p id="empresa">{{experiencia.empresa}}</p>
           <p id="função"> {{experiencia.descricao}}</p>
       </div>
-  
+
     </section>
-    
+
 </main>
 
 

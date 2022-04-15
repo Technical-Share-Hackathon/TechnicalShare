@@ -48,49 +48,49 @@ UPDATE hard_skills SET usuario_id = 1 WHERE id_hard_skills = 1
 UPDATE soft_skills SET usuario_id = 1 WHERE id_soft_skills = 1
 
 INSERT INTO hard_skills (primeira_skill,  nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('Java', 3, 'Quarkus', 3, 'Primefaces', 3, 'Spring Framework', 3, 'Angular', 1)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Resiliência', 'Inteligência emocional', 'Trabalho em equipe', 'Atenção a detalhes', 'Comunicação assertiva ')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Criatividade', 'Inteligência emocional', 'Trabalho em equipe', 'Atenção a detalhes', 'Comunicação assertiva ')
 UPDATE usuario SET hard_skills_id = 2 WHERE id = 2;
 UPDATE usuario SET soft_skills_id = 2 WHERE id = 2;
 UPDATE hard_skills SET usuario_id = 2 WHERE id_hard_skills = 2
 UPDATE soft_skills SET usuario_id = 2 WHERE id_soft_skills = 2
 
 INSERT INTO hard_skills (primeira_skill,  nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('Google Analytics', 3, 'Hotjar', 1, 'Google Optimize', 2, 'Google Tagmanager',  3, 'H.E.A.R.T.', 1)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Resiliência', 'Flexibilidade', 'Comunicação', 'Confiança', 'Organização e gestão do tempo')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Criatividade', 'Flexibilidade', 'Comunicação', 'Confiança', 'Organização e gestão do tempo')
 UPDATE usuario SET hard_skills_id = 3 WHERE id = 3;
 UPDATE usuario SET soft_skills_id = 3 WHERE id = 3;
 UPDATE hard_skills SET usuario_id = 3 WHERE id_hard_skills = 3
 UPDATE soft_skills SET usuario_id = 3 WHERE id_soft_skills = 3
 
 INSERT INTO hard_skills (primeira_skill, nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('PHP', 2, 'C++', 3, 'Python', 3, 'Kotlin', 3, 'Java', 2)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Ética', 'Motivação', 'Comunicação', 'Trabalhar sob pressão', 'Gestão de tempo')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Criatividade', 'Motivação', 'Comunicação', 'Trabalhar sob pressão', 'Gestão de tempo')
 UPDATE usuario SET hard_skills_id = 4 WHERE id = 4;
 UPDATE usuario SET soft_skills_id = 4 WHERE id = 4;
 UPDATE hard_skills SET usuario_id = 4 WHERE id_hard_skills = 4
 UPDATE soft_skills SET usuario_id = 4 WHERE id_soft_skills = 4
 
 INSERT INTO hard_skills (primeira_skill, nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('Java Script', 3, 'node', 3, 'Angular', 3, 'Bootstrap',1, 'jQuery',3)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Inteligência emocional', 'Resolução de problemas', 'Trabalho em equipe', 'Atenção a detalhes', 'Pro Atividade')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Criatividade', 'Resolução de problemas', 'Trabalho em equipe', 'Atenção a detalhes', 'Pro Atividade')
 UPDATE usuario SET hard_skills_id = 5 WHERE id = 5;
 UPDATE usuario SET soft_skills_id = 5 WHERE id = 5;
 UPDATE hard_skills SET usuario_id = 5 WHERE id_hard_skills = 5
 UPDATE soft_skills SET usuario_id = 5 WHERE id_soft_skills = 5
 
 INSERT INTO hard_skills (primeira_skill, nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('Bitrix24', 2, 'YouTrack', 2, 'PangoScrum', 1, 'GanttProject', 2, 'Taiga', 1)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Segurança', 'Confiança', 'Trabalho em equipe', 'Atenção a detalhes', 'Comunicação assertiva ')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Criatividade', 'Confiança', 'Trabalho em equipe', 'Atenção a detalhes', 'Comunicação assertiva ')
 UPDATE usuario SET hard_skills_id = 6 WHERE id = 6;
 UPDATE usuario SET soft_skills_id = 6 WHERE id = 6;
 UPDATE hard_skills SET usuario_id = 6 WHERE id_hard_skills = 6
 UPDATE soft_skills SET usuario_id = 6 WHERE id_soft_skills = 6
 
 INSERT INTO hard_skills (primeira_skill, nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('React', 3, 'Django', 3, 'Flask', 2, 'web2py', 3, 'CherryPy', 1)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Resiliência', 'Auto estima', 'Comunicação', 'Confiança', 'Organização')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Criatividade', 'Auto estima', 'Comunicação', 'Confiança', 'Organização')
 UPDATE usuario SET hard_skills_id = 7 WHERE id = 7;
 UPDATE usuario SET soft_skills_id = 7 WHERE id = 7;
 UPDATE hard_skills SET usuario_id = 7 WHERE id_hard_skills = 7
 UPDATE soft_skills SET usuario_id = 7 WHERE id_soft_skills = 7
 
 INSERT INTO hard_skills (primeira_skill, nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('Adobe XD', 1, 'Figma', 2 , 'ProtoPie', 1, 'Maze', 1, 'UX-P', 3)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Pro atividade', 'Assertividade', 'Empatia', 'Trabalhar sob pressão', 'Organização')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Criatividade', 'Assertividade', 'Empatia', 'Trabalhar sob pressão', 'Organização')
 UPDATE usuario SET hard_skills_id = 8 WHERE id = 8;
 UPDATE usuario SET soft_skills_id = 8 WHERE id = 8;
 UPDATE hard_skills SET usuario_id = 8 WHERE id_hard_skills = 8
@@ -98,7 +98,7 @@ UPDATE soft_skills SET usuario_id = 8 WHERE id_soft_skills = 8
 
 
 INSERT INTO hard_skills (primeira_skill, nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('Java', 1, 'Spring Framework', 2, 'TypeScript', 3, 'Angular', 3, 'Docker', 2)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Pro atividade', 'Comprometimento', 'Boa Comunicação', 'Trabalhar sob pressão', 'Organização')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Criatividade', 'Comprometimento', 'Boa Comunicação', 'Trabalhar sob pressão', 'Organização')
 UPDATE usuario SET hard_skills_id = 9 WHERE id = 9;
 UPDATE usuario SET soft_skills_id = 9 WHERE id = 9;
 UPDATE hard_skills SET usuario_id = 9 WHERE id_hard_skills = 9
@@ -106,21 +106,21 @@ UPDATE soft_skills SET usuario_id = 9 WHERE id_soft_skills = 9
 
 
 INSERT INTO hard_skills (primeira_skill, nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('.net', 3, 'Padrões de Projeto', 3, 'Laravel', 3, 'Symfony', 3, 'REST API', 3)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Inteligência Emocional', 'Assertividade', 'Empatia', 'Trabalhar sob pressão', 'Gestão')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Criatividade', 'Assertividade', 'Empatia', 'Trabalhar sob pressão', 'Gestão')
 UPDATE usuario SET hard_skills_id = 10 WHERE id = 10;
 UPDATE usuario SET soft_skills_id = 10 WHERE id = 10;
 UPDATE hard_skills SET usuario_id = 10 WHERE id_hard_skills = 10
 UPDATE soft_skills SET usuario_id = 10 WHERE id_soft_skills = 10
 
 INSERT INTO hard_skills (primeira_skill,  nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('Figma', 3,  'Sketch', 3, 'UserTesting',  3, 'Applause', 3, 'Overflow', 3)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Pro atividade', 'Assertividade', 'Empatia', 'Trabalhar sob pressão', 'Organização')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Criatividade', 'Assertividade', 'Empatia', 'Trabalhar sob pressão', 'Organização')
 UPDATE usuario SET hard_skills_id = 11 WHERE id = 11;
 UPDATE usuario SET soft_skills_id = 11 WHERE id = 11;
 UPDATE hard_skills SET usuario_id = 11 WHERE id_hard_skills = 11
 UPDATE soft_skills SET usuario_id = 11 WHERE id_soft_skills = 11
 
 INSERT INTO hard_skills (primeira_skill, nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('Artia', 2, 'Microsoft Project', 2, 'Trello', 2, 'Taiga', 3,  'Jira', 1)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Resiliência', 'Gerenciamento de Crise', 'Empatia', 'Trabalhar sob pressão', 'Organização')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Criatividade', 'Gerenciamento de Crise', 'Empatia', 'Trabalhar sob pressão', 'Organização')
 UPDATE usuario SET hard_skills_id = 12 WHERE id = 12;
 UPDATE usuario SET soft_skills_id = 12 WHERE id = 12;
 UPDATE hard_skills SET usuario_id = 12 WHERE id_hard_skills = 12
@@ -131,7 +131,7 @@ INSERT INTO experiencia (cargo, descricao, empresa, inicio, termino, usuario_id)
 INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email, localizacao) VALUES ( 'Tatiane Ferreira','https://i.imgur.com/7kZxkb7.jpg','Q.A Tester','Bem-Vindo ao meu perfil! Já estou na caminhada a 3 anos, e o meu maior estimulo pessoal é ajudar outras pessoas da mesma forma que me ajudaram no início da minha carreira.','Pleno', 'Rio', 'tatiferreira@fcamara.com', 'Osasco-SP');
 INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5511999824698”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=tatiferreira@fcamara.com”%3EChat with User')
 INSERT INTO hard_skills (primeira_skill, nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('Appium', 2, 'Kryption', 2, 'Cypress', 2, 'Maven', 3, 'Test Complete', 1)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Autonomia', 'Iniciativa', 'Comunicação eficaz', 'Pensamento crítico', 'Sociabilidade')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Criatividade', 'Iniciativa', 'Comunicação eficaz', 'Pensamento crítico', 'Sociabilidade')
 
 
 UPDATE usuario SET hard_skills_id = 13 WHERE id = 13;
@@ -171,7 +171,7 @@ UPDATE usuario SET links_id = 15 WHERE id = 15
 INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email, localizacao) VALUES ( 'Ariston Simões','https://i.imgur.com/jbHJBkJ.jpg','Dev Full Stack','Gosto de transformar ideias em projetos com conceitos personalizados que faça negócios se destacarem no mercado por meio do desenvolvimento full stack.','Pleno', 'Rio', 'arisimoes@fcamara.com', 'Barcelona-Espanha');
 INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5551996486756”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=arisimoes@fcamara.com”%3EChat with User')
 INSERT INTO hard_skills (primeira_skill,  nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('Node JS', 3,  'Mongo DB', 3,  'Pyton', 3,  'HTML', 2, 'CSS', 2)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Capacidade de Análise', 'Concentração', 'Trabalho em Equipe', 'Adaptação', 'Disciplina')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Capacidade de Análise', 'Concentração', 'Criatividade', 'Adaptação', 'Disciplina')
 
 
 UPDATE usuario SET hard_skills_id = 16 WHERE id = 16;
@@ -185,7 +185,7 @@ UPDATE usuario SET links_id = 16 WHERE id = 16
 INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email, localizacao) VALUES ( 'Karla Santacruz','https://i.imgur.com/94Uymtu.jpg','Product Owner','Experiência em Gestão de Produtos digitais e UX Design, trabalho na área de tecnologia desde 2015, com passagens por empresas renomadas','Pleno', 'Rio', 'karlasantacruz@fcamara.com', 'Totenham-Inglaterra');
 INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5514996411675”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=karlasantacruz@fcamara.com”%3EChat with User')
 INSERT INTO hard_skills (primeira_skill, nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('Agile', 2, 'Scrum', 1, 'Kanban', 2, 'Confluence', 2, 'Jira Software', 1)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Comunicação', 'Empatia', 'Inovação', 'Resiliência', 'Disciplina')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Criatividade', 'Empatia', 'Inovação', 'Resiliência', 'Disciplina')
 
 
 UPDATE usuario SET hard_skills_id = 17 WHERE id = 17;
@@ -199,7 +199,7 @@ UPDATE usuario SET links_id = 17 WHERE id = 17
 INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email, localizacao) VALUES ( 'Marcelo Godoy','https://i.imgur.com/vqqE8X9.jpg','Dev Back end','Atuo à 10 anos nesta área, e busco pelo conhecimento multidisciplinar, para ter condições de analisar, encontrar e resolver os problemas nos mais diversos níveis ou propor soluções eficientes para atender a necessidade do cliente.','Sênior', 'Veneza', 'marcelogodoy@fcamara.com', 'Nova Delhi-India');
 INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5514999362588”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=marcelogodoy@fcamara.com”%3EChat with User')
 INSERT INTO hard_skills (primeira_skill,  nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('Spring Boot', 3, 'Pyton', 3, 'Ruby', 3, 'React JS', 2, 'Java Script', 1)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Liderança', 'Comunicação', 'Integridade', 'Ética', 'Honestidade')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Liderança', 'Criatividade', 'Integridade', 'Ética', 'Honestidade')
 
 
 UPDATE usuario SET hard_skills_id = 18 WHERE id = 18;
@@ -213,7 +213,7 @@ UPDATE usuario SET links_id = 18 WHERE id = 18
 INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email, localizacao) VALUES ( 'Carol Alfredo','https://i.imgur.com/5Uikkyg.jpg','Product Owner','Sou uma pessoa muito analítica, que gosta de sair dos padrões tradicionais e ama desafios. Dessa forma, venho então estudando, em busca de explorar todo esse meu potencial!','Trainee', 'Veneza', 'carolalfredo@fcamara.com', 'Washingtom-EUA');
 INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5514996997412”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=carolalfredo@fcamara.com”%3EChat with User')
 INSERT INTO hard_skills (primeira_skill, nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('Trello', 2, 'Microsoft Project', 3, 'Jira Software', 3, 'Monday', 1, 'Mural', 3)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Detalhista', 'Foco', 'Curiosadade', 'Organização', 'Proativa')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Detalhista', 'Foco', 'Curiosadade', 'Criatividade', 'Proativa')
 
 
 UPDATE usuario SET hard_skills_id = 19 WHERE id = 19;
@@ -227,7 +227,7 @@ UPDATE usuario SET links_id = 19 WHERE id = 19
 INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email, localizacao) VALUES ( 'Helena Borges','https://i.imgur.com/t9RPBI3.jpg','Dev Front End','Sou muito grata às adversidades que apareceram na minha vida, pois elas me ensinaram a tolerância, a simpatia, o autocontrole, a perseverança e outras qualidades que, sem essas adversidades, eu jamais conheceria.','Pleno', 'Veneza', 'helenaborges@fcamara.com', 'Ohio-EUA');
 INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5512999992540”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=helenaborges@fcamara.com”%3EChat with User')
 INSERT INTO hard_skills (primeira_skill, nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('HTML', 3, 'Angular', 3, 'PHP', 2, 'CSS', 3, 'Bootstrap', 3)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Criatividade', 'Determinação', 'Atitude Positiva', 'Motivação', 'Proativa')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Criatividade', 'Determinação', 'Atitude Positiva', 'Motivação', 'Criatividade')
 
 
 UPDATE usuario SET hard_skills_id = 20 WHERE id = 20;
@@ -254,7 +254,7 @@ UPDATE usuario SET links_id = 21 WHERE id = 21
 INSERT INTO usuario (nome, link_foto, profissao_atual, resumo, nivel_senioridade, squad, email, localizacao) VALUES ( 'Patricia Albert','https://i.imgur.com/ljO9ppX.jpg','Ux Designer','Apaixonada por criar, inventar e aprender. Encontrei minhas paixões no design e procuro sempre aprender com novas experiências e evoluir a cada dia.','Júnior', 'Veneza', 'patialbert@fcamara.com', 'Distrito Federal-Brasilia');
 INSERT INTO links (link_whatsapp, link_teams) VALUES ('https://wa.me/5511998596741”%3EFalar', 'https://teams.microsoft.com/l/chat/0/0?users=patialbert@fcamara.com”%3EChat with User')
 INSERT INTO hard_skills (primeira_skill, nivel_primeira_hard, segunda_skill, nivel_segunda_hard, terceira_skill, nivel_terceira_hard, quarta_skill, nivel_quarta_hard, quinta_skill,  nivel_quinta_hard) VALUES ('Adobe XD', 1, 'Google Analytics', 2, 'Hotjar', 3, 'Zeplin', 2, 'Framer', 1)
-INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Entusiasmo', 'Adaptação', 'Comunicação', 'Empatia', 'Negociação')
+INSERT INTO soft_skills (primeira_skill, segunda_skill, terceira_skill, quarta_skill, quinta_skill) VALUES ('Entusiasmo', 'Adaptação', 'Comunicação', 'Criatividade', 'Negociação')
 
 
 UPDATE usuario SET hard_skills_id = 22 WHERE id = 22;
