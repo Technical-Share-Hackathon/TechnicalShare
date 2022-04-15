@@ -32,6 +32,8 @@ public class UsuarioDetalhadoDto {
 
     private List<Experiencia> experiencias;
 
+    private  String localizacao;
+
     public UsuarioDetalhadoDto(Usuario usuario) {
         this.id = usuario.getId();
         this.nome = usuario.getNome();
@@ -49,6 +51,7 @@ public class UsuarioDetalhadoDto {
         this.experiencias = usuario.getExperiencias();
         this.nivelSenioridade = usuario.getNivelSenioridade();
         this.squad = usuario.getSquad();
+        this.localizacao = usuario.getLocalizacao();
     }
 
     public Long getId() {
@@ -99,7 +102,7 @@ public class UsuarioDetalhadoDto {
         return squad;
     }
 
-    public String getNivelSenioridade() {
-        return nivelSenioridade;
-    }
+    public String getNivelSenioridade() {return nivelSenioridade; }
+
+    public String getLocalizacao() {return localizacao;}
 }
