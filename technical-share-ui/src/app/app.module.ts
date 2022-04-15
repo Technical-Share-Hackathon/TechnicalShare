@@ -8,13 +8,15 @@ import { HomeComponent } from './home/home.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { PesquisaUsuariosComponent } from './pesquisa-usuarios/pesquisa-usuarios.component';
 import { FormsModule } from '@angular/forms';
+import { BarraProgessoPipe } from './barra-progesso.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PerfilComponent,
-    PesquisaUsuariosComponent
+    PesquisaUsuariosComponent,
+    BarraProgessoPipe
   ],
   imports: [
     BrowserModule,

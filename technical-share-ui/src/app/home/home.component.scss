@@ -21,7 +21,7 @@ body{
 
 .btn-group{
     display: none;
-  }
+}
 
 .title{
     display: flex;
@@ -108,58 +108,45 @@ body{
     filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
 }
 
-
-
-
 .img-style{
     height:100px ;
     width: 120px ;
-  }
-  
-  
-  .font-style{
+}
+
+.font-style{
     font-size:0.7em;
-  }
-  
-  h1{
-    font-size:1.3em;
-  }
-  
-  
-  h6{
-    font-size:0.6em;
-  }
-  
-  .view {
+}
+
+.view {
     background-image: url(../../assets/fundo2.png) ;
     height: 100%;
     background-size: cover;
     background-position: center;
     background:
-      linear-gradient(
+    linear-gradient(
         rgba(40,40,99,.75),rgba(40,40,99,.75)
-      ),
-      url(../../assets/fundo2.png) no-repeat;
-  
-  }
-  
-  .bg {
-   background-color: #404099;
-  
-  }
-  
-  .botao{
+),
+    url(../../assets/fundo2.png) no-repeat;
+
+}
+
+.bg {
+    background-color: #404099;
+
+}
+
+.botao{
     background-color: #FF4500;
-  }
-  
-  .titulo{
+}
+
+.titulo{
     color:  #4B4B8E;
-  }
+}
 
 #text{
     width: 672px;
     height: 120px;
-    margin-left: 200px;
+    margin-left: 100px;
     padding-top: -50px;
     font-style: normal;
     font-weight: 600;
@@ -336,6 +323,12 @@ body{
     margin-left: 18px;
 }
 
+#volta2{
+    transform: rotate(180deg);
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
 #pic-pesquisa{
     width: 139.33px;
     height: 140px;
@@ -344,39 +337,40 @@ body{
 @media only screen and (max-width: 1025px){
 
     header{
-        display: flex;
-        align-items: center;
-      }
-      
-      #logo{
-        margin-left: 0px;
-      }
-      
-      .btn-group{
-        display: block;
-      }
-      
-      .dropdown-item{
-        background: #404099;
-        border-top: 2px solid #FF4500;
-        color: #FFFFFF;
-      }
+    display: flex;
+    align-items: center;
+    }
+
+#logo{
+    margin-left: 0px;
+    }
+
+.btn-group{
+    display: block;
+}
+
+.dropdown-item{
+    background: #404099;
+    border-top: 2px solid #FF4500;
+    color: #FFFFFF;
+    }
 
 .icons{
-     display: none;
- }
+    display: none; 
+    }
+
 #text{
-    width: 350px;
+    width: 340px;
     height: 127px;
     margin-left: 16px;
-    margin-top: 30px;
+    margin-top: -20px;
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
     line-height: 40px;
     text-align: center;
     color: #FFFFFF;
-}
+    }
 
 .view {
     background-image: url(../../assets/fundo2mobile.png) ;
@@ -384,12 +378,12 @@ body{
     background-size: cover;
     background-position: center;
     background:
-      linear-gradient(
+    linear-gradient(
         rgba(40,40,99,.75),rgba(40,40,99,.75)
-      ),
+     ),
       url(../../assets/fundo2mobile.png) no-repeat;
-  
-  }
+
+    }
 
 #parte-pesquisa{
     width: 350px;
@@ -408,475 +402,114 @@ body{
 
 
 #sugestões{
-    width: 380px;
+    width: 340px;
     height: 62px;
     margin-left: 14px;
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 500px;
     line-height: 32px;
-}
+    }
 
-#lista-flex{
+#container-interesse{
     display: flex;
     flex-direction: row;
-}
+    height:100px;
+    width: 300px;
+    margin-left: 0px;
+    margin-top: -30px
+    }
 
-.card-list{
+#pesquisa-list{
     width: 150px;
-    height: 192px;
-}
+    height: 250px;
+    margin-left: 20px;
+    }
 
-#card-flex{
-    width: 400px;
-    height: 150px;
-    border: 1px solid red;
-    display: flex;
-    flex-direction: row;
-    margin-left: -200px;
-    
-}
+#pic-pesquisa{
+    width: 100px;
+    }
+
+#name-pesquisa{
+    font-size: 14px;
+    }
+
+.rounded-circle{
+    width: 50px;
+    height: 50px;
+    }
 
 #pic{
-    width: 40px;
-height: 40.65px;
-}
+    width: 88.23px;
+    height: 88.65px;
+    }
 
-#name{
-    width: 121px;
-height: 15.2px;
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 22px;
-text-align: center;
-}
+#nav-lista-sugestões{
+    width:365px;
+    margin-left: 0px;
+    }
 
-#cargo{
-    margin-top: 25px;
-    width: 121px;
-    height: 29px;
-    font-style: normal; 
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 17px;
+#lista-sugestões{
+    width: 50px;
+    font-size: 15px;
     text-align: center;
-    letter-spacing: 0.15em;
-    font-variant: small-caps;
-}
+    color: #FF4500;
+    }
 
-#row-responsive{ 
-    width: 200px;
-}
 
-#mais{
-    display: none;
-}
+#pessoas-mesmo-cargo{
+    width: 340px;
+    height: 62px;
+    margin-top: 850px;
+    margin-left: 14px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500px;
+    line-height: 32px;
+    }
 
-#mais2{
-    display: none;
-}
+#sugestão-profissão{
+    margin-left: 0px;
+    margin-top: -60px;
+    }
 
 #menos{
-    display: none;
+    margin-left: 160px;
+    }
+
+#mais{
+    margin-left: 160px;
+    }
+
+#avancar{
+    margin-left: 2px;
+    margin-top: 1px;
+    }
+
+#volta{
+    margin-left: 2px;
+    margin-top: 1px;
+    transform: rotate(180deg);
 }
 
 #menos2{
-    display: none;
-}
-
-#pessoas-mesmo-cargo{
-    width: 380px;
-    height: 62px;
-    margin-left: 14px;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 32px;
-}
-
-
-
-}
-
-
-
-
-/* 
-
-body{
-    width: 100%;
-    height: 1500px;
-    background-color: #F7F1FF;
-}
-
-
-
-.header{
-    width: 100%;
-    height: 85px;
-    background: #404099;
-    display: flex;
-    justify-content: space-between;
-}
-
-.title{
-    display: flex;
-    align-items: center;
-    margin-left: 32px;
-}
-
-#technical{
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px; 
-    color: #FFFFFF;
-}
-
-.icons{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.text-icons{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-.order-text-icon{
-    display: flex;
-    flex-direction: column; 
-    margin:30px;
-}
-
-.img-icon{
-    width: 29.14px;
-    height: 29.14px;
-    margin-left: 10px;
-    
-}
-
-#coracao{
-    width: 20px;
-    height: 20px;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-    cursor: pointer;
-    margin-left: 15px;
-}
-
-#sininho{
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    margin-left: 25px;
-}
-
-#user{
-    width: 20px;
-    height: 20px;  
-    cursor: pointer;
-    margin-left:5px;
-}
-
-#saída{
-    border-radius: 1px;
-    cursor: pointer;
-}
-
-#coracao:hover{
-    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
-}
-#sininho:hover{
-    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
-}
-#user:hover{
-    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
-}
-#saída:hover {
-    filter: invert(53%) sepia(74%) saturate(7015%) hue-rotate(0deg) brightness(104%) contrast(107%);
-}
-
-
-.section{
-    width: 100%;
-    height: 471px;
-    background:url('../../assets/fundo2.png'),  #404099;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.section2{
-    margin-top: 180px;
-}
-
-
-
-#barra-pesquisa{
-    display: flex;
-    align-items: center;
-    padding: 8px 12px;
-    width: 896.84px;
-    height: 51px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 200px;
-    background: #FFFFFF;
-    border: 1px solid #B4AEBD;
-    border-radius: 5px;
-}
-
-#barra-buscar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    width: 175.83px;
-    height: 51px;
-    margin-left: 1400px;
-    margin-top: -50px;
-    background: #FF4500;
-    border-radius: 0px 8px 8px 0px;
-    color: #FFFFFF;
-}
-
-
-#opções-sugestões{
-    display: flex;
-    width: 1042px;
-    height: 90px;
-    margin-left: 149px;
-    padding:10px;
-    justify-content:space-between;
-    margin-top: 20px;
-    
-}
-
-.interesses{
-    display: flex;
-}
-
-.design{
-    display: flex; 
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    width: 209px;
-    height: 38px;
-    background: #FFBAA3;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.design :hover{
-    width: 100px;
-}
-
-#ux{
-
-}
-
-#figma{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    width: 158px;
-    height: 38px;
-    background: #E0DAE9;
-    border-radius: 8px;
-    margin-left: 20px;
-}
-
-#metodologia-agil {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    width: 202px;
-    height: 38px;
-    background: #E0DAE9;
-    border-radius: 8px;
-    margin-left: 20px;
-}
-
-.swiper{
-    width: 100%;
-    margin-left: 150px;
-}
-
-.card-content{
-    display: flex;
-    background:#F7F1FF;
-}
-
-#pic{
-    margin-top: 20px;
-}
-
-
-
-
-
-
-
-@media only screen and (max-width: 1025px){
-
-    body{
-        width: 100%;
-        background-color: #F7F1FF;
-    }
- 
-    .header{
-        width: 100%;
-        height: 85px;
-        background: #404099;
+    margin-left: 160px;
     }
 
-  
-
-    .section{
-        margin-top: -30px;
-        width: 100%;
-        height: 359px;
-        background: url('../../assets/fundo2mobile.png'),  #404099;
+#volta2{
+    margin-left: -2px;
+    margin-top: 1px;
+    transform: rotate(180deg);
     }
 
-    .section2{
-        width: 100%;
-        margin-top: 15px;
+#mais2{
+    margin-left: 160px; 
     }
 
-    #text{
-        
+#avancar2{
+    margin-left: 1px;
+    margin-top: 1px; 
     }
 
-    #barra-pesquisa{
-        display: flex;  
-        flex-direction: row;
-        align-items: center;
-        padding: 8px 12px;
-        width: 260px;
-        height: 38px;
-        margin-left: 25px;
-        margin-top: 140px;
-        background: #FFFFFF;
-        border: 1px solid #B4AEBD;
-        border-radius: 5px;
-    }
 
-    #barra-buscar{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;  
-        align-items: center;
-        padding: 8px;
-        width: 85px;
-        height: 38px;
-        margin-left: 285px;
-        margin-top: -38px;
-        background: #FF4500;
-        border-radius: 0px 8px 8px 0px;
-    }
-
-    #sugestões{
-        width: 350px;
-        height: 62px;
-        margin-left: 16px;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 22px;
-        line-height: 32px;
-        color: #404099;
-    }
-
-    #opções-sugestões{
-        width: 100%;   
-        height: 38px;
-        display: flex;
-        margin-left: 0px;
-    }
-
-    #ux{
-        display: none;
-    }
-
-    #figma{
-        display: none;
-    }
-
-    #metodologia-agil{
-        display: none;
-    }
-
-    #design{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 8px;
-        width: 152px;
-        height: 38px;
-        margin-left: 0px; 
-        margin-top: -20px;
-        background: #FFBAA3;
-        border-radius: 8px;
-    }
-
-    #ux{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 8px;
-        width: 128px;
-        height: 38px;
-        margin-left: -20px;
-        margin-top: -20px;
-        background: #E0DAE9;
-        border-radius: 8px;
-    }
-
-    .swiper{
-        width: 100%;
-        margin-left: 0px;
-    }
-
-    #pic{
-        width: 88.23px;
-        height: 88.65px;
-    }
-
-    #name{
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 22px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: #404099;
-    }
-   
-    #pessoas-mesmo-cargo{
-        width: 100%;
-        height: 36px;
-        margin-left: 0px;
-        top: 855px;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 22px;
-        line-height: 32px;
-        color: #404099;
-    }
-} */
+}

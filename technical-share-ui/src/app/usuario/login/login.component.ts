@@ -28,7 +28,10 @@ export class LoginComponent implements OnInit {
       this.usuarioCompleto = result
   
       this.router.navigate(['home']);
-    })
+    }, erro => {
+      alert('Usuário inválido');
+    }
+    )
   }
 
 }

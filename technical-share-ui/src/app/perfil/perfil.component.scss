@@ -16,6 +16,19 @@ main{
     justify-content: space-around;
 }
 
+.umTerco
+{   
+    width: 33.3%; 
+}  
+
+.doisTercos{   
+    width: 66.6%; 
+} 
+
+.tresTercos{  
+    width: 100%; 
+}
+
 .header{
     width: 100%;
     height: 85px;
@@ -26,7 +39,7 @@ main{
 
 .btn-group{
     display: none;
-  }
+}
 
 .title{
     display: flex;
@@ -327,9 +340,47 @@ main{
     color: #FF4500;
 }
 
+#soft-skills{
+    width: 103px;
+    height: 24px;
+    margin-left: 16px;
+    margin-top: 40px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    color: #404099;
+} 
+
+#ver-mais2{
+    width: 86px;
+    height: 17px;
+    margin-left: 200px;
+    margin-top: 50px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    letter-spacing: 0.15em;
+    font-variant: small-caps;
+    color: #404099;
+}
+
 .ratings{
     margin-left: 16px;
     margin-top: 10px;
+}
+
+.cor{
+    background-color: #FF4500;
+}
+
+.color{
+    background-color: #404099;
 }
 
 #ver-mais{
@@ -394,8 +445,9 @@ main{
     color: #404099;
 }
 
+
 #cargo2{
-    width: 250px;
+    width: 350px;
     height: 22px;
     left: 16px;
     top: 15px;
@@ -426,7 +478,7 @@ main{
 }
 
 #empresa{
-    width: 200px;
+    width: 230px;
     height: 17px;
     font-style: normal;
     font-weight: 500;
@@ -473,115 +525,115 @@ main{
 
 @media only screen and (max-width: 1025px){
 
-    body{
-        width: 100%;
-        height: 1500px;
-        background-color: #F7F1FF;
+body{
+    width: 100%;
+    height: 1500px;
+    background-color: #F7F1FF;
     }
 
-    main{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     }
 
-    header{
-        display: flex;
-        align-items: center;
-    }
-    
-    #logo{
-        margin-left: 0px;
-    }
-    
-    .btn-group{
-        display: block;
-    }
-    
-    .dropdown-item{
-        background: #404099;
-        border-top: 2px solid #FF4500;
-        color: #FFFFFF;
+header{
+    display: flex;
+    align-items: center;
     }
 
-    .section-volta{
-       margin-left: 20px
+#logo{
+    margin-left: 0px;
+    }
+
+.btn-group{
+    display: block;
+    }
+
+.dropdown-item{
+    background: #404099;
+    border-top: 2px solid #FF4500;
+    color: #FFFFFF;
+    }
+
+.section-volta{
+    margin-left: 20px
     }
 
     #pic{
-        width: 137.89px;
-        height: 140px;
-        border-radius: 50%;
+    width: 137.89px;
+    height: 140px;
+    border-radius: 50%;
     }
 
     #heart{
-        margin-left: 300px;
-        margin-top: -20px
+    margin-left: 300px;
+    margin-top: -20px
     }
 
-    .perfil-section{
-        width: 100%;
-        height: 688px;
-        margin-left: 0px;
-        background: #FFFFFF;
-        border-radius: 5px;
-        display: flex;
+.perfil-section{
+    width: 100%;
+    height: 688px;
+    margin-left: 0px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    display: flex;
     }
 
-    .section2{
-        width: 100%;
-        height: 688px;
-        background: #FFFFFF;
-        border: 1px solid #E0DAE9;
-        border-radius: 5px;
-        margin-left: 0px;
+.section2{
+    width: 100%;
+    height: 688px;
+    background: #FFFFFF;
+    border: 1px solid #E0DAE9;
+    border-radius: 5px;
+    margin-left: 0px;
     }
 
-    .section3{
-        width: 100%;
-        height: 722px;
-        background: #FFFFFF;    
-        box-sizing: border-box;
-        border-radius: 5px;
-        margin-left: 0px;
+.section3{
+    width: 100%;
+    height: 722px;
+    background: #FFFFFF;    
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-left: 0px;
     }
 
-    #text{
-        width: 322.46px;
-        height: 220px;
+#text{
+    width: 322.46px;
+    height: 220px;
     }
 
-    #descrição-cargo{
-        width: 100%;
+#descrição-cargo{
+    width: 100%;
     }
 
-    #função{
-        display:none;
+#função{
+    display:none;
     }
 
-    .icons{
-        display: none;
+.icons{
+    display: none;
     }
 
-    .img-style{
-        height:100px ;
-        width: 120px ;
+.img-style{
+    height:100px ;
+    width: 120px ;
     }
 
-    #topo {
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 8px;
-        width: 365px;
-        height: 50px;
-        background: #404099;
-        border-radius: 8px;
-        color: #ffffff;
+#topo {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 365px;
+    height: 50px;
+    background: #404099;
+    border-radius: 8px;
+    color: #ffffff;
     }
 }
 
