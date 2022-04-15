@@ -1,6 +1,6 @@
 package br.com.technicalshare.api.controller.dto;
 
-import br.com.technicalshare.api.modelos.Usuario;
+import br.com.technicalshare.api.models.Usuario;
 
 public class UsuarioDtoSimples {
 
