@@ -18,11 +18,13 @@
     <td>Spring</td>
     <td>MySql</td>
     <td>Angular</td>
+    <td>Bootstrap 4</td>
   </tr>
   <tr>
     <td>8.*</td>
     <td>7.4</td>
     <td>8.0</td>
+    <td>7.0</td>
     <td>7.0</td>
   </tr>
 </table>
@@ -34,6 +36,9 @@
 <img src="https://user-images.githubusercontent.com/72326473/163059677-3ee6aaa0-860c-4898-87b5-b65c3ab0a010.png" width="424" height="124">
 2)basta iniciar o projeto pela própria IDE do seu gosto. Para uma documentação mais detalhada dos endpoints, acesse o swagger da aplicação:
 <img src="https://user-images.githubusercontent.com/72326473/163060619-95d0be70-9351-40f6-bdee-249c071b18e1.png" width="524" height="224">
+3) No script de banco de dados você pode editar os usuários para comtemplar senha ao efetuar o login:
+<img src="https://user-images.githubusercontent.com/72326473/163605315-19e75720-f5f8-4952-9734-63ec61000754.png" width="524" height="224">
+4) Se preferir pode usar o usuário default que tem o email "lucasst@fcamara.com" e senha "1234"
 
 ## Como rodar o FrontEnd do Projeto:
 1) Primeiro execute o comando "npm install" no diretório do projeto angular, isso vai garantir que vc instale todas as dependências que são ignoradas pelo git
