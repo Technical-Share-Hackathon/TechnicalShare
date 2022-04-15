@@ -43,7 +43,7 @@
 <div class="jumbotron jumbotron-fluid view" style="height: 400px; padding-top:150px">
   <div class="container" id="section1">
 
-    <!-- Texto antes da barra de pesquisa -->
+   
     <div class="row justify-content-center mt-2 p-3 ">
       <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-1"></div>
       <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 mt-1 ">
@@ -51,7 +51,6 @@
       </div>
     </div>
 
-    <!-- barra de pesquisa -->
     <div class="row justify-content-center" id="parte-pesquisa">
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 mt-1" >
         <div class="input-group">
@@ -65,10 +64,7 @@
 
   </div>
 </div>
-<!-- Fim do jumbotron com imgagem -->
 
-
-<!-- Container das sugestões, aqui rola interpolação da pesquisa de acordo com o interesse -->
 <div class="container ">
   <div class="row mt-4">
     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -102,11 +98,11 @@
   </div>
 </div>
 
-<!-- Container com o resultado da pesquisa interpolado pelo interesse -->
+
 <div class="container" id="container-interesse">
   <div class="row">
 
-    <!-- Voltar página -->
+
     <div class=" col-lg-1 col-xl-1 mt-5" id="menos">
       <a class="page-link rounded-circle" (click)="retrocederPagina(interesseAtual)">
         <img src="../../../assets/proximo.png" alt="" id="volta">
@@ -114,7 +110,7 @@
     </div>
 
 
-    <!-- Resultado das pesquisar dinamicas -->
+ 
     <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
       <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active"
@@ -146,7 +142,6 @@
     </div>
 
 
-    <!-- Avançar Página -->
     <div class="  col-lg-1 col-xl-1 mt-5" id="mais">
       <a class="page-link rounded-circle" (click)="avancarPagina(interesseAtual)">
         <img src="../../assets/proximo.png" id="avancar">
@@ -156,7 +151,7 @@
   </div>
 </div>
 
-<!-- Container do resultado da pesquisa -->
+
 <div class="container mt-5 mb-3" >
   <div class="row justify-content-center mt-2">
     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -165,11 +160,11 @@
   </div>
 </div>
 
-<!-- Container de resultado dos sugeridos por Profissão -->
+
 <div class="container mb-5" id="sugestão-profissão">
   <div class="row" id="row-responsive">
 
-      <!-- Voltar página dos sugeridos por mesma profissão -->
+     
       <div class=" col-lg-1 col-xl-1 mt-5" id="menos2">
         <a class="page-link rounded-circle" (click)="retrocederPaginaProfissao()">
           <img src="../../assets/proximo.png" alt="Botão voltar" id="volta2">
@@ -205,7 +200,6 @@
       </div>
     </div>
 
-     <!-- Avançar Página dos sugeridos por mesma profissão-->
      <div class="  col-lg-1 col-xl-1 mt-5" id="mais2">
       <a class="page-link rounded-circle" (click)="avancarPaginaProfissao()" >
         <img src="../../../assets/proximo.png" id="avancar2">
@@ -233,181 +227,3 @@
 
 
 
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-   
-</head>
-
-<body>
- 
- <main>  
-    <header class="header">
-        <div class="title">
-          <img src="../assets/logo.png" alt="Logo FCamara" id="logo">
-          <img src='../assets/jogue-a-flecha 1.png' id='seta'>
-          <h6 id="technical"> Technical Share </h6>
-        </div>
-      
-          <nav class="icons">
-            <div class="order-text-icon">
-              <img src='../assets/heart.png' alt='Favoritos' class="img-icon" id="coracao">
-              <p class="text-icons"> Favoritos </p>
-            </div>
-            <div class="order-text-icon">
-              <img src='../assets/notificação.png' alt='Notificações' class="img-icon" id="sininho">
-              <p class="text-icons"> Notificações </p>
-            </div>
-            <div class="order-text-icon">
-              <img src='../assets/conta.png' alt='Perfil' id="user">
-              <p class="text-icons"> Perfil </p>
-            </div>
-            <div class="order-text-icon">
-              <img src='../assets/sair.png' alt='Logout' id="saída">
-              <p class="text-icons"> Sair </p>
-            </div>
-          </nav>
-      </header>
-    
-    <section class="section">
-      
-      <h2 id="text">Encontre o #SangueLaranja que você precisa!</h2>
-     <div class="">
-      <input type="text" placeholder="Busque por habilidades, cargos ou nome do Sangue Laranja" id="barra-pesquisa">
-      <button id="barra-buscar"> Buscar </button>
-     </div>
-    
-    </section>
-
-    
-        <h5 id ="sugestões"> Sugestões de acordo com seus interesses </h5>
-
-
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-              <li
-                class="nav-item"
-                role="presentation"
-                *ngFor="let interesse of interesses"
-              >
-                <a
-                  class="nav-link badge badge badge-pill badge-info mr-3 "
-                  id="pills-{{ interesse }}-tab"
-                  data-toggle="pill"
-                  href="#pills-{{ interesse }}"
-                  role="tab"
-                  [attr.aria-controls]="'pills-{{interesse}}'"
-                  aria-selected="false"
-                  >{{ interesse }}
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div> -->
-
-      <!-- <div class="interesses">
-        <nav *ngFor = "let interesse of interesses" id="opções-sugestões">
-            <p class="design" id ="{{interesse}}" type="submit"> {{interesse}} </p>
-        </nav>
-      </div> -->
-
-   
-    <!--  <section>
-      <div class="swiper mySwiper container">
-        <div class="swiper-wrapper content">
-          <div class="swiper-slide card">
-            
-            <div class="card-content">
-              <div class="perfil" *ngFor="let perfil of perfis">
-                <img src="../assets/profile.png" alt="Foto de perfil">
-                <h6 id="name">{{perfil.name}}</h6>
-                <p id="cargo">{{perfil.cargo}}</p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-      </div>
-
-     </section>
-
-     <h5 id="pessoas-mesmo-cargo"> Pessoas do mesmo cargo </h5>
-
-     <section class="section2">
-      <div class="swiper mySwiper container">
-        <div class="swiper-wrapper content">
-          <div class="swiper-slide card">
-            <div class="card-content">
-              <div class="perfil" *ngFor="let perfil of perfis">
-                <img src="../assets/profile.png" alt="Foto de perfil">
-                <h6 id="name">{{perfil.name}}</h6>
-                <p id="cargo">{{perfil.cargo}}</p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-      </div>
-
-     </section>
-    </main>
-</body>
-</html>
- -->
-<!-- <main> -->
-
-<!-- <div id="result">
-  <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" id="profile"*ngFor="let perfil of perfis">
-          <img src="./assets/profile.png" alt="Foto de perfil" id="pic"> 
-    <h6 id ="name"> {{perfil.name}} </h6>
-    <p id="cargo"> {{perfil.cargo}} </p>
-
-</div>
-</div>
-</div>
-<div class="swiper-button-next"></div>
-<div class="swiper-button-prev"></div>
-<div class="swiper-pagination"></div>
-</div>
-
-
-
-
-<div id="result2">
-   <div id="profile" *ngFor="let perfil of perfis">
-      <img src="../assets/profile.png" alt="Foto de perfil"id="pic"> 
-      <h6 id ="name"> {{perfil.name}} </h6>
-      <p id="cargo"> {{perfil.cargo}} </p>  
-  </div>
-  </div>
-
-
-
-
-</main> -->
